@@ -1,0 +1,137 @@
+site_name: Zauberwürfellöseroboter
+site_url: http://127.0.0.1:8001/rcs
+copyright: Copyright &copy; 2024-2025 Franz Weingartz
+theme:
+  language: de
+  name: material
+#  logo: assets/images/icon.svg
+  icon:
+    logo: material/cube
+#  favicon: assets/images/icon.svg
+#  favicon: material/cube
+  custom_dir: docs/assets/custom
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+#    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.expand
+    - navigation.footer
+    - content.tooltips
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+    - toc.follow
+    - navigation.tracking
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+plugins:
+  - search
+  - offline
+  - macros
+  - exporter:
+      enabled: false
+      logging:
+        level: debug
+      formats:
+        pdf:
+          concurrency: 32
+          stylesheets:
+            - docs/assets/stylesheets/pdf.scss
+          covers:
+            front: docs/assets/covers/front.html.j2
+            back: docs/assets/covers/back.html.j2
+          browser:
+            debug: false
+          aggregator:
+            enabled: true
+            output: documentation.pdf
+            covers: book
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - footnotes
+  - def_list
+  - attr_list
+  - abbr
+
+  - pymdownx.highlight
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - pymdownx.keys
+  - pymdownx.blocks.caption
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+#      options:
+#        custom_icons:
+#          - overrides/.icons
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets:
+      auto_append:
+        - docs/includes/glossary.md
+
+extra_javascript:
+  - assets/javascripts/katex.js
+  - assets/javascripts/mathjax.js
+  - assets/javascripts/mkdocs-exporter.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+extra: # used by macros plugin
+  project_name: Zauberwürfellöseroboter
+
+nav:
+  - Startseite: index.md
+  - Tagebuch: diary.md
+  - Farberkennung: color_detection.md
+  - Server:
+      - server/index.md
+      - Hilfsmitttel: server/utils.md
+      - Kommunikation: server/communication.md
+  - Löser:
+      - solver/index.md
+      - IDA*: solver/ida_star.md
+      - Korf: solver/korf.md
+      - Thistlethwaite: solver/thistlethwaite.md
+  - Der Roboter:
+      robot/index.md
+  - Zauberwürfelzugnotation: rubiks_cube_move_notation.md
+  - Erklärungen: explanations.md
+  - Informationen: about.md
+  - Galerie: gallery.md
