@@ -45,7 +45,7 @@ plugins:
 #  - offline
   - macros
   - exporter:
-      enabled: true
+      enabled: false
       logging:
         level: debug
       formats:
