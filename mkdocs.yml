@@ -42,10 +42,10 @@ theme:
 
 plugins:
   - search
-  - offline
+#  - offline
   - macros
   - exporter:
-      enabled: false
+      enabled: true
       logging:
         level: debug
       formats:

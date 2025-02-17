@@ -2,8 +2,6 @@
 
 Diese Webseite beinhaltet die Dokumentation sowie das Tagebuch und eventuell andere Daten des Projekts.
 
-Dies ist ein Testpush.
-
 ## Das Projekt
 
 Bei diesem Projekt geht es darum, einen Roboter/eine Maschine zu bauen, die einen 3x3-Zauberwürfel löst.
