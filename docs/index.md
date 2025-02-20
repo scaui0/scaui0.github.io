@@ -13,5 +13,3 @@ Bei diesem Projekt geht es darum, einen Roboter/eine Maschine zu bauen, die eine
 * [x] Einen Roboter/eine Maschine bauen, die den Würfel sicher drehen kann.
 * [x] Den Roboter/die Maschine mit der Programmierung verbinden.
 * [ ] Alle noch vorhandenen Fehler beheben.
-
-Dies ist ein testcommit.

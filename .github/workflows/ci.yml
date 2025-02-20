@@ -31,4 +31,8 @@ jobs:
       - run: playwright install
         if: ${{ env.PDF != 'false' }}
 
-      - run: ZIP=${{ env.ZIP }} GITHUB=${{ env.GITHUB }} PDF=${{ env.PDF }} mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy --force
+        env:
+          ZIP: ${{ env.ZIP }}
+          GITHUB: ${{ env.GITHUB }}
+          PDF: ${{ env.PDF }}

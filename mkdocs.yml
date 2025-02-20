@@ -44,16 +44,16 @@ theme:
 plugins:
   - search
   - offline:
-      enabled: !ENV [ "ZIP", "false" ]
+      enabled: !ENV [ZIP, false]
   - group:
-#      enabled: !ENV [GITHUB, false]
-      enabled: true
+      enabled: !ENV [GITHUB, false]
+#      enabled: true
       plugins:
         - social
         - macros
         - exporter:
-#            enabled: !ENV [PD", false]
-            enabled: true
+            enabled: !ENV [PD", false]
+#            enabled: true
             logging:
               level: debug
             formats:
