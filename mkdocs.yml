@@ -1,5 +1,6 @@
 site_name: Zauberwürfellöseroboter
 site_url: https://scaui0.github.io
+site_description: Erstellung eines Zauberwürfel-lösenden Roboters.
 copyright: Copyright &copy; 2024-2025 Franz Weingartz
 theme:
   language: de
@@ -9,7 +10,7 @@ theme:
     logo: material/cube
 #  favicon: assets/images/icon.svg
 #  favicon: material/cube
-  custom_dir: docs/assets/custom
+  custom_dir: docs/overrides
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -42,26 +43,31 @@ theme:
 
 plugins:
   - search
-#  - offline
-  - macros
-  - exporter:
-      enabled: false
-      logging:
-        level: debug
-      formats:
-        pdf:
-          concurrency: 32
-          stylesheets:
-            - docs/assets/stylesheets/pdf.scss
-          covers:
-            front: docs/assets/covers/front.html.j2
-            back: docs/assets/covers/back.html.j2
-          browser:
-            debug: false
-          aggregator:
-            enabled: true
-            output: documentation.pdf
-            covers: book
+  - offline:
+      enabled: !ENV [ZIP, false]
+  - group:
+      enabled: !ENV [GITHUB, false]
+      plugins:
+        - social
+        - macros
+        - exporter:
+            enabled: !ENV [PDF, false]
+            logging:
+              level: debug
+            formats:
+              pdf:
+                concurrency: 32
+                stylesheets:
+                  - docs/assets/stylesheets/pdf.scss
+                covers:
+                  front: docs/assets/covers/front.html.j2
+                  back: docs/assets/covers/back.html.j2
+                browser:
+                  debug: false
+                aggregator:
+                  enabled: true
+                  output: documentation.pdf
+                  covers: book
 
 markdown_extensions:
   - toc:

@@ -53,7 +53,7 @@ Heute war der erste Schultag im neuen Schuljahr, an dem unser Lehrer uns gesagt 
 Tagebuch schreiben sollen, und nicht nur an den Tagen, an denen wir an dem Projekt arbeiten. Ich werde versuchen, das
 umzusetzen, auch wenn ich nicht weiß, ob es zu 100 % geht.
 
-Nachdem ich den kurzen Text oben geschrieben habe und mich mit Problemen der Darstellung von geschützten Leerzeichen(
+Nachdem ich den kurzen Text oben geschrieben habe und mich mit Problemen der Darstellung von geschützten Leerzeichen (
 ` `) beschäftigt habe, habe ich keine Lust, auch noch zu programmieren. Habe aber grade doch noch
 das Fremdwortregister hinzugefügt.
 !!! note "Notiz"
@@ -61,13 +61,13 @@ das Fremdwortregister hinzugefügt.
     Das Fremdwortregister wurde am 22.9.2024 in Fußnoten geändert. Die Fremdwörter können dort (am Ende des Dokuments)
     eingesehen werden.
 
-Später (15:33) doch noch die nächsten zwei Drehungen hinzugefügt. Diese sind `r`(rechte Seite im Uhrzeigersinn) und
-`r'`(rechte Seite gegen den Uhrzeigersinn).
+Später (15:33) doch noch die nächsten zwei Drehungen hinzugefügt. Diese sind `r` (rechte Seite im Uhrzeigersinn) und
+`r'` (rechte Seite gegen den Uhrzeigersinn).
 
 ## Tag 7 - 27.8.2024
 
-Ich habe heute keine Lust zum Schreiben. Habe gerade die Drehbewegungen in eine JSON-Datei verfrachtet.
-Ein Beispiel aus dieser JSON-Datei (gekürzt, weil es statt 2 Bewegungen der Plättchenfarben (der Cubies, kleinerer 
+Ich habe heute keine Lust zum Schreiben. Habe gerade die Drehbewegungen in eine JSON[^2]-Datei verfrachtet.
+Ein Beispiel aus dieser JSON-Datei (gekürzt, weil es statt 2 Bewegungen der Plättchenfarben (der Cubies, kleinerer 
 Unterwürfel) immer exakt 5 gibt, eine zum Drehen der Hauptseite und 4 zum Drehen der Ränder):
 
 ```json
@@ -91,19 +91,19 @@ Unterwürfel) immer exakt 5 gibt, eine zum Drehen der Hauptseite und 4 zum Drehe
 }
 ```
 
-Jedes der Elemente in dem `f`(front; Vorderseite in Uhrzeigersinn)-Array ist entweder:
+Jedes der Elemente in dem `f` (front; Vorderseite in Uhrzeigersinn)-Array ist entweder:
 
-* eine Referenz auf einem anderen Zug(, der aus mehreren Bewegungen, oder auch Referenzen, bestehen kann),
+* eine Referenz auf einem anderen Zug (, der aus mehreren Bewegungen, oder auch Referenzen, bestehen kann),
 * die Drehung einer Seite (nicht deren Kanten) oder
 * die Bewegung von einer Reihe/Spalte (Orientierung ist das Feld `from_type`) an Index `from_index` von Seite
   `from_face` zu den Stellen an Seite `to_face`. Ein optionaler Parameter `reverse` bestimmt dabei, ob die ausgewählten
   Farben vor dem Einfügen umgedreht werden sollen.
 
-Die gesamten bis jetzt verfügbaren Drehungen(`f`, `f'`, `r`, `r'`) sind jetzt auf das neue Format umgestellt.
+Die gesamten bis jetzt verfügbaren Drehungen (`f`, `f'`, `r`, `r'`) sind jetzt auf das neue Format umgestellt.
 
 ## Tag 8 - 28.8.2024
 
-Wollte heute nichts machen, habe dann aber doch die Drehungen der Oberseite(`t` und `t'`) hinzugefügt.
+Wollte heute nichts machen, habe dann aber doch die Drehungen der Oberseite (`t` und `t'`) hinzugefügt.
 Die Drehungsdatei hat schon 242 Zeilen!
 
 ## Tag 9 - 29.8.2024
@@ -213,7 +213,7 @@ gefunden. Das heißt, ich muss sie selbst erstellen. Vielleicht von Hand, aber e
 Ich hätte heute auch programmiert, hatte allerdings zu viel damit zu tun, die mathematischen Formeln oben zu
 korrigieren. Als das dann ging, musste ich die Dokumentation noch in HTML umwandeln, um zu sehen, ob Firefox 
 [LaTeX](explanations.md#latex), das Format für die mathematischen Rechnungen, das ich nutze, anzeigen kann. Das hat 
-erstmal nicht geklappt, weil das Encoding nicht `UTF-8`war. Dann gab es Probleme, dass `pandoc`, das Programm, das ich 
+erstmal nicht geklappt, weil das Encoding nicht `UTF-8`war. Dann gab es Probleme, dass *pandoc*, das Programm, das ich 
 zum Konvertieren der Markdown-Datei zu HTML nutze, keine vollständige HTML-Datei produziert hat, sondern nur den Text in
 HTML, es fehlten also Meta-Informationen, wie Kodierung, Autor, Skripte, die zur Ausführung benötigt wurden, Style (in 
 CSS) etc. Das ging eigentlich ganz einfach zu lösen, ich musste nur ein `-s` (oder `--standalone`) an den Befehl in der
@@ -226,7 +226,7 @@ wahrscheinlich schon fertig. :joy:
 
     Hier stand lange Zeit `FIXME: Why does this symbol not work?`.
     
-    Das lag daran, dass `pandoc` keine Emojis supportet hat. Nach der Umstellung auf *Material for MkDocs* geht es 
+    Das lag daran, dass pandoc keine Emojis supportet hat. Nach der Umstellung auf *Material for MkDocs* geht es 
     jetzt. Da ich den Kommentar nicht für immer löschen wollte, habe ich diese Infobox hinzugefügt.
 
 ## Tag 20 - 9.9.2024
@@ -235,7 +235,7 @@ Heute hatte ich wegen Orchester keine Zeit, um zu programmieren und an diesem Ta
 
 ## Tag 21 - 10.9.2024
 
-Heute habe ich nicht programmiert, mich aber etwas mit `pandoc` auseinandergesetzt. Ich wollte, dass es einen Darkmode
+Heute habe ich nicht programmiert, mich aber etwas mit pandoc auseinandergesetzt. Ich wollte, dass es einen Darkmode
 gibt, wenn man ihn im Browser oder in den Betriebssystemeinstellungen aktiviert hat. Das ist extrem schiefgegangen, und
 der Text war extrem angezogen / extrem lange Zeilen. Das habe ich nicht hingekriegt zu fixen, und deshalb gibt es jetzt
 keinen Darkmode.
@@ -288,8 +288,8 @@ Hier ein Pseudocode (als UML-Ablaufdiagramm, erstellt mit Mermaid):
 
 !!! note
 
-    Ursprünglich war der Code in PlantUML geschrieben, wegen späteren Änderungen des Markdown zu HTML Konvertierers
-    jetzt aber in Mermaid.
+    Ursprünglich war der Code in *PlantUML* geschrieben, wegen späteren Änderungen des Markdown zu HTML Konvertierers
+    jetzt aber in *Mermaid*.
 
 ```mermaid
 graph TD
@@ -326,7 +326,7 @@ Nachtrag:
 Oder auch heute noch. Heute bin ich von *pandoc* (Programm zum Konvertieren von Markdown zu HTML) auf
 *Material for MkDocs* umgestiegen. Letzteres erstellt vollständige HTML-Seiten, mit Inhaltsverzeichnis, anderen
 Themen/Artikeln, stellt eine Suche bereit und unterstützt auch mobile Endgeräte. Allerdings supportet
-*Material for MkDocs* kein `PlantUML` (mit dem das Ablaufdiagramm oben ursprünglich erstellt wurde), sondern nur
+*Material for MkDocs* kein *PlantUML* (mit dem das Ablaufdiagramm oben ursprünglich erstellt wurde), sondern nur
 *Mermaid* (etwas Ähnliches). Habe jetzt das obige Ablaufdiagramm zu Mermaid geändert. Hat ewig gebraucht, und das, 
 obwohl das Skript gar nicht mehr genutzt wird.
 
@@ -406,10 +406,10 @@ schon. Nach einem Neustart ging aber alles wieder.
 Heute habe ich mir ein eigenes Logo in InkScape erstellt: ![Mein Icon](assets/images/icon.svg)
 
 Das Design habe ich mit ChatGPT ausdiskutiert. Eigentlich sollte es türkis sein, aber das sähe im Header der 
-Dokumentation seltsam aus, weil die Farben(Lila und Türkis) nicht gut zusammen aussahen.
+Dokumentation seltsam aus, weil die Farben (Lila und Türkis) nicht gut zusammen aussahen.
 
-Dann habe ich noch die Farben der Dokumentation geändert. Der Header ist jetzt grün (vorher indigo) und die 
-Zweitfarbe ist jetzt türkis (welche Farbe es vorher war, weiß ich nicht, Nachtrag: war auch indigo). Ich habe 
+Dann habe ich noch die Farben der Dokumentation geändert. Der Header ist jetzt grün (vorher indigo) und die 
+Zweitfarbe ist jetzt türkis (welche Farbe es vorher war, weiß ich nicht, Nachtrag: war auch indigo). Ich habe 
 mittlerweile mehr Zeit in die Dokumentation gesteckt, als in das Programm. Das muss ich unbedingt ändern.
 
 Habe grade noch sehr viele Rechtschreibe– und Grammatikfehler behoben.
@@ -486,7 +486,7 @@ Projekt nicht).
 
 Heute habe ich versucht, meine Dokumentation in ein PDF zu verwandeln/zu konvertieren. Dies ist gescheitert, weil ich
 nicht, weiß, welches von den zwei *Material for Mkdocs*-Plugins, die ich ausprobiert habe, jetzt welche Funktionalität 
-bereitstellt. Es gab zwei verschiedene Arten: eins, das bei ++ctrl+p++(Drucken) im Browser ein PDF erstellt, und eins,
+bereitstellt. Es gab zwei verschiedene Arten: eins, das bei ++ctrl+p++ (Drucken) im Browser ein PDF erstellt, und eins,
 das eine Unterwebsite (`/pdf` oder ähnlich) bereitstellt. Nachdem alle möglichen Versuche fehlgeschlagen sind, habe ich
 aufgehört und angefangen, den heutigen Tag zu dokumentieren.
 
@@ -801,7 +801,7 @@ Bugs in meinen anderen Programmen fixen. :bug:
 
 ## Tag 118 - 16.12.2024
 
-Ich habe mich gerade dazu entschlossen, die PDB(Pattern Database) nicht selbst zu erstellen, weil ich nicht 1000 Jahre 
+Ich habe mich gerade dazu entschlossen, die PDB (Pattern Database) nicht selbst zu erstellen, weil ich nicht 1000 Jahre 
 warten kann. Dann habe ich im Internet nach einer existierenden gesucht und eine gefunden, die allerdings keine Lizenz
 hat. Also darf ich sie strenggenommen nicht nutzen, deshalb habe ich eine Anfrage geschickt, ob eine Lizenz hinzugefügt
 werden kann. Ich gehe aber nicht davon aus, dass ich eine Antwort erhalten werde, da der/die Ersteller*in schon lange
@@ -1097,16 +1097,32 @@ Fußnoten existieren jetzt wieder, allerdings nur 4 von über 10. Allerdings wä
 Tooltips gehen würden, allerdings habe ich kein Geld, um mir die Insiders-Version von Material for MkDocs zu kaufen, 
 also vielleicht selbst machen? :eyes:
 
-## Tag 180 - 16.2.2024
+## Tag 180 - 16.2.2025
 
-heute habe ich, wie gestern angefangen, den *Verteiler* auf die verschiedenen Skripte zu programmieren. Es geht mir 
+Heute habe ich, wie gestern angefangen, den *Verteiler* auf die verschiedenen Skripte zu programmieren. Es geht mir 
 darum, dass ich schnell Zugriff auf jeden Programmteil habe, damit ich die einzelnen Teile testen kann. Aktuell 
 unterstützt werden die verschiedenen Löse-Algorithmen (Korf, Thistlethwaite und ein TestThistlethwaite, der einen 
 Schritt in anderen Prozessen ausführt), der Move-Pruner und ein kleines Programm (drei Zeilen!), das eine Python-Liste 
 in Züge umwandelt (zum Entwickeln nützlich).
 
 Ich habe gerade mal testweise einmal Korfs und Thistlethwaites Algorithmen mit den gleichen Zügen gestartet, beide 
-Laufen jetzt schon seit mehr als 10 Minuten, ich habe für den Würfel (mit Ausführen) nur 2 1/2 Minuten gebraucht.
+laufen jetzt schon seit mehr als 10 Minuten, ich habe für den Würfel (mit Ausführen) nur 2 1/2 Minuten gebraucht.
+
+## Tag 181 - 17.2.2025
+
+Tatsächlich wurde der Würfel auch nach mehr als 30 Minuten nicht gelöst. Dann habe ich gestern abgebrochen.
+
+Hatte eben noch sehr viele Probleme mit GitHub Actions (seit gestern ist die Dokumentation auf 
+[scaui0.github.io](https://scaui0.github.io) verfügbar) und konnte nicht weiterprogrammieren.
+
+## Tag 182 - 18.2.2025
+
+Heute habe ich die zwei Versionen des Programms (ich habe meinen USB-Stick vor 2 Wochen vergessen) zu einer gemacht.
+Nach einigen Problemen mit Git hat es dann auch geklappt.
+
+## Tag 183 - 19.2.2025
+
+Heute habe ich den gemeinsamen Entry-Point meines Programms um die KI-Funktionen erweitert.
 
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann.
