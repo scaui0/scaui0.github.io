@@ -44,7 +44,7 @@ theme:
 plugins:
   - search
   - offline:
-      enabled: !ENV [ZIP, false]
+      enabled: !ENV [ "ZIP", "false" ]
   - group:
 #      enabled: !ENV [GITHUB, false]
       enabled: true
@@ -52,7 +52,7 @@ plugins:
         - social
         - macros
         - exporter:
-            enabled: !ENV [PDF, false]
+            enabled: !ENV [ "PDF", "false" ]
             logging:
               level: debug
             formats:
