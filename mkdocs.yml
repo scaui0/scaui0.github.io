@@ -46,7 +46,8 @@ plugins:
   - offline:
       enabled: !ENV [ZIP, false]
   - group:
-      enabled: !ENV [GITHUB, false]
+#      enabled: !ENV [GITHUB, false]
+      enabled: true
       plugins:
         - social
         - macros
