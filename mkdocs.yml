@@ -52,7 +52,7 @@ plugins:
         - social
         - macros
         - exporter:
-            enabled: !ENV [PD", false]
+            enabled: !ENV [PDF, false]
 #            enabled: true
             logging:
               level: debug
