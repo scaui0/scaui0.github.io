@@ -1,3 +1,7 @@
+---
+title: Der Roboter
+---
+
 # Der Roboter
 
 ![Der Roboter](../images/robot_1.jpg)

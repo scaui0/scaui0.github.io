@@ -1,3 +1,7 @@
+---
+title: Server
+---
+
 # Der Server
 
 Der Server ist der Teil des Projekts, der den Würfel löst.

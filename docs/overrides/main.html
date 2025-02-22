@@ -2,6 +2,27 @@
 
 {% block extrahead %}
   <meta name="robots" content="noindex, nofollow">
-<!--  <script data-goatcounter="https://scaui0-rcs.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>-->
   <script data-goatcounter="https://scaui0-rcs.goatcounter.com/count" async src="/assets/javascripts/goatcounter.js"></script>
+  <script lang="javascripts">
+    let firstLoad = true;
+
+    setTimeout(() => {
+        if (window.document$) {
+            window.document$.subscribe(() => {
+                if (firstLoad) {
+                    firstLoad = false;
+                    return;
+                }
+                goatCounterCount();
+            });
+        } else {
+            console.log("window.document$ wurde auch später nicht gefunden");
+        }
+    }, 1000);
+
+    function goatCounterCount() {
+        console.log("Site reload: sending information to GoatCounter");
+        window.goatcounter.count();
+    }
+  </script>
 {% endblock %}

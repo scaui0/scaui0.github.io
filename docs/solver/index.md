@@ -1,3 +1,7 @@
+---
+title: Löser
+---
+
 # Löse-Methoden
 
 Um einen Zauberwürfel zu lösen, gibt es verschiedene Methoden, die alle ihre Vor- und Nachteile haben.

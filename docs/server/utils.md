@@ -12,7 +12,7 @@ Der Move-Pruner vereinfacht Züge. Er basiert darauf, dass Züge in sogenannte *
 zu Zügen zusammengesetzt werden.
 
 Eine Gruppe besteht dabei aus den Bewegungen zweier gegenüberliegenden Seiten. Nach einer Gruppe muss immer eine Gruppe
-anderen Typs kommen, also nach einer Gruppe `{R: 1, L:2}` muss eine Gruppe kommen, die keine `L` und `R` Züge mehr hat.
+anderen Typs kommen, also nach einer Gruppe `{R: 1, L: 2}` muss eine Gruppe kommen, die keine `L` und `R` Züge mehr hat.
 
 Dann werden die Gruppen wieder in Züge umgewandelt, indem für jede Gruppe nacheinander die Anzahl der Rotationen Modulo
 4 gerechnet wird. Dann wird die Seite plus ein Modifikator (`2` und `'`) für die Rotationen 2 und 3 hinzugefügt.

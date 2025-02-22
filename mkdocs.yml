@@ -125,7 +125,7 @@ extra:
   project_name: Zauberwürfellöseroboter
 
 nav:
-  - Startseite: index.md
+#  - Startseite: index.md
   - Tagebuch: diary.md
   - Farberkennung: color_detection.md
   - Server:
