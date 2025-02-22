@@ -121,7 +121,7 @@ extra_javascript:
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
 
-extra: # used by macros plugin
+extra:
   project_name: Zauberwürfellöseroboter
 
 nav:

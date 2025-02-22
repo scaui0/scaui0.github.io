@@ -1132,6 +1132,18 @@ Habe wieder mal Fehler in GitHub Actions gehoben.
 
 Heute habe ich
 
+!!! info "Fehlender Eintrag"
+
+    Ich habe keine Ahnung, warum hier abgebrochen wurde oder was ich genau gemacht habe, es war aber nichts Wichtiges.
+
+## Tag 186 - 22.2.2025
+
+Ich habe eben ein Analytics-Tool hinzugefügt, mit dem ich jetzt sehen kann, wie viele Leute mein Projekt gelesen haben,
+von wo sie kamen, welche Browser genutzt wurden, welches Betriebssystem, welche Bildschirmgröße und von wo sie mein 
+Projekt angeschaut haben (welches Land).
+
+Weil ich keine personalisierten Daten wie IPs sammle, habe ich auch keine Cookie-Information hinzugefügt.
+
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann.
 
