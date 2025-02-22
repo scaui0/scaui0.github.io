@@ -1124,6 +1124,14 @@ Nach einigen Problemen mit Git hat es dann auch geklappt.
 
 Heute habe ich den gemeinsamen Entry-Point meines Programms um die KI-Funktionen erweitert.
 
+## Tag 184 - 20.2.2025
+
+Habe wieder mal Fehler in GitHub Actions gehoben.
+
+## Tag 185 - 21.2.2025
+
+Heute habe ich
+
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann.
 
