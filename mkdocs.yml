@@ -44,10 +44,11 @@ theme:
 plugins:
   - search
   - offline:
-      enabled: !ENV [ZIP, false]
+#      enabled: !ENV [ZIP, false]
+    enabled: true
   - group:
-      enabled: !ENV [GITHUB, false]
-#      enabled: true
+#      enabled: !ENV [GITHUB, false]
+      enabled: true
       plugins:
         - social
         - macros
