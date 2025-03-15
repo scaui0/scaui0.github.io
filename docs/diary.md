@@ -515,8 +515,7 @@ wird der mit den wenigsten Zügen gewählt und das Prinzip für diesen Zug, bess
 ausgeführt. Die KI (ein künstliches neuronales Netz = KNN) würde ausrechnen, welcher Zug der beste ist, und dann zum
 Lernen mit Backpropaganda herausfinden, welches der beste Zug gewesen wäre. Dann würde das Model (die KI) die Gewichtung
 der Neuronen mit Backpropaganda ändern, und so dazulernen. Im nächsten Versuch wäre es dann vielleicht besser und würde
-etwas richtig raten (eigentlich ist es kein Raten, sondern komplexes ausrechnen. Siehe 
-[Wie neuronale Netzwerke funktionieren](explanations.md#wie-neuronale-netze-funktionieren)).
+etwas richtig raten (eigentlich ist es kein Raten, sondern komplexes ausrechnen).
 
 ## Tag 73 - 1.11.2024
 
@@ -1143,6 +1142,61 @@ von wo sie kamen, welche Browser genutzt wurden, welches Betriebssystem, welche 
 Projekt angeschaut haben (welches Land).
 
 Weil ich keine personalisierten Daten wie IPs sammle, habe ich auch keine Cookie-Information hinzugefügt.
+
+## Tag 187 - 23.2.2025
+
+Ich habe mich jetzt entschlossen, den Algorithmus von Kociemba zu implementieren. 
+
+## Tag 188 - 24.2.2025
+
+Heute habe ich weiter an dem Datapack-Updater programmiert.
+
+## Tag 189 - 25.2.2025
+
+Heute auch.
+
+## Tag 190 (26.2.2025) - Tag 200 (8.3.2025)
+
+In dieser Zeit hatte ich keine Lust zu programmieren (muss auch mal sein).
+
+## Tag 201 - 9.3.2025
+
+Ich habe jetzt ein alternatives Würfelspeichersystem programmiert. Dieses System basiert nicht auf den einzelnen Farben 
+(Facelets), sondern auf den Teilstrukturen (Cubies). Es wird also gespeichert, wo die Ecken und Kanten sind und wie sie 
+gedreht sind.
+
+Ein paar Tests haben ergeben, dass das Drehen des Würfels zwar etwas länger braucht, dafür aber die Positionsberechnung
+der Ecken und Kanten in den PDBs extrem verschnellert wurden (beim Neuen besteht der Würfel schon aus diesen 
+Informationen, sodass sie nicht extrahiert werden müssen). Dadurch könnte der Lösealgorithmus eine 10-fache
+Beschleunigung erhalten.
+
+## Tag 202 (10.3.2025) - Tag 203 (11.3.2025)
+
+Ich habe ein Problem. Die neue Speicherart verändert sich nicht richtig, wenn eine Seite des Würfels gedreht wird: wenn 
+ich ein Gegenteil ausführe, sind die Ecken genauso verdreht, wie, wenn ich nicht das Gegenteil genommen hätte (`R'` und 
+`R`). Die Daten kommen aber aus einer Berechnung, auf der alles andere (auch die bisherigen PDBs) basiert. Das könnte
+heißen, dass, wenn diese Berechnung richtig funktioniert, der Algorithmus schneller werden könnte (weil die richtigen 
+Daten vorhanden sind), oder, dass er gar nicht mehr funktioniert, weil die Berechnung doch irgendwie funktioniert hat
+(warum auch immer sie dann falsche Ergebnisse liefert).
+
+## Tag 204 (12.3.2025) - Tag 205 (13.3.2025)
+
+Keine Zeit zum Programmieren.
+
+## Tag 206 - 14.3.2025
+
+Der Fehler hat sich behoben. Nachdem ich mit sehr komplizierten und langen RegExen vom Original die ganzen Ecken, Kanten
+und Orientierungen extrahiert, ein Programm geschrieben, dass die Werte in mein Format umwandelt, und alles zum Laufen
+gebracht habe, habe ich gemerkt, dass doch alles in Ordnung war. Der Fehler kam daher, dass der Löse-Algorithmus den
+Würfel mit der roten Seite vorne, braucht und normalerweise die grüne Seite vorne ist. Ich kann mir vorstellen, dass
+ich irgendwann weitere Probleme damit kriege, aber dann kann ich einfach einen Konverter programmieren, der die zwei 
+Formate umkonvertiert. 
+
+## Tag 207 - 15.3.2025
+
+Heute habe ich nur dokumentiert. Als ich dabei mathematische Formeln schreiben wollte, habe ich gemerkt, dass sie nicht 
+angezeigt werden konnten. Jetzt (mehrere Stunden später) weiß ich, dass https://unpkg.com down ist. Die Startseite geht 
+noch, alle Unterseiten aber nicht. Ich steige jetzt ersteinmal auf einen anderen CDN umzusteigen.
 
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann.

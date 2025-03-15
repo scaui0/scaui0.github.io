@@ -2,11 +2,11 @@
 
 !!! info "Leichte Abweichungen zum Original"
 
-    Der Algoritmus den ich verwende unterscheidet sich vom Original insofern, dass er in Schritt 3 eine andere Strategie
-    nutzt. Mehr dazu unten.
+    Der Algoritmus, den ich verwende unterscheidet sich vom Original insofern, dass er in Schritt 3 eine andere 
+    Strategie nutzt. Mehr dazu unten.
 
 Der Thistlethwaite Algorithmus teilt den Löseprozess in vier Schritte, in denen der Würfel nur begrenzte Variationen
-haben kann, und damit im nächsten Teil schneller geöst werden kann.
+haben kann, und damit im nächsten Teil schneller gelöst werden kann.
 
 Die schlechteste Lösung sind 46 Züge, im Original aber 52.
 
@@ -21,7 +21,7 @@ der Verdrehung hat.
 
 Die verschiedenen Gruppen von Würfelzuständen werden als *group* bezeichnet. Daher kommen auch die Namen `G0` bis `G4`.
 Die Programmschritte, um zu diesen Zuständen zu kommen, werden benannt nach ihren Zielgruppen. Jede Gruppe nutzt ihre
-eigene Pattern-Database
+eigene Pattern-Database.
 
 Die erste Gruppe `G0` ist ein beliebig verdrehter Würfel. Da jede Kante eine von zwei Orientierungen haben muss und
 diese ohne die Viertelzüge der Vorder- und Rückseite nicht verändert werden können, kann man, wenn man die Kanten im

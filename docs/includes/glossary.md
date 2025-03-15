@@ -27,6 +27,8 @@
 *[JSON]: JavaScript Object Notation: Strukturiertes, verschachteltes Datenformat.
 *[CLI]: command-line Interface, Kommandozeilen-Schnittstelle. Befehl z. B. im Terminal (Eingabeaufforderung).
 *[Regex]: Ein RegEx (regular expression) ist eine Syntax zum Beschreiben von Zeichenketten.
+*[RegEx]: Ein RegEx (regular expression) ist eine Syntax zum Beschreiben von Zeichenketten.
+*[RegExen]: Ein RegEx (regular expression) ist eine Syntax zum Beschreiben von Zeichenketten.
 *[SFN]: Schülerforschungszentrum Nordhessen.
 *[Modulo]: Der Rest beim Teilen.
 *[API]: Application Programming Interface – Programm-Schrittstelle

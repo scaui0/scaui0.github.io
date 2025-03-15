@@ -53,8 +53,8 @@ graph TD
 
 Als Zug bezeichnet man die Verbindung von einem Knoten zum Anderen, durch die sich die Knoten unterscheiden.
 
-EIne Tiefe ist in dem Diagramm eine Ebene (z.B. A, B, C und D). Eine Tiefe von 2 meint aber alle Tiefen, bis die Tiefe
-2 erreicht wurde.
+EIne Tiefe ist in dem Diagramm eine Ebene (z. B. A, B, C und D). Eine Tiefe von 2 meint aber alle Tiefen, bis die 
+Tiefe 2 erreicht wurde.
 
 In den mathematischen Formeln rund um IDA\* ist $n$ der aktuelle Knoten. Die vorherigen Knoten werden mit $n-1 $, $n-2 $
 ... dargestellt. Der Startknoten ist $s$.

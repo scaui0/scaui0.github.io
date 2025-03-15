@@ -1,6 +1,16 @@
-# Erklärungen
+# Über diese Dokumentation
 
-Sie verstehen etwas nicht, das in dieser Dokumentation genutzt wird? Dann schauen sie, ob Sie den Begriff hier finden!
+Diese Dokumentation basiert auf Markdown, einer Auszeichnungssprache, die in Plain-Text geschrieben wird. Sie beinhaltet
+Strukturen wie Überschriften oder Tabellen.
+
+## Material for Mkdocs
+
+Diese Dokumentation wurde mit *Material for Mkdocs* erstellt. Material for Mkdocs ist ein Theme for Mkdocs, dass dieses
+schöne Design und die Suche bereitstellt. Mkdocs ist ein Programm, dass aus verschieden Markdown-Dateien die 
+Dokumentation zusammenstellt, so dass sie im Browser angezeigt werden kann.
+
+[Mkdocs](https://mkdocs.org){ .md-button }
+[Material for Mkdocs](https://squidfunk.github.io/mkdocs-material){ .md-button }
 
 ## Markdown
 

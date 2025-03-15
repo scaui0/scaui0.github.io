@@ -20,9 +20,9 @@ Schreibt man die Buchstaben der Seiten klein, so meint das die Seite und die par
 
 Die mittleren Ebenen sind `S`, `E` und `M`.
 
-`S` ist die mittlere Seite, die an `F` angrenzt. Sie wird in die gleiche Richtung wie `F` gedreht.
-`E` ist die horizontale Ebene. Sie wird wie `D` gedreht.
-`M` ist die letzte Ebene, sie wird in die gleiche Richtung wie `L` gedreht.
+* `S` ist die mittlere Seite, die an `F` angrenzt. Sie wird in die gleiche Richtung wie `F` gedreht.
+* `E` ist die horizontale Ebene. Sie wird wie `D` gedreht.
+* `M` ist die letzte Ebene, sie wird in die gleiche Richtung wie `L` gedreht.
 
 Merken kann man sich die Drehrichtungen, weil eine Seite immer nach der nächsten Seite im Alphabet gedreht wird.
 So ist `S` im Alphabet näher an `F` als an `B` und `E` näher an `D` als an `L`.

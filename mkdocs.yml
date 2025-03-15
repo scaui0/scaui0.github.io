@@ -43,34 +43,32 @@ theme:
 
 plugins:
   - search
-  - offline:
-#      enabled: !ENV [ZIP, false]
-    enabled: true
-  - group:
-#      enabled: !ENV [GITHUB, false]
-      enabled: true
-      plugins:
-        - social
-        - macros
-        - exporter:
-            enabled: !ENV [PDF, false]
-#            enabled: true
-            logging:
-              level: debug
-            formats:
-              pdf:
-                concurrency: 32
-                stylesheets:
-                  - docs/assets/stylesheets/pdf.scss
-                covers:
-                  front: docs/assets/covers/front.html.j2
-                  back: docs/assets/covers/back.html.j2
-                browser:
-                  debug: false
-                aggregator:
-                  enabled: true
-                  output: documentation.pdf
-                  covers: book
+#  - awesome-nav
+#  - group:
+##      enabled: !ENV [GITHUB, false]
+#      enabled: true
+#      plugins:
+#        - social
+#        - macros
+#        - exporter:
+#            enabled: !ENV [PDF, false]
+##            enabled: true
+#            logging:
+#              level: debug
+#            formats:
+#              pdf:
+#                concurrency: 32
+#                stylesheets:
+#                  - docs/assets/stylesheets/pdf.scss
+#                covers:
+#                  front: docs/assets/covers/front.html.j2
+#                  back: docs/assets/covers/back.html.j2
+#                browser:
+#                  debug: false
+#                aggregator:
+#                  enabled: true
+#                  output: documentation.pdf
+#                  covers: book
 
 markdown_extensions:
   - toc:
@@ -80,6 +78,7 @@ markdown_extensions:
   - def_list
   - attr_list
   - abbr
+  - md_in_html
 
   - pymdownx.highlight
   - pymdownx.details
@@ -109,18 +108,23 @@ markdown_extensions:
   - pymdownx.snippets:
       auto_append:
         - docs/includes/glossary.md
+  - pymdownx.blocks.tab:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
 
 extra_javascript:
-  - assets/javascripts/katex.js
+#  - assets/javascripts/mkdocs-exporter.js
+#  - https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js
   - assets/javascripts/mathjax.js
-  - assets/javascripts/mkdocs-exporter.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+#  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+#  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 extra_css:
-  - https://unpkg.com/katex@0/dist/katex.min.css
+  - assets/stylesheets/extra.css
+#  - https://unpkg.com/katex@0/dist/katex.min.css
 
 extra:
   project_name: Zauberwürfellöseroboter
@@ -128,6 +132,7 @@ extra:
 nav:
 #  - Startseite: index.md
   - Tagebuch: diary.md
+  - Fachbegriffe: technical_terms.md
   - Farberkennung: color_detection.md
   - Server:
       - server/index.md
@@ -135,12 +140,15 @@ nav:
       - Kommunikation: server/communication.md
   - Löser:
       - solver/index.md
+      - Basis: solver/base.md
       - IDA*: solver/ida_star.md
       - Korf: solver/korf.md
       - Thistlethwaite: solver/thistlethwaite.md
   - Der Roboter:
       robot/index.md
-  - Zauberwürfelzugnotation: rubiks_cube_move_notation.md
-  - Erklärungen: explanations.md
-  - Informationen: about.md
+#  - Erklärungen: explanations.md
+#  - Informationen: about.md
+  - About:
+      - about/index.md
+      - about/about_documentation.md
   - Galerie: gallery.md
