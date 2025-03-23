@@ -1,5 +1,7 @@
 # Korfs Algorithmus
 
+--8<-- "docs/includes/algorithm_from_benotto.md"
+
 Korfs Algorithmus ist ein Algorithmus, der die optimale Lösung (maximal 20 Züge) für einen Zauberwürfel findet, aber
 dafür relativ lange braucht, da sehr viele Züge durchsucht werden müssen.
 

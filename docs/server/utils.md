@@ -1,10 +1,6 @@
 # Hilfsmittel
 
-!!! todo "Besserer Name"
-
-    Diese Seite braucht einen besseren Namen, der beschreibt, was in ihr steht.
-
-Der Server würde ohne einige Hilfsmittel nicht so gut laufen, wie er es tut.
+Der Server nutzt verschiedene Werkzeuge, wie den Move-Pruner oder den Farbkorrigierer.
 
 ## Der Move-Pruner
 
@@ -19,6 +15,23 @@ Dann werden die Gruppen wieder in Züge umgewandelt, indem für jede Gruppe nach
 
 Dadurch verringert sich die Länge der Zugfolgen durchschnittlich um ein Viertel ($\frac{76}{100}$). Dieser Wert stammt
 aus einem Test mit 1 000 verschiedenen zufälligen Zugfolgen der Länge 100.
+
+??? example "Beispiel"
+
+    Am Angang haben wir die Züge `R L' F U D2 U`. Dann werden die Züge nacheinander in Gruppen eingeteilt:
+
+    1. `{R: 1, L: -1}`
+    2. `{F: 1}`
+    3. `{U: 2, D: 2}`
+
+    Dann werden die Gruppen wieder zusammengefügt:
+
+    Die erste Gruppe hat ein R mit $\text{Anzahl Rotationen} \mod 4 = 0$, daher wird kein Modifikator angehangen. Beim
+    L ist der Modulo 4 aber 3, daher wird ein `'` angehangen. Für die anderen Gruppen wird genauso verfahren.
+    
+    Wenn man diese Züge aneinanderfügt, erhält man `R L' F U2 D2`, das ist einen Züg kürzer als am Anfang. Dieser ist 
+    aber nicht verschwunden, die zwei Us wurden zu einem `U2`, weil kein Zug dazwischen war, der dies verhindert 
+    hätte.    
 
 ## Farbkorrigierer
 

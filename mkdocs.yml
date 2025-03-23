@@ -140,7 +140,7 @@ nav:
       - Kommunikation: server/communication.md
   - Löser:
       - solver/index.md
-      - Basis: solver/base.md
+      - Koordinaten-Berechnung: solver/coordinates.md
       - IDA*: solver/ida_star.md
       - Korf: solver/korf.md
       - Thistlethwaite: solver/thistlethwaite.md

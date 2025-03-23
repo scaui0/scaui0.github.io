@@ -48,7 +48,7 @@ graph TD
     D --> DA(DA)
     D --> DB(DB)
     style CB stroke: red, fill: #760000
-    style Start stroke: blue, fill: #000076
+    style Start stroke: blue, fill: green, color: green
 ```
 
 Als Zug bezeichnet man die Verbindung von einem Knoten zum Anderen, durch die sich die Knoten unterscheiden.

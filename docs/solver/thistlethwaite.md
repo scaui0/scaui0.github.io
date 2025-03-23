@@ -2,8 +2,10 @@
 
 !!! info "Leichte Abweichungen zum Original"
 
-    Der Algoritmus, den ich verwende unterscheidet sich vom Original insofern, dass er in Schritt 3 eine andere 
-    Strategie nutzt. Mehr dazu unten.
+    Der Algoritmus, den ich verwende unterscheidet sich vom Original von Thistlethwaite
+    insofern, dass er in Schritt 3 eine andere Strategie nutzt. Mehr dazu unten.
+
+--8<-- "docs/includes/algorithm_from_benotto.md"
 
 Der Thistlethwaite Algorithmus teilt den Löseprozess in vier Schritte, in denen der Würfel nur begrenzte Variationen
 haben kann, und damit im nächsten Teil schneller gelöst werden kann.

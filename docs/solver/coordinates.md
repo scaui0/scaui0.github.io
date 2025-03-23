@@ -33,7 +33,7 @@ $$
 Oder einfacher:
 
 $$
-o = O_0 \cdot 3^6 + O_1 \cdot 3^5 + O_2 \cdot 3^4 + O_3 \cdot 3^3 + O_4 \cdot 3^3 + O_5 \cdot 3^1 + O_0 \cdot 3^0
+o = O_0 \cdot 3^6 + O_1 \cdot 3^5 + O_2 \cdot 3^4 + O_3 \cdot 3^3 + O_4 \cdot 3^3 + O_5 \cdot 3^1 + O_6 \cdot 3^0
 $$
 
 #### Die Permutationen

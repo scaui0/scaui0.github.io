@@ -6,15 +6,12 @@ title: Löser
 
 Um einen Zauberwürfel zu lösen, gibt es verschiedene Methoden, die alle ihre Vor- und Nachteile haben.
 
+## Koordinaten-Berechnung
 
-!!! danger "Umstrukturierung"
+[↳ Siehe Koordinaten-Berechnung](coordinates.md)
 
-    Diese Seite mitsamt ihren Unterseiten braucht eine umfassende Umstrukturierung. Dabei soll möglichst nach folgenden
-    Punkten gearbeitet werden:
-    
-    * Link zum Originalprojekt, zu dem auch die PDBs gehören. Die PDBs auch als extern markieren.
-    * Die genaue Funktionsweise grob erklären (Koordinatenberechnung).
-    * Kociembas Algorithmus hinzufügen.
+Die Algorithmen berechnen einen eindeutigen Index aus den relevanten Strukturen des Würfels. Diese Funktion ist hier
+näher beschrieben.
 
 ## IDA\*
 

@@ -1198,8 +1198,62 @@ Heute habe ich nur dokumentiert. Als ich dabei mathematische Formeln schreiben w
 angezeigt werden konnten. Jetzt (mehrere Stunden später) weiß ich, dass https://unpkg.com down ist. Die Startseite geht 
 noch, alle Unterseiten aber nicht. Ich steige jetzt ersteinmal auf einen anderen CDN umzusteigen.
 
+## Tag 208 - 16.3.2025
+
+Heute habe ich wieder mal weiter dokumentiert. Der CDN-Server geht wieder.
+
+Die Dokumentation hat alleine schon 849 Zeilen, das Tagebuch 1218. Also habe ich alleine an der Dokumentation 2.067 
+Zeilen geschrieben. Eine genauere Auswertung, etwa wie viele Buchstaben eine Zeile durchschnittlich hat, will ich auch 
+noch machen, aber wahrscheinlich wie die Auswertung der einzelnen Tage am Ende, damit sich das danach nicht noch 
+verändert.
+
+## Tag 209 - 17.3.2025
+
+Keine Zeit zum Programmieren.
+
+## Tag 210 - 18.3.2025
+
+Nachtrag: An diesem Tag habe ich recherchiert, wie ich den letzten Lösealgorithmus (den Two-Phase Algorithm von
+Kociemba) umsetzen kann. Dann bin ich auf die 
+[Python-Implementierung](https://github.com/hkociemba/RubiksCube-TwophaseSolver) gestoßen. Als ich dann den Programmcode
+angeschaut habe, habe ich gemerkt, dass ich den Algorithmus unterschätzt habe. Wenn schon die Datei zum Drehen der 
+Würfel über 500 Zeilen hat, will ich gar nicht wissen, wie viele Zeilen es insgesamt gibt. Dann habe ich aufgegeben und
+beschlossen, die API des [Cube Explorers](https://kociemba.org/download.htm) zu nutzen. Diese löst einen Würfel in 
+wenigen Sekunden (oft unter einer) und liefert dabei nur Ergebnisse unter 22 Zügen.
+
+## Tag 211 - 19.3.2025
+
+Ich versuche gerade, den Cube Explorer per API einzubinden. Er ist schoneinmal bei 10 verschiedenen Würfeln gleichzeitig
+optimal Lösen abgestürzt (hat Windows nicht ausgehalten).
+
+## Tag 212 - 20.3.2025
+
+Heute habe ich eine Klasse programmiert, die die einzelnen Teile des Programms vereint. Da es dann sehr lange gebraucht 
+hat, habe ich versucht, ein Tool zu finden, das die Importe analysiert und mir ein Diagramm erstellt, damit ich weiß, 
+warum es so lange braucht.
+
+## Tag 213 - 21.3.2025
+
+Nachdem es jetzt mit *pydeps* als Dependencies-Diagramm-Erstell-Programm geklappt hat, habe ich gemerkt, warum die 
+Importe so lange gebraucht haben. Es lag an der API und der GUI, die immer geladen wurden, auch wenn sie nicht genutzt
+wurden. Jetzt habe ich die Importe so verschoben, dass sie nur noch importiert werden, wenn ich sie brauche (also fast 
+nie).
+
+## Tag 214 - 22.3.2025
+
+Heute habe ich angefangen, eine GUI für den Server zu programmieren, damit man den Roboter auch virtuell beobachten 
+kann und immer schauen kann, wie der Würfel gerade gedreht ist. Dann habe ich bemerkt, dass ich dafür die Verbindung
+ändern muss, weil dann viel mehr Daten ausgetauscht werden müssen.
+
+## Tag 215 - 23.3.2025
+
+Die GUI ist auf einem guten Weg. Ich habe schon verschiedene Knöpfe und einen 2D-Würfel, allerdings ohne Funktionalität.
+Um die zu implementieren, brauche ich erst ein neues API-Design. Damit habe ich schon angefangen: Der Server sendet 
+immer verschiedene Befehle, wie `run_moves`, die der Roboter dann ausführt und gegebenenfalls den aktuellen Zug 
+zurücksendet.
+
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
-eine bestimmte Aufgabe ausführen kann.
+eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.
 
 [^2]: Heuristik: Methoden, die mit begrenztem Wissen und wenig Zeit zu wahrscheinlichen Aussagen oder praktikablen 
 Lösungen führen.
