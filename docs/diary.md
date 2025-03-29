@@ -1252,6 +1252,36 @@ Um die zu implementieren, brauche ich erst ein neues API-Design. Damit habe ich 
 immer verschiedene Befehle, wie `run_moves`, die der Roboter dann ausführt und gegebenenfalls den aktuellen Zug 
 zurücksendet.
 
+## Tag 216 (24.3.2025) - Tag 218 (26.3.2025)
+
+In diesen drei Tagen habe ich programmiert, aber vergessen, einen Tagebucheintrag zu machen und wusste nicht mehr, was
+ich gemacht habe.
+
+## Tag 219 - 27.3.2025
+
+Heute will ich es schaffen, die GUI halbwegs brauchbar zu machen, und dafür sorgen, dass die API Sinn ergibt.
+
+## Tag 220 - 28.3.2025
+
+Heute habe ich eigentlich die GUI mit der API weitergemacht. Aber jetzt (später am Abend) habe ich mal probiert, den 
+Roboter mit Farberkennung unter einer starken Lichtquelle zu probieren. Das Ergebnis beim Training der KI basierend auf 
+den neuen Daten: Die Accuracy (Genauigkeit) ist im Training schon nach 1/4 auf 100 % gestiegen. Da das bei den 
+vorherigen Daten nicht so war, schließe ich daraus, dass die Daten sehr viel berechenbarer sind. Ein Testscan hat 
+ergeben, dass das Einscannen jetzt extrem viel weniger Probleme bereitet: 100 % richtig eingescannt! Das Würfellösen
+geht leider noch nicht, weil die Farbauswertung doch noch leicht hängt: Es wird oft eine Farbe falsch zugeordnet.
+Den Farbkorrigierer kann ich noch nicht anwenden, weil ich aktuell nicht erkennen kann, ob der Würfel möglich ist.
+
+## Tag 221 - 29.3.2025
+
+Die KI hat leider auch mit starker Lampe noch Probleme, die Farben zu erkennen. Habe ich aber ehrlich gesagt auch:
+
+![Das Schachbrettmuster, wie der Roboter es wahrnimmt](images/robot_view_checkerboard.png)
+
+Wo ist Rot und wo Orange? Die anderen Farben sind auch nicht sehr eindeutig. Hier noch mal extremer:
+
+![Ein zufälliger Würfel aus der Sicht des Roboters](images/robot_view_random_cube.png)
+
+
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.
 
