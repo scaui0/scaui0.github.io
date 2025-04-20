@@ -1,7 +1,7 @@
-# Fachbegriffe
+# Würfelstruktur
 
-Für die Arbeit mit dem Zauberwürfel braucht man Begriffe für Züge und, um die verschiedenen Ecken und Kanten eindeutig 
-zu identifizieren.
+Der Zauberwürfel besteht aus einer 3x3 Struktur, bei der man die einzelnen Ebenen drehen kann. Für die Arbeit mit dem
+Zauberwürfel ist es wichtig, die verschiedenen Teile, wie die Bewegungen und die Ecken auseinanderhalten zu können.
 
 ## Die Züge
 
@@ -44,3 +44,27 @@ Ecke `URF`.
 
 Die Kanten werden ähnlich wie die Ecken mit den Buchstaben der Seiten bezeichnet, an die sie angrenzt. Beispiel: die 
 Kante vorne-rechts ist `FR`.
+
+## Würfel überprüfen
+
+Da der Würfel eine bestimmte Struktur hat, die genau eingehalten werden muss, wird an einigen Stellen des Programms 
+geprüft, ob der Würfel auch wirklich existieren kann. Dafür gibt es mehrere Kriterien:
+
+* Die Summe der Kantenorientierungen muss immer eine gerade Zahl sein (durch 2 teilbar).
+* Die Summe der Eckenorientierungen muss immer durch 3 teilbar sein.
+* Die Parität der Ecken muss der der Kanten entsprechen.
+
+Die Parität ist die Anzahl an Vertauschungen einer Permutation, bis diese gelöst ist. Die Parität kann entweder gerade
+oder ungerade sein. Die Paritäten müssen übereinstimmen, weil bei einer Bewegung des Würfels immer Ecken und Kanten 
+gedreht werden.
+
+??? info "Videoerklärung"
+
+    <div class="youtube-wrapper">
+      <iframe 
+        class="youtube-embed"
+        src="https://www.youtube.com/embed/3BaZ3SkTfc0?rel=0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>

@@ -1281,6 +1281,92 @@ Wo ist Rot und wo Orange? Die anderen Farben sind auch nicht sehr eindeutig. Hie
 
 ![Ein zufälliger Würfel aus der Sicht des Roboters](images/robot_view_random_cube.png)
 
+## Tag 222 - 30.3.2025
+
+Der Roboter scannt die Farben auch unter sehr verschiedenen Lichtbedingungen noch nicht richtig ein.
+
+## Tag 223 (31.3.2025) - Tag 225 (2.4.2025)
+
+Das Projekt geht mir extrem auf die Nerven. Ich will es endlich beenden!
+
+## Tag 226 (3.4.2025) - Tag 229 (6.4.2025)
+
+Ich hatte Probleme, weil *tensorflow* (das Package, das ich für die KI nutze) plötzlich nicht mehr ging.
+
+## Tag 230 - 7.4.2025
+
+Das hoffe ich jetzt zu beheben. In einer neuen Umgebung (venv) ging es jetzt. Aber in der Projektumgebung nicht. Deshalb
+setzte ich diese gerade neu auf.
+
+Es geht! Warum es funktioniert, weiß ich nicht. Es könnte aber daran liegen, dass ich Tensorflow aus einem anderen 
+Thread heraus gestartet habe. Ein Thread ist ein paralleler Teil einer Anwendung.
+
+## Tag 231 - 8.4.2025
+
+Es klappt jetzt. Die Farberkennung kann jetzt theoretisch wieder funktionieren, praktisch macht sie das aber immer noch 
+nicht, weshalb ich die orange Seite des Würfels schwarz abkleben werde. Dann muss ich das noch mit dem Roboter verbinden
+und alle noch verbleibenden Fehler beheben (ich kenne schon einige). Dafür habe ich noch etwa eine Woche, dann sind die
+Ferien vorbei, da wir noch Verwandte besuchen. Und danach noch ein bisschen an der Dokumentation weiterschreiben.
+
+Aber jetzt ersteinmal die ganzen unnötigen Testdateien löschen …
+ 
+Jetzt habe ich mindestens 10 nicht verwendete Dateien gelöscht. Ich habe jetzt nach über vier Monaten den Ordner 
+`remote_tests` in `robot` umbenannt. Der Name kam daher, dass ich dort eigentlich nur Tests machen wollte, aber dann das
+ganze Programm geschrieben habe.
+
+## Tag 232 - 9.3.2025
+
+Die GUI ist fast fertig, es kann aber noch sein, dass ich Probleme bekomme, weil man den Automatic-Mode ich ausschalten 
+kann, weil es ein Popup gibt, das anzeigt, dass der Würfel eingescannt wird, damit man nicht andere Aktionen macht, die
+dann mit dem Einscannen kollidieren.
+
+
+=== "Automatic Mode beim Ausführen der Züge"
+
+    ![Automatic Mode beim Ausführen der Züge](images/automatic_mode_running_moves.png)
+
+=== "Manual Mode beim Lösen eines Würfels"
+
+    ![Manual Mode beim Lösen eines Würfels](images/manual_mode_solving_cube.png)
+
+Jetzt fehlt nur noch die Farberkennung und dann kann ich die GUI/API mit dem Roboter verbinden und Fertig!
+
+## Tag 233 - 10.4.2025
+
+Ich habe heute die orange Seite mit schwarz abgeklebt. Die KI, die ich damit trainiert habe, ist besser gewesen als die
+davor, allerdings hat sie immer noch Probleme.
+
+Weil es sein kann, dass das daran liegt, dass die umliegenden Facelets den Farbwert leicht verändern, habe ich einfach
+einen verdrehten Würfel als KI-Trainingsdaten-Basis genommen. Das Ergebnis: 99,8 % Genauigkeit – auf den
+Trainingsdaten, bei denen 12 Würfel leider nicht ausreichen. Aber trotzdem: Manche Würfel können gelöst werden! Aber
+manchmal stürzt die Verbindung ab, weil es einen Ping gibt, der aber nicht beantwortet werden kann, weil der Client
+gerade die Züge ausführt. Kann aber auh daran liegen, dass der Server die Farben zu lange auswertet.
+
+Später: Ich werde ersteinmal versuchen, den Korrekturalgorithmus so zu erweitern, dass alle möglichen Korrekturen
+geprüft werden, statt nur der am Wahrscheinlichsten.
+
+## Tag 234 - 11.4.2025
+
+Heute habe ich den neuen Korrekturalgorithmus programmiert und geschafft, zu prüfen, ob ein Würfel existieren kann. 
+Dann habe ich genau das noch dokumentiert.
+
+## Tag 235 (12.4.2025) - Tag 241 (16.4.2025)
+
+Wir waren Verwandte besuchen und ich konnte den Roboter nicht mitnehmen.
+
+## Tag 242 - 17.4.2025
+
+Kaum aus dem Urlaub zurück direkt eines der größten PyCharm Updates jemals machen. Angeblich sollte ich jetzt Jupiter
+Notebooks nutzen können, praktisch klappt das noch nicht, weil ich irgendeine andere Version brauche, egal.
+
+## Tag 243 - 18.4.2025
+
+Gestern und heute habe ich es geschafft, die grundlegende Verbindung zwischen Roboter und Server zu machen. Das heißt,
+eigentlich sollte jetzt alles funktionieren.
+
+## Tag 244 (19.4.2025) - Tag Tag 246 (21.4.2025)
+
+Wir sind wieder im Urlaub.
 
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.

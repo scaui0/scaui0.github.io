@@ -132,7 +132,7 @@ extra:
 nav:
 #  - Startseite: index.md
   - Tagebuch: diary.md
-  - Fachbegriffe: technical_terms.md
+  - Würfelstruktur: cube_structure.md
   - Farberkennung: color_detection.md
   - Server:
       - server/index.md

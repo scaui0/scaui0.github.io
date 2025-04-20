@@ -15,5 +15,6 @@ Lösung berechnet wurde, führt der Roboter die Züge aus, um den Würfel auch i
 
 !!! info
 
-    Der Roboter ist der Roboter von …. Das Design variiert etwas, die Dekorationen sind nicht vorhanden.
+    Der Roboter ist der [MindCub3r-Roboter von MindCuber.com](https://www.mindcuber.com/mindcub3r/mindcub3r.html). Das 
+    Design variiert etwas, die Dekorationen sind nicht vorhanden.
 

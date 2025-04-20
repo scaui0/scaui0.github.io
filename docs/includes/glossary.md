@@ -32,3 +32,4 @@
 *[SFN]: Schülerforschungszentrum Nordhessen.
 *[Modulo]: Der Rest beim Teilen.
 *[API]: Application Programming Interface – Programm-Schrittstelle
+*[Permutation]: Anordnung
