@@ -1,6 +1,6 @@
 # Kommunikation
 
-Der Server kommuniziert mit dem Client, um wichtige Informationen wie Konfiguration, Farben oder Züge zu übertragen.
+Der Server kommuniziert mit dem Client (Roboter), um wichtige Informationen wie Konfiguration, Farben oder Züge zu übertragen.
 
 ## Die Roboter-Züge
 
@@ -20,3 +20,17 @@ Im Folgenden alle Aktionen sortiert nach `type`:
 | `rotate_plate`         | Rotiert die Platte, auf der der Würfel steht. `times` bestimmt dabei die Anzahl an 90°-Drehungen.                                                                                                   |
 | `arm_up`               | Bewegt den Arm hoch (90°).                                                                                                                                                                          |
 | `arm_down`             | Bewegt den Arm runter (0°).                                                                                                                                                                         |
+
+## Das Gesamte
+
+Der Roboter verbindet sich nach dem Starten mit dem Server und wartet, bis der Server einen Befehl sendet und führt
+diesen aus. Einzelne Befehle, wie das Einscannen eines Würfels, benötigen einen Rückgabewert.
+
+Alle Befehle mit `type`:
+
+| `type`      | Beschreibung                                                                                                          |
+|-------------|-----------------------------------------------------------------------------------------------------------------------|
+| `start`     | Der Client macht gar nichts.                                                                                          |
+| `run_moves` | Der Client führt die in `robot_moves` angegeben Züge aus und sendet nach jedem Teil den aktuellen Index an den Server |
+| `scan_cube` | Der Client scannt den Würfel ein und sendet die Farben and den Server.                                                |
+

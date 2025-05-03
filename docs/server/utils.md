@@ -31,12 +31,25 @@ aus einem Test mit 1 000 verschiedenen zufälligen Zugfolgen der Länge 100.
     
     Wenn man diese Züge aneinanderfügt, erhält man `R L' F U2 D2`, das ist einen Züg kürzer als am Anfang. Dieser ist 
     aber nicht verschwunden, die zwei Us wurden zu einem `U2`, weil kein Zug dazwischen war, der dies verhindert 
-    hätte.    
+    hätte.
 
 ## Farbkorrigierer
 
-Da die Farben von der [Farberkennung](../color_detection.md) selten zu 100 % stimmen, korrigiert dieser Algorithmus
-die Farben, indem er je eine der überschüssigen Farben einer Defizitfarbe zuordnet.
+Da die Farben von der [Farberkennung](../color_detection.md) selten zu 100 % stimmen, werden sie nach dem Auswerten
+von einem Algorithmus korrigiert, wenn der erkannte Würfel nicht existieren kann. Im Laufe der Zeit sind drei
+verschiedene Korrektur-Algorithmen entstanden, von denen aber nur einer wirklich zuverlässig arbeitet. Der
+Vollständigkeit halber sind alle hier dokumentiert. Ich möchte keine Beschwerden über die sehr kreativen Namen hören!
+
+### Neu
+
+Dieser Algorithmus korrigiert eine Farbe, in dem er prüft, welche Zu-Viel-Farbe am ehesten zu der Defizitfarbe passt.
+Das Wichtige daran ist, dass nur Möglichkeiten beachtet werden, bei denen ein möglicher Würfel herauskommt. Das führt
+dazu, dass es immer ein Ergebnis gibt, wenn nur eine Farbe falsch ist, aber auch, dass es möglich ist, dass ein Würfel
+herauskommt, der zwar möglich ist, aber nicht der gewollte.
+
+### Komplex
+
+Dieser Algorithmus korrigiert die Farben, indem er je eine der überschüssigen Farben einer Defizitfarbe zuordnet.
 
 Als Erstes werden die Positionen der Farben, die zu häufig vorkommen, gespeichert, ebenso wie die Farben, die es zu
 wenig gibt (Defizitfarben), und die Anzahl, die sie mehr vorkommen müsste.
@@ -51,3 +64,7 @@ wird das Feld zu der Defizitfarbe geändert und die Bestände aktualisiert.
 
 Am Ende sollte es keine Defizitfarbe mehr geben. Da es immer noch die Wahrscheinlichkeit gibt, dass die Farben nicht
 stimmen, wird in einem solchen Fall der Würfel noch einmal eingescannt.
+
+## Einfach
+
+Hier wird wie in *Neu* eine Farbe korrigiert, nur, dass dabei nicht nur valide Würfel als Ergebnis möglich sind.

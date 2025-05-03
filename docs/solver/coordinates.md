@@ -1,16 +1,14 @@
-# Basis
+# Koordinaten-Berechnung
 
 Alle Algorithmen, die ich nutze, funktionieren ähnlich: sie haben alle Pattern-Databases, in denen sie die benötigte
 Anzahl von Zügen zum Ziel nachschlagen.
-
-## Koordinaten-Berechnung
 
 Die PDBs (Pattern-Databases) bestehen aus Nibbles. Ein Nibble ist die Hälfte eines Bytes und kann Zahlen von 1 bis 16
 speichern. Um die Position des aktuellen Nibbles herauszufinden, wird eine Koordinate aus den relevanten Teilen des
 Würfels berechnet und dann in der Liste nachgeschaut. Diese Koordinatenberechnung unterscheidet sich für jede einzelne
 PDB.
 
-### Beispiel
+## Beispiel
 
 Die PDB `corner.pdb` speichert die Orientierung und Permutation der Ecken. Um die Koordinate (auch Index genannt)
 herauszufinden, werden als Erstes die Daten aus dem Würfel extrahiert. Diese haben folgende Struktur:
@@ -18,7 +16,7 @@ herauszufinden, werden als Erstes die Daten aus dem Würfel extrahiert. Diese ha
 * Die Orientierungen sind eine Liste von Zahlen je 0 bis 2. Sie hat die Länge 8.
 * Die Permutationen sind eine Liste der Zahlen von 0 bis 11. Jede Zahl kommt einmal vor.
 
-#### Die Orientierungen
+### Die Orientierungen
 
 Da die Orientierungen im sogenannten Ternärsystem (alle Zahlen zwischen 0 und 2) sind, kann man die Werte mit einem
 jeweiligen Stellenwert multiplizieren, um die Zahl im Dezimalsystem (0 bis 9, das *normale* System) zu erhalten.
@@ -36,12 +34,12 @@ $$
 o = O_0 \cdot 3^6 + O_1 \cdot 3^5 + O_2 \cdot 3^4 + O_3 \cdot 3^3 + O_4 \cdot 3^3 + O_5 \cdot 3^1 + O_6 \cdot 3^0
 $$
 
-#### Die Permutationen
+### Die Permutationen
 
 Da die Permutationen öfters berechnet werden müssen und komplizierter als die Orientierungen sind, werden sie an anderer
-Stelle berechnet. Sie [PermutationIndexer](#permutationindexer).
+Stelle berechnet. Siehe [PermutationIndexer](#permutationindexer).
 
-#### Der Gesamtwert
+### Der Gesamtwert
 
 Um am Ende eine Zahl zu haben, müssen die Zahlen noch kombiniert werden. $p$ wird mit $4^7$ multipliziert, weil das die
 größte Zahl ist, die $o$ haben kann und so garantiert ist, dass jeder Würfel einen anden Index hat.
@@ -74,7 +72,7 @@ In unserem Beispiel wäre das dann:
 
 1. Rechts von der Zahl 2 sind drei Zahlen, von denen zwei kleiner sind.
 2. Die 3 hat nur zwei Zahlen rechts von sich, beide kleiner.
-3. Die 1 hat eine kleinere Zahl rechts von sich, die null.
+3. Die 1 hat eine kleinere Zahl rechts von sich, die Null.
 4. Da die 0 ganz rechts steht, kann sie keine weiteren Zahlen rechts neben sich haben.
 
 Das Ergebnis ist also $(2, 2, 1, 0)$. Warum dieser Algorithmus funktioniert, habe ich nicht verstanden.

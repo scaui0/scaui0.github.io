@@ -1314,7 +1314,7 @@ Jetzt habe ich mindestens 10 nicht verwendete Dateien gelöscht. Ich habe jetzt 
 `remote_tests` in `robot` umbenannt. Der Name kam daher, dass ich dort eigentlich nur Tests machen wollte, aber dann das
 ganze Programm geschrieben habe.
 
-## Tag 232 - 9.3.2025
+## Tag 232 - 9.4.2025
 
 Die GUI ist fast fertig, es kann aber noch sein, dass ich Probleme bekomme, weil man den Automatic-Mode ich ausschalten 
 kann, weil es ein Popup gibt, das anzeigt, dass der Würfel eingescannt wird, damit man nicht andere Aktionen macht, die
@@ -1350,23 +1350,66 @@ geprüft werden, statt nur der am Wahrscheinlichsten.
 Heute habe ich den neuen Korrekturalgorithmus programmiert und geschafft, zu prüfen, ob ein Würfel existieren kann. 
 Dann habe ich genau das noch dokumentiert.
 
-## Tag 235 (12.4.2025) - Tag 241 (16.4.2025)
+## Tag 235 (12.4.2025) - Tag 239 (16.4.2025)
 
 Wir waren Verwandte besuchen und ich konnte den Roboter nicht mitnehmen.
 
-## Tag 242 - 17.4.2025
+## Tag 240 - 17.4.2025
 
 Kaum aus dem Urlaub zurück direkt eines der größten PyCharm Updates jemals machen. Angeblich sollte ich jetzt Jupiter
 Notebooks nutzen können, praktisch klappt das noch nicht, weil ich irgendeine andere Version brauche, egal.
 
-## Tag 243 - 18.4.2025
+## Tag 241 - 18.4.2025
 
 Gestern und heute habe ich es geschafft, die grundlegende Verbindung zwischen Roboter und Server zu machen. Das heißt,
 eigentlich sollte jetzt alles funktionieren.
 
-## Tag 244 (19.4.2025) - Tag Tag 246 (21.4.2025)
+## Tag 242 (19.4.2025) - Tag 244 (21.4.2025)
 
 Wir sind wieder im Urlaub.
+
+## Tag 245 (22.4.2025) - Tag 246 (23.4.2025)
+
+Wichtigere Dinge zu tun.
+
+## Tag 247 - 24.4.2025
+
+Ich habe morgen ein Probereferat über die Jahresarbeit! Gestern habe ich schon das Meiste vorbereitet.
+
+Ich habe eben die verschiedenen Korrektur-Algorithmen dokumentiert. Und dann den Text hier geschrieben und mittels
+meines Tagebuch-Tag-Überprüfers bemerkt, dass ich seit einigen Tagen die Tagnummern falsch hatte. Und dann noch, dass
+das Programm in bestimmten Fällen den Fehler nicht bemerkt hat.
+
+## Tag 248 - 25.4.2025
+
+Das Referat lief gut.
+
+## Tag 249 - 26.4.2025
+
+Der Roboter funktioniert sehr gut. Die Farberkennung braucht nur noch etwas mehr (mehr als 300 Würfel!) Trainingsdaten,
+dann klappt es endlich! Aber auch jetzt geht es meistens schon. Eben hat der Roboter sich fast selbst zerstört, weil er
+den Würfel nicht richtig hatte und es nicht bemerkt hat, wie soll er auch.
+
+## Tag 250 - 27.4.2025
+
+War wohl so im Flow, dass ich vergessen habe, hier einen Kommentar zu machen.
+
+## Tag 251 - 28.4.2025
+
+Der Roboter hat seit gestern eine extrem gute Quote beim Farbenerkennen – alle, bis auf einen, Würfel richtig erkannt.
+Der eine Würfel, der nicht gelöst werden konnte, hatte das Problem, dass es zwei leicht falsche Farben gab, von denen 
+nur eine korrigiert werden konnte. Das heißt, ich muss einen Algorithmus machen, der mehr als eine Farbe korrigiert.
+Ansonsten bin ich mit dem Roboter sehr zufrieden, es funktioniert fast alles perfekt. Das Einzige, was noch verändert 
+werden muss, ist die GUI und vielleicht ein kleiner Teil des Restprogramms. In der GUI funktioniert z. B. der 
+automatische Modul nicht richtig und mein Programm hat noch einige `TODO`-Kommentare.
+
+## Tag 252 - 29.5.2025
+
+Ein paar Fehler in der Dokumentation behoben.
+
+## Tag 253 - 29.4.2025
+
+Immer, wenn man etwas Kleines ändert, verändert sich alles andere mit, sodass am Ende gar nichts mehr funktioniert.
 
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.

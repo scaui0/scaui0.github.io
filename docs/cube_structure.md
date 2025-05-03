@@ -31,7 +31,7 @@ Die mittleren Ebenen alleine werden durch die Buchstaben `S`, `E` und `M`.
 | E         | D                   |
 | M         | L                   |
 
-Tipp zum Merken: `S` ist näher an `F` als `B`. Das ist bei allen Ebenen so.
+Tipp zum Merken: `S` ist im Alphabet näher an `F` als `B`. Das ist bei allen Ebenen so.
 
 Die Buchstaben `x`, `y` und `z` drehen den Würfel um die entsprechenden Achsen.
 
@@ -59,6 +59,8 @@ oder ungerade sein. Die Paritäten müssen übereinstimmen, weil bei einer Beweg
 gedreht werden.
 
 ??? info "Videoerklärung"
+    
+    Die ersten 7 Minuten dieses Videos reichen, um in dieses Thema etwas tiefer einzusteigen.
 
     <div class="youtube-wrapper">
       <iframe 
