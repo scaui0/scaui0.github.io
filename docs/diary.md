@@ -978,8 +978,7 @@ Modul einfach ohne venv, das System ist egal.
 
 ## Tag 142 - 9.1.2025
 
-Das Installieren
-des Moduls hat geklappt, das Verbinden mit dem Laptop nicht so gut. Das Programm könnte jetzt 
+Das Installieren des Moduls hat geklappt, das Verbinden mit dem Laptop nicht so gut. Das Programm könnte jetzt 
 theoretisch ausgeführt werden, wenn ich es hinkriegen würde, den EV3 mit dem Laptop im Subnetz kommunizieren zu lassen.
 Das Subnetz steht, der Computer kann sich auch mit dem EV3 verbinden, nur andersherum geht es irgendwie nicht.
 
@@ -1133,7 +1132,8 @@ Heute habe ich
 
 !!! info "Fehlender Eintrag"
 
-    Ich habe keine Ahnung, warum hier abgebrochen wurde oder was ich genau gemacht habe, es war aber nichts Wichtiges.
+    Ich habe keine Ahnung, warum ich hier abgebrochen habe oder was ich genau gemacht habe, es war aber nichts 
+    Wichtiges.
 
 ## Tag 186 - 22.2.2025
 
