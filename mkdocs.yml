@@ -63,7 +63,6 @@ plugins:
                   - docs/assets/stylesheets/pdf.scss
                 covers:
                   front: docs/assets/covers/front.html.j2
-                  back: docs/assets/covers/back.html.j2
                 browser:
                   debug: false
                 aggregator:
