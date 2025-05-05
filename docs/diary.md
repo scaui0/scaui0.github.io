@@ -1403,13 +1403,22 @@ Ansonsten bin ich mit dem Roboter sehr zufrieden, es funktioniert fast alles per
 werden muss, ist die GUI und vielleicht ein kleiner Teil des Restprogramms. In der GUI funktioniert z. B. der 
 automatische Modul nicht richtig und mein Programm hat noch einige `TODO`-Kommentare.
 
-## Tag 252 - 29.5.2025
+## Tag 252 - 29.4.2025
 
-Ein paar Fehler in der Dokumentation behoben.
+Ein paar Fehler in der Dokumentation behoben. 
 
-## Tag 253 - 29.4.2025
+Und danach wohl noch etwas am Programm …
 
 Immer, wenn man etwas Kleines ändert, verändert sich alles andere mit, sodass am Ende gar nichts mehr funktioniert.
+
+## Tag 253 (30.4.2025) - Tag 256 (3.5.2025)
+
+Wir hatten ein langes Wochenende und waren nicht zu Hause.
+
+## Tag 257 - 4.5.2025
+
+Heute habe ich versucht, den neuen *New-Complex*-Korrektur-Algorithmus zu erstellen. Ist leider bei Weitem nicht so 
+einfach wie alle anderen.
 
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.
