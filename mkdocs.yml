@@ -114,13 +114,20 @@ markdown_extensions:
         kwds:
           case: lower
 
-extra_javascript:
-#  - assets/javascripts/mkdocs-exporter.js
-#  - https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js
-  - assets/javascripts/mathjax.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-#  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-#  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+extra_javascript:  # TODO: Remove custom color from Mermaid diagram? The darkmode doesn't work...
+  # This works:
+  - assets/javascripts/mkdocs-exporter.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - assets/scripts/katex.js  # TODO: Why do I have to use KaTeX?
+  - https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js
+
+  # This not:
+#  - assets/javascripts/mathjax.js
+#  - assets/scripts/mathjax.js
+#  - assets/scripts/mkdocs-exporter.js
+##  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
+##  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
+#  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
 
 extra_css:
   - assets/stylesheets/extra.css

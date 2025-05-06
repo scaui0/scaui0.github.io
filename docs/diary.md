@@ -1420,6 +1420,14 @@ Wir hatten ein langes Wochenende und waren nicht zu Hause.
 Heute habe ich versucht, den neuen *New-Complex*-Korrektur-Algorithmus zu erstellen. Ist leider bei Weitem nicht so 
 einfach wie alle anderen.
 
+## Tag 258 - 5.5.2025
+
+Heute habe ich die Dokumentation in PDF umgewandelt. Fast 100 Seiten! Leider gibt es noch Formatierungsfehler.
+
+## Tag 259 - 6.5.2025
+
+Die Fehler von gestern habe ich jetzt behoben. Waren nur ein paar Skripte, die gefehlt haben.
+
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.
 
