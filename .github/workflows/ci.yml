@@ -38,9 +38,8 @@ jobs:
       - run: playwright install
         if: ${{ vars.RCS_DOCS_PDF == 'true' }}
 
-      - run: echo "RCS_DOCS_PDF is $RCS_DOCS_PDF"
-        env:
-          RCS_DOCS_PDF: ${{ vars.RCS_DOCS_PDF }}
+      - name: Direct echo
+        run: echo "RCS_DOCS_PDF is ${{ vars.RCS_DOCS_PDF }}"
 
       - run: mkdocs gh-deploy --force
         env:
