@@ -30,10 +30,10 @@ jobs:
       - run: pip install mkdocs-material
 
       - run: pip install mkdocs-material[imaging] mkdocs-exporter mkdocs-macros-plugin
-        if: ${{ vars.RCS_DOCS_PDF == 'true' }}
+        if: ${{ vars.RCS_DOCS_PDF != 'false' }}
 
       - run: playwright install
-        if: ${{ vars.RCS_DOCS_PDF == 'true' }}
+        if: ${{ vars.RCS_DOCS_PDF != 'false' }}
 
       - name: Direct echo
         run: echo "RCS_DOCS_PDF is ${{ vars.RCS_DOCS_PDF }}"
