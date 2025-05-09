@@ -30,13 +30,13 @@ jobs:
       - run: pip install mkdocs-material
 
       - run: pip install mkdocs-material[imaging]
-        if: ${{ vars.RCS_DOCS_SOCIAL == 'true' }
+        if: ${{ vars.RCS_DOCS_SOCIAL == 'true' }}
 
       - run: mkdocs-exporter mkdocs-macros-plugin
-        if: ${{ vars.RCS_DOCS_PDF == 'true' }
+        if: ${{ vars.RCS_DOCS_PDF == 'true' }}
 
       - run: playwright install
-        if: ${{ vars.RCS_DOCS_PDF == 'true' }
+        if: ${{ vars.RCS_DOCS_PDF == 'true' }}
 
       - run: mkdocs gh-deploy --force
         env:
