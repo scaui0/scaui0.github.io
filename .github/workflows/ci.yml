@@ -27,13 +27,19 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-exporter mkdocs-macros-plugin mkdocs-material[imaging]
+      - run: pip install mkdocs-material
+
+      - run: pip install mkdocs-material[imaging]
+        if: ${{ vars.RCS_DOCS_SOCIAL == 'true' }
+
+      - run: mkdocs-exporter mkdocs-macros-plugin
+        if: ${{ vars.RCS_DOCS_PDF == 'true' }
 
       - run: playwright install
-#        if: ${{ env.PDF != 'false' }}
+        if: ${{ vars.RCS_DOCS_PDF == 'true' }
 
       - run: mkdocs gh-deploy --force
         env:
-          ZIP: ${{ env.ZIP }}
-          GITHUB: ${{ env.GITHUB }}
-          PDF: ${{ env.PDF }}
+          GITHUB: ${{ vars.GITHUB }}
+          RCS_DOCS_PDF: ${{ vars.RCS_DOCS_PDF }}
+          RCS_DOCS_SOCIAL: ${{ vars.RCS_DOCS_SOCIAL }}

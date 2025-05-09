@@ -288,22 +288,22 @@ Hier ein Pseudocode (als UML-Ablaufdiagramm, erstellt mit Mermaid):
 
 !!! note
 
-    Ursprünglich war der Code in *PlantUML* geschrieben, wegen späteren Änderungen des Markdown zu HTML Konvertierers
+    Ursprünglich war der Code in *PlantUML* geschrieben, wegen späteren Änderungen des Markdown-zu-HTML-Konvertierers
     jetzt aber in *Mermaid*.
 
 ```mermaid
-graph TD
+graph LR
     A[Start] --> B[Frage nach Passwort für Remote]
     B --> C{Passwort richtig?}
     C -->|Nein| B
-    C -->|Ja| D{Konvertationflag gesetzt?}
+    C -->|Ja| D{Konvertierungsflag gesetzt?}
     D -->|Nein| G[Baue SSH-Verbindung zum Remote auf]
     D -->|Ja| E[Konvertiere Dokumentation zu HTML]
-    E --> F[Gib Informationen über den Status der Konvertation aus]
+    E --> F[Gib Informationen über den Status der Konvertierung aus]
     F --> G
-    G --> H[Übertrage alle Relevanten Dateien an die entsprechenden Stellen]
+    G --> H[Übertrage relevante Dateien]
     H --> I[Starte Remote-Server neu]
-    I --> J{Benutzer*in will Dateien erneut übertragen?}
+    I --> J{Dateien erneut übertragen?}
     J -->|Ja| D
     J -->|Nein| K[Ende]
 ```
@@ -312,7 +312,7 @@ graph TD
 
 In diesem langen Zeitraum hatte ich andere Sachen zu tun, als zu Programmieren. Allerdings habe ich mir überlegt, wie
 ich den Löse-Algorithmus programmieren werde. Da Korfs Algorithmus eine Heuristik und eine riesige Datenbank für die
-Teilschritte nutzt, und ich keine Ahnung von Heuristiken (die benötigte heißt irgendwie *IDA** oder so, das ist glaube
+Teilschritte nutzt, und ich keine Ahnung von Heuristiken (die Benötigte heißt irgendwie *IDA** oder so, das ist glaube
 ich eine Heuristik, die nie über dem Ziel liegt/voraussagt) habe, habe ich mich dazu entschieden, ersteinmal einen
 Algorithmus, der den Würfel mit den gleichen Lösungen wie ein normaler Mensch (, der den Würfel lösen kann) löst, zu 
 implementieren. Damit der Roboter/die Maschine nicht immer 50–100 Schritte zur Lösung des Würfels ausführen muss, werde 
@@ -1427,6 +1427,15 @@ Heute habe ich die Dokumentation in PDF umgewandelt. Fast 100 Seiten! Leider gib
 ## Tag 259 - 6.5.2025
 
 Die Fehler von gestern habe ich jetzt behoben. Waren nur ein paar Skripte, die gefehlt haben.
+
+## Tag 260 (7.5.2025) - Tag 261 (8.5.2025)
+
+Ich habe versucht, die Dokumentation in PDF umzuwandeln. Dann habe ich aufgegeben.
+
+## Tag 262 - 9.5.2025
+
+Heute habe ich es geschafft, die kleinen Fehler zu beheben. Jetzt habe ich wieder Formeln und Diagramme, auch wenn ich 
+die Diagramme leider drehen musste, so dass man sie jetzt kaum lesen kann.
 
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.

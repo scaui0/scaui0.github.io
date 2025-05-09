@@ -43,17 +43,15 @@ theme:
 
 plugins:
   - search
+  - offline
   - group:
-#      enabled: !ENV [GITHUB, false]
-      enabled: true
+      enabled: !ENV [GITHUB, false]
       plugins:
-        - social
+        - social:
+            enabled: !ENV [RCS_DOCS_SOCIAL, false]
         - macros
-#        - :
-#            module_name: macros
         - exporter:
-#            enabled: !ENV [PDF, false]
-            enabled: true
+            enabled: !ENV [RCS_DOCS_PDF, false]
             logging:
               level: debug
             formats:
@@ -115,29 +113,23 @@ markdown_extensions:
           case: lower
 
 extra_javascript:  # TODO: Remove custom color from Mermaid diagram? The darkmode doesn't work...
-  # This works:
+  - assets/javascripts/mathjax.js
+  - assets/javascripts/mathjax.js
   - assets/javascripts/mkdocs-exporter.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-  - assets/scripts/katex.js  # TODO: Why do I have to use KaTeX?
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js
-
-  # This not:
-#  - assets/javascripts/mathjax.js
-#  - assets/scripts/mathjax.js
-#  - assets/scripts/mkdocs-exporter.js
-##  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
-##  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
-#  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
 
 extra_css:
   - assets/stylesheets/extra.css
-#  - https://unpkg.com/katex@0/dist/katex.min.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
 
 extra:
   project_name: Zauberwürfellöseroboter
 
 nav:
-#  - Startseite: index.md
+  - Startseite: index.md
   - Tagebuch: diary.md
   - Würfelstruktur: cube_structure.md
   - Farberkennung: color_detection.md
