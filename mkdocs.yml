@@ -43,16 +43,17 @@ theme:
 
 plugins:
   - search
-  - offline
   - group:
-      enabled: !ENV [GITHUB, false]
+      enabled: true
+#      enabled: !ENV [GITHUB, false]
       plugins:
         - social:
             enabled: true
 #            enabled: !ENV [RCS_DOCS_SOCIAL, false]
         - macros
         - exporter:
-            enabled: !ENV [RCS_DOCS_PDF, false]
+            enabled: true
+#            enabled: !ENV [RCS_DOCS_PDF, false]
             logging:
               level: debug
             formats:
