@@ -48,7 +48,8 @@ plugins:
       enabled: !ENV [GITHUB, false]
       plugins:
         - social:
-            enabled: !ENV [RCS_DOCS_SOCIAL, false]
+            enabled: true
+#            enabled: !ENV [RCS_DOCS_SOCIAL, false]
         - macros
         - exporter:
             enabled: !ENV [RCS_DOCS_PDF, false]
