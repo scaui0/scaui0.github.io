@@ -1,0 +1,24 @@
+<div class="md-copyright">
+  {% if config.copyright %}
+  <div class="md-copyright__highlight">
+    {{ config.copyright }}
+  </div>
+  {% endif %}
+  {% if not config.extra.generator == false %}
+  Made with
+  <a
+      href="https://squidfunk.github.io/mkdocs-material/"
+      rel="noopener" target="_blank"
+  >
+    Material for MkDocs
+  </a>
+  <br>
+  Deployed with
+  <a
+      href="https://pages.github.com/"
+      rel="noopener" target="_blank"
+  >
+    GitHub Pages
+  </a>
+    {% endif %}
+</div>
