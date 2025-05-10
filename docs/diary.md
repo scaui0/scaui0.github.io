@@ -1437,6 +1437,11 @@ Ich habe versucht, die Dokumentation in PDF umzuwandeln. Dann habe ich aufgegebe
 Heute habe ich es geschafft, die kleinen Fehler zu beheben. Jetzt habe ich wieder Formeln und Diagramme, auch wenn ich 
 die Diagramme leider drehen musste, so dass man sie jetzt kaum lesen kann.
 
+## Tag 263 - 10.5.2025
+
+Ich habe das Programm und die Dokumentation jetzt in andere Projekte verfrachtet, damit ich sie einfacher ändern kann.
+Dann habe ich eben – wie immer nach einigen Fehlern – die erste Sicherheitskopie des Projekts gemacht :party:
+
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.
 
