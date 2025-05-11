@@ -44,7 +44,7 @@ theme:
 plugins:
   - search
   - group:
-      enabled: false
+      enabled: true
 #      enabled: !ENV [GITHUB, false]
       plugins:
         - social:
