@@ -10,6 +10,14 @@ Der Server läuft und wartet, bis sich ein Client (Roboter) verbindet. Dann send
 der Client Farben sendet, die der Server dann auswertet und den Würfel löst. Wenn der Würfel gelöst ist, sendet er ihn
 zum Client zurück.
 
+## API mit und ohne GUI
+
+Ich habe zwei verschiedene Arten von API implementiert: Eine mit Bedienoberfläche und eine ohne. Die mit GUI wartet 
+immer auf eine Nutzereingabe, es sein denn, der automatische Modus ist aktiviert. Die API ohne GUI wertet nur die Würfel
+aus, löst sie und sendet die Lösung zum Client.
+
+[//]: # (TODO: Ablaufdiagramm lassen?)
+
 ??? info "Ablaufdiagramm des Servers"
 
     ```mermaid
