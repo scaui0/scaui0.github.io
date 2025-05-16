@@ -47,8 +47,8 @@ graph TD
     C --> CB(CB - Ziel)
     D --> DA(DA)
     D --> DB(DB)
-    style CB stroke: red, fill: #760000
-    style Start stroke: blue, fill: green, color: green
+    style Start stroke: red, fill: #CC6666
+    style CB stroke: blue, fill: #6699CC
 ```
 
 Als Zug bezeichnet man die Verbindung von einem Knoten zum Anderen, durch die sich die Knoten unterscheiden.
@@ -84,7 +84,7 @@ graph TD
     Start(Startknoten) --> B(1)
     Start(Startknoten) --> C(6)
     Start(Startknoten) --> D(5)
-    style Start stroke: blue, fill: blue
+    style Start stroke: red, fill: #CC6666
 ```
 
 /// figure-caption
@@ -105,7 +105,7 @@ graph TD
     B --> BA(4)
     B --> BB(2)
     B --> BC(4)
-    style Start stroke: blue, fill: blue
+    style Start stroke: red, fill: #CC6666
 ```
 
 /// figure-caption
@@ -126,7 +126,7 @@ graph TD
     BB --> BBA(3)
     BB --> BBB(6)
     BB --> BBC(10)
-    style Start stroke: blue, fill: blue
+    style Start stroke: red, fill: #CC6666
 ```
 
 /// figure-caption
@@ -164,7 +164,8 @@ graph TD
     BBA --> BBAA(0)
     BBA --> BBAB(3)
     BBA --> BBAC(5)
-    style Start stroke: blue, fill: blue
+    style Start stroke: red, fill: #CC6666
+    style BBAA stroke: blue, fill: #6699CC
 ```
 
 /// figure-caption
