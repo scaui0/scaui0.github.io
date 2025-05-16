@@ -148,6 +148,7 @@ nav:
       - Thistlethwaite: solver/thistlethwaite.md
   - Der Roboter:
       robot/index.md
+  - How to use: how_to_use.md
 #  - Erklärungen: explanations.md
 #  - Informationen: about.md
   - About:
