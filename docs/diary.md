@@ -1442,6 +1442,41 @@ die Diagramme leider drehen musste, so dass man sie jetzt kaum lesen kann.
 Ich habe das Programm und die Dokumentation jetzt in andere Projekte verfrachtet, damit ich sie einfacher ändern kann.
 Dann habe ich eben – wie immer nach einigen Fehlern – die erste Sicherheitskopie des Projekts gemacht :party:
 
+## Tag 264 - 11.5.2025
+
+Heute habe ich das Dino-Runner-Spiel auf meiner 404-Seite gemacht. Der Statuscode 404 meint, dass die angegebene Seite
+nicht gefunden wurde.
+
+## Tag 265 - 12.5.2025
+
+Heute habe ich ein paar kleine Strukturierungsänderungen gemacht.
+
+## Tag 266 - 13.5.2025
+
+Ich habe den How-to-use-Teil angefangen.
+
+## Tag 267 - 14.5.2025
+
+Heute habe ich die GUI-lose API weitergemacht. Dabei habe ich gemerkt, dass es nicht sinnvoll ist, dass der Computer die
+Roboter-Züge berechnet, weil dann andere Roboter, die eventuell andere Protokolle brauchen, den Würfel nicht ausführen 
+können. Das heißt, dass ich das noch zum Roboter verschieben muss. Das Gleiche ist mit der Konfiguration, die auch
+roboterabhängig ist.
+
+## Tag 268 - 15.5.2025
+
+Das mit den Roboterzügen und der Konfiguration ist ein Zukunftsproblem. Jetzt muss ich ersteinmal Dokumentation 
+schreiben.
+
+## Tag 269 - 16.5.2025
+
+An diesem Tag habe ich irgendetwas an der Dokumentation gemacht.
+
+Tag 270 - 17.5.2025
+
+Ich schreibe jetzt ersteinmal weiter, dann versuche ich jetzt am Wochenende (heute ist Freitag) das PDF fertig zu 
+machen, um es dann auszudrucken. Dann muss ich auch schnell die Webseite für Crawler (Webseiten-Finder von
+Suchmaschinen) zugänglich machen, damit sich diese noch vor der Präsentation updaten können.
+
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.
 

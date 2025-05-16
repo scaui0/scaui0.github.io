@@ -28,9 +28,23 @@ diesen aus. Einzelne Befehle, wie das Einscannen eines Würfels, benötigen eine
 
 Alle Befehle mit `type`:
 
-| `type`      | Beschreibung                                                                                                          |
-|-------------|-----------------------------------------------------------------------------------------------------------------------|
-| `start`     | Der Client macht gar nichts.                                                                                          |
-| `run_moves` | Der Client führt die in `robot_moves` angegeben Züge aus und sendet nach jedem Teil den aktuellen Index an den Server |
-| `scan_cube` | Der Client scannt den Würfel ein und sendet die Farben and den Server.                                                |
+| `type`              | Beschreibung                                                                                                          |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `start`             | Der Client macht gar nichts und speichert nur die in `config` gespeicherte Konfiguration.                             |
+| `run_moves`         | Der Client führt die in `robot_moves` angegeben Züge aus und sendet nach jedem Teil den aktuellen Index an den Server |
+| `scan_cube`         | Der Client scannt den Würfel ein und sendet die Farben and den Server.                                                |
+| `wait_for_new_cube` | Der Client wartet, bis ein Würfel entfernt und wieder eingelegt wurde.                                                |
 
+Am Anfang werden immer die folgenden Befehle gesendet: 
+```json
+[
+  {
+    "type": "start", "config": {
+      "start_moves_before_scanning": [
+        {"type": "rotate_cube_with_arm", "times": 4}
+      ]
+    }
+  },
+  {"type": "wait_for_new_cube"}
+]
+```

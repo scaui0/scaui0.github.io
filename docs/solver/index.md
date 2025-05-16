@@ -34,3 +34,9 @@ Zeit benötigt.
 Thistlethwaite Algorithmus ist eine Lösemethode, die den Lösevorgang in verschiedene Gruppen unterteilt, die die
 jeweiligen Würfelzustände reduziert, damit der Würfel im nächsten Löseabschnitt schneller gelöst werden kann. Dadurch
 wird die Lösung zwar schneller gefunden, braucht aber eventuell ein wenig mehr Züge (maximal 46).
+
+## Kociembas Algorithmus
+
+Herbert Kociembas Algorithmus löst einen Zauberwürfel in unter 22 Zügen in wenigen Sekunden. Dabei werden Symetrien des
+Würfels genutzt, also dass ein Würfel der gleiche ist, wenn man ihn dreht. Da mir dieser Algorithmus eine Nummer zu groß
+war, habe ich die CubeExplorer-API genutzt. Der Cube Explorer beinhaltet die originale Implementation des Algorithmus.

@@ -7,6 +7,11 @@
     [als PDF ansehen](documentation.pdf). Beachten Sie jedoch, dass ich diese Dokumentation als Webseite geschrieben 
     habe und Sie daher Links nicht nutzen können.
 
+!!! info "Webseite"
+    
+    Wenn Sie eine interaktive Website eines PDFs so wie ich bevorzugen, können Sie sie Sich gerne auf 
+    [scaui0.github.io](https://scaui0.github.io) anschauen.
+
 Diese Webseite beinhaltet die Dokumentation sowie das Tagebuch und eventuell andere Daten des Projekts.
 
 ## Das Projekt

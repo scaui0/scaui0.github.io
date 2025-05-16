@@ -13,10 +13,8 @@ zum Client zurück.
 ## API mit und ohne GUI
 
 Ich habe zwei verschiedene Arten von API implementiert: Eine mit Bedienoberfläche und eine ohne. Die mit GUI wartet 
-immer auf eine Nutzereingabe, es sein denn, der automatische Modus ist aktiviert. Die API ohne GUI wertet nur die Würfel
+immer auf eine Nutzereingabe, es sei denn, der automatische Modus ist aktiviert. Die API ohne GUI wertet nur die Würfel
 aus, löst sie und sendet die Lösung zum Client.
-
-[//]: # (TODO: Ablaufdiagramm lassen?)
 
 ??? info "Ablaufdiagramm des Servers"
 
@@ -36,3 +34,9 @@ aus, löst sie und sendet die Lösung zum Client.
         I --> L[Wandle die vereinfachten \nZüge in Roboter-Züge\n und schicke sie zum Client]
         L --> D
     ```
+
+## Manuelle API
+
+Für Entwickler, die sich auf Wichtigeres als die Würfelverwaltung konzentrieren wollen, habe ich eine kleine API mit den
+basic Funktionen gemacht. Sie ist integriert in die textbased API (`python main.py api`). Die Spezifikationen befinden 
+sich wie meistens auf der `/docs`-Seite der API.

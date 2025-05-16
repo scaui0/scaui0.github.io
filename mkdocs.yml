@@ -81,6 +81,7 @@ markdown_extensions:
   - md_in_html
 
   - pymdownx.highlight
+  - pymdownx.inlinehilite
   - pymdownx.details
   - pymdownx.caret
   - pymdownx.mark
@@ -114,7 +115,7 @@ markdown_extensions:
         kwds:
           case: lower
 
-extra_javascript:  # TODO: Remove custom color from Mermaid diagram? The darkmode doesn't work...
+extra_javascript:
   - assets/javascripts/mathjax.js
   - assets/javascripts/mathjax.js
   - assets/javascripts/mkdocs-exporter.js
