@@ -40,7 +40,7 @@ Würfelseite geändert.
 
 Ein Bild aus der GUI:
 
-![Einfacher aufgeklappter Würfel](images/gui.png)
+![Einfacher aufgeklappter Würfel](/images/gui.png)
 
 ## Tag 5
 
@@ -138,7 +138,7 @@ Streifen einfach ablesen kann. :)
 ## Tag 12 - 1.9.2024
 
 Heute habe ich den oben genannten Würfel gebaut.
-![Flaches Stück Papier in der Form, wie der Würfel in der GUI](images/flat_cube.jpg)
+![Flaches Stück Papier in der Form, wie der Würfel in der GUI](/images/flat_cube.jpg)
 
 ## Tag 13 - 2.9.2024
 
@@ -344,7 +344,7 @@ gleichzeitig verarbeitet werden. Macht's aber auch nicht besser … Jetzt warte
 
 Hat immer noch nicht installiert, dafür habe ich jetzt die nächsten Bewegungen hinzugefügt. Das sind `S`, `E` und `M`, 
 wie immer auch mit `'`. Damit kann man endlich ein Muster machen! 
-![Muster in GUI](images/new_gui_image.png)
+![Muster in GUI](/images/new_gui_image.png)
 
 ## Tag 35 - 24.9.2024
 
@@ -403,7 +403,7 @@ schon. Nach einem Neustart ging aber alles wieder.
 
 ## Tag 39 - 28.9.2024
 
-Heute habe ich mir ein eigenes Logo in InkScape erstellt: ![Mein Icon](assets/images/icon.svg)
+Heute habe ich mir ein eigenes Logo in InkScape erstellt: ![Mein Icon](/assets/images/icon.svg)
 
 Das Design habe ich mit ChatGPT ausdiskutiert. Eigentlich sollte es türkis sein, aber das sähe im Header der 
 Dokumentation seltsam aus, weil die Farben (Lila und Türkis) nicht gut zusammen aussahen.
@@ -724,7 +724,7 @@ Pause machen. :coffe:
 ## Tag 105 - 3.12.2024
 
 Heute habe ich den Roboter fertig gebaut.
-![Der fertige Roboter](images/robot_1.jpg)
+![Der fertige Roboter](/images/robot_1.jpg)
 
 Die Dekoration, die hinten auf den Augen ist, habe ich weggelassen, weil ich die Teile nicht gefunden habe.
 
@@ -1275,11 +1275,11 @@ Den Farbkorrigierer kann ich noch nicht anwenden, weil ich aktuell nicht erkenne
 
 Die KI hat leider auch mit starker Lampe noch Probleme, die Farben zu erkennen. Habe ich aber ehrlich gesagt auch:
 
-![Das Schachbrettmuster, wie der Roboter es wahrnimmt](images/robot_view_checkerboard.png)
+![Das Schachbrettmuster, wie der Roboter es wahrnimmt](/images/robot_view_checkerboard.png)
 
 Wo ist Rot und wo Orange? Die anderen Farben sind auch nicht sehr eindeutig. Hier noch mal extremer:
 
-![Ein zufälliger Würfel aus der Sicht des Roboters](images/robot_view_random_cube.png)
+![Ein zufälliger Würfel aus der Sicht des Roboters](/images/robot_view_random_cube.png)
 
 ## Tag 222 - 30.3.2025
 
@@ -1323,11 +1323,11 @@ dann mit dem Einscannen kollidieren.
 
 === "Automatic Mode beim Ausführen der Züge"
 
-    ![Automatic Mode beim Ausführen der Züge](images/automatic_mode_running_moves.png)
+    ![Automatic Mode beim Ausführen der Züge](/images/automatic_mode_running_moves.png)
 
 === "Manual Mode beim Lösen eines Würfels"
 
-    ![Manual Mode beim Lösen eines Würfels](images/manual_mode_solving_cube.png)
+    ![Manual Mode beim Lösen eines Würfels](/images/manual_mode_solving_cube.png)
 
 Jetzt fehlt nur noch die Farberkennung und dann kann ich die GUI/API mit dem Roboter verbinden und Fertig!
 
