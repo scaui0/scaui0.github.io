@@ -60,7 +60,7 @@ Option `--auto`.
 
 Der Aufbau:
 
-![Der Aufbau der GUI](/images/api_gui_with_cube.png)
+![Der Aufbau der GUI](/images/api_gui_with_descriptions.png)
 
 1. Der Solve-Button zum Lösen des aktuellen Würfels in Feld 6.
 2. Der Scan-Button zum Auffordern des Clients zum Scannen.
