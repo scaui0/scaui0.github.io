@@ -1471,11 +1471,14 @@ schreiben.
 
 An diesem Tag habe ich irgendetwas an der Dokumentation gemacht.
 
-Tag 270 - 17.5.2025
+## Tag 270 - 17.5.2025
 
 Ich schreibe jetzt ersteinmal weiter, dann versuche ich jetzt am Wochenende (heute ist Freitag) das PDF fertig zu 
 machen, um es dann auszudrucken. Dann muss ich auch schnell die Webseite für Crawler (Webseiten-Finder von
 Suchmaschinen) zugänglich machen, damit sich diese noch vor der Präsentation updaten können.
+
+Ich meine jetzt, dass ich alles Wichtige in der Dokumentation behandelt habe. Wenn dem auch andere Leute (meine Eltern)
+zustimmen, kann ich endlich das PDF erstellen.
 
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.

@@ -1,0 +1,22 @@
+name: Check diary headers
+
+on: [push, pull_request]
+
+jobs:
+  test-script:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.12]
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Test headers in diary
+      run: python test_dates_in_doc.py.py
