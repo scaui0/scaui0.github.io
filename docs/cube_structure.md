@@ -57,16 +57,3 @@ geprüft, ob der Würfel auch wirklich existieren kann. Dafür gibt es mehrere K
 Die Parität ist die Anzahl an Vertauschungen einer Permutation, bis diese gelöst ist. Die Parität kann entweder gerade
 oder ungerade sein. Die Paritäten müssen übereinstimmen, weil bei einer Bewegung des Würfels immer Ecken und Kanten 
 gedreht werden.
-
-??? info "Videoerklärung"
-    
-    Die ersten 7 Minuten dieses Videos reichen, um in dieses Thema etwas tiefer einzusteigen.
-
-    <div class="youtube-wrapper">
-      <iframe 
-        class="youtube-embed"
-        src="https://www.youtube.com/embed/3BaZ3SkTfc0?rel=0"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>

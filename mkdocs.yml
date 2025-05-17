@@ -5,12 +5,8 @@ copyright: Copyright &copy; 2024-2025 Franz Weingartz
 theme:
   language: de
   name: material
-#  logo: assets/images/icon.svg
   icon:
     logo: material/cube
-#  favicon: assets/images/icon.svg
-#  favicon: material/cube
-  custom_dir: docs/overrides
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -104,8 +100,7 @@ markdown_extensions:
 #      options:
 #        custom_icons:
 #          - overrides/.icons
-  - pymdownx.tasklist:
-      custom_checkbox: true
+  - pymdownx.tasklist
   - pymdownx.snippets
   - pymdownx.blocks.tab:
       alternate_style: true
@@ -124,6 +119,7 @@ extra_javascript:
 
 extra_css:
   - assets/stylesheets/extra.css
+  - assets/stylesheets/extra_pdf.css
   - https://unpkg.com/katex@0/dist/katex.min.css
 
 extra:
@@ -144,8 +140,7 @@ nav:
       - IDA*: solver/ida_star.md
       - Korf: solver/korf.md
       - Thistlethwaite: solver/thistlethwaite.md
-  - Der Roboter:
-      robot/index.md
+  - Der Roboter: robot.md
   - How to use: how_to_use.md
   - Glossar: glossary.md
   - About:
