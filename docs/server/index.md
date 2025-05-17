@@ -19,7 +19,7 @@ aus, löst sie und sendet die Lösung zum Client.
 ??? info "Ablaufdiagramm des Servers"
 
     ```mermaid
-    graph TD
+    graph LR
         A(Start) --> B[Warte auf Client]
         B --> C[Sende Konfiguration]
         C --> D[Warte, bis Client Farben schickt]

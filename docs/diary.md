@@ -946,7 +946,7 @@ Ich muss mal kurz (auch für mich) ein kleines Diagramm schreiben:
 
 === "Server"
     ```mermaid
-    graph TD
+    graph RL
         A(Client connected) --> B(Send Config)
         B --> C(Receive cube state)
         C --> D(Solve given cube)
@@ -955,7 +955,7 @@ Ich muss mal kurz (auch für mich) ein kleines Diagramm schreiben:
     ```
 === "Client"
     ```mermaid
-    graph TD
+    graph RL
         A(Connect to server) --> B(Receive Config)
         B --> C(Send cube state)
         C --> D(Wait for solution)
