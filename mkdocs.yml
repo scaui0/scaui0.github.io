@@ -44,11 +44,11 @@ theme:
 plugins:
   - search
   - group:
-      enabled: true
+      enabled: false
 #      enabled: !ENV [GITHUB, false]
       plugins:
         - social:
-            enabled: true
+            enabled: false
 #            enabled: !ENV [RCS_DOCS_SOCIAL, false]
         - macros
         - exporter:
@@ -106,9 +106,7 @@ markdown_extensions:
 #          - overrides/.icons
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.snippets:
-      auto_append:
-        - docs/includes/glossary.md
+  - pymdownx.snippets
   - pymdownx.blocks.tab:
       alternate_style: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
@@ -133,7 +131,7 @@ extra:
 
 nav:
   - Startseite: index.md
-  - Tagebuch: diary.md
+#  - Tagebuch: diary.md
   - Würfelstruktur: cube_structure.md
   - Farberkennung: color_detection.md
   - Server:
