@@ -1,12 +1,5 @@
 # Zauberwürfellöseroboter
 
-
-!!! info "PDF"
-
-    Wenn Sie eine PDF-Ansicht der Webseite vorziehen, können Sie diese Dokumentation auch gerne 
-    [als PDF ansehen](documentation.pdf). Beachten Sie jedoch, dass ich diese Dokumentation als Webseite geschrieben 
-    habe und Sie daher Links nicht nutzen können.
-
 !!! info "Webseite"
     
     Wenn Sie eine interaktive Website eines PDFs so wie ich bevorzugen, können Sie sie sich gerne auf 
