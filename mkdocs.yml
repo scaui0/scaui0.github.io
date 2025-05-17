@@ -40,11 +40,11 @@ theme:
 plugins:
   - search
   - group:
-      enabled: false
+      enabled: true
 #      enabled: !ENV [GITHUB, false]
       plugins:
         - social:
-            enabled: false
+            enabled: true
 #            enabled: !ENV [RCS_DOCS_SOCIAL, false]
         - macros
         - exporter:
