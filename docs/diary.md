@@ -1479,3 +1479,9 @@ Suchmaschinen) zugänglich machen, damit sich diese noch vor der Präsentation u
 
 Ich meine jetzt, dass ich alles Wichtige in der Dokumentation behandelt habe. Wenn dem auch andere Leute (meine Eltern)
 zustimmen, kann ich endlich das PDF erstellen.
+
+## Tag 271 - 17.5.2025
+
+Ich habe jetzt ein brauchbares PDF erstellt. Ein paar Sachen muss ich noch bearbeiten, damit es wirklich gut ist. Dann
+habe ich jetzt noch das Problem, dass ich keine Tagebucheinträgt in beiden Git-Branches (Verzweigungen der Änderungen)
+machen kann, weshalb das PDF wahrscheinlich plötzlich enden wird.
