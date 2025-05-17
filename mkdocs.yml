@@ -147,9 +147,8 @@ nav:
   - Der Roboter:
       robot/index.md
   - How to use: how_to_use.md
-#  - Erklärungen: explanations.md
-#  - Informationen: about.md
+  - Glossar: glossary.md
   - About:
       - about/index.md
       - about/about_documentation.md
-  - Galerie: gallery.md
+  - Anhang A – Galerie: gallery.md

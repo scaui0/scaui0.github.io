@@ -2,9 +2,8 @@
 
 !!! info "Fremdwörter"
 
-    Da in dieser Dokumentation einige nicht umgangssprachliche oder programmierspezifische Wörter genutzt werden, ist
-    bei deren Verwendung meist eine kleine Zahl angegeben. Diese ist ein Link zu einer Fußnote, in der das Wort näher 
-    erklärt wird.
+    Da in dieser Dokumentation einige nicht umgangssprachliche oder programmierspezifische Wörter genutzt werden, habe
+    ich ein Glossar erstellt. Die meisten Wörter sollten Sie dort finden.
 
 Die Tage 1–5 beziehen sich auf Arbeitstage, die Tage danach allerdings auf \*echte* Tage.
 
@@ -66,7 +65,7 @@ Später (15:33) doch noch die nächsten zwei Drehungen hinzugefügt. Diese sind 
 
 ## Tag 7 - 27.8.2024
 
-Ich habe heute keine Lust zum Schreiben. Habe gerade die Drehbewegungen in eine JSON[^2]-Datei verfrachtet.
+Ich habe heute keine Lust zum Schreiben. Habe gerade die Drehbewegungen in eine JSON-Datei verfrachtet.
 Ein Beispiel aus dieser JSON-Datei (gekürzt, weil es statt 2 Bewegungen der Plättchenfarben (der Cubies, kleinerer 
 Unterwürfel) immer exakt 5 gibt, eine zum Drehen der Hauptseite und 4 zum Drehen der Ränder):
 
@@ -109,7 +108,7 @@ Die Drehungsdatei hat schon 242 Zeilen!
 ## Tag 9 - 29.8.2024
 
 Ich habe gerade die Bewegung der linken Seite in die Datei eingegeben. Beim Testen ist mir aufgefallen, dass das
-`reverse`-Argument[^1] nicht an die Drehfunktion übergeben würde. Eine Katastrophe! Keine Drehung geht mehr! Das heißt,
+`reverse`-Argument nicht an die Drehfunktion übergeben würde. Eine Katastrophe! Keine Drehung geht mehr! Das heißt,
 ich muss mehr als 350 Zeilen neuschreiben! Los geht's...
 
 Es ist doch fast alles OK. Das Problem war nur, dass ich nicht gesehen hatte, dass das Default des `reverse` Arguments
@@ -159,7 +158,7 @@ Hier wollte ich eigentlich einen Eintrag machen, kann mich aber nicht mehr erinn
 
 Heute habe ich ChatGPT gefragt, wie Korfs Algorithmus funktioniert. Ich glaube, verstanden zu haben, dass der
 Algorithmus alle möglichen Kombinationen an Zügen von 1 Zug zu 20 Zügen durchgeht und für jede Zugfolge die
-Heuristik[^2] berechnet, um herauszufinden, welche Kombination am Wahrscheinlichsten zum Erfolg (gelöster Würfel) führt.
+Heuristik berechnet, um herauszufinden, welche Kombination am Wahrscheinlichsten zum Erfolg (gelöster Würfel) führt.
 
 Die Heuristik habe ich noch nicht implementiert, aber dafür kann das Programm einen Würfel mit wenigen Drehungen lösen,
 sofern der Würfel nicht zu sehr verdreht ist. Das Maximum an Zügen zum Lösen ist 20, das Programm braucht dafür
@@ -212,7 +211,7 @@ gefunden. Das heißt, ich muss sie selbst erstellen. Vielleicht von Hand, aber e
 
 Ich hätte heute auch programmiert, hatte allerdings zu viel damit zu tun, die mathematischen Formeln oben zu
 korrigieren. Als das dann ging, musste ich die Dokumentation noch in HTML umwandeln, um zu sehen, ob Firefox 
-[LaTeX](explanations.md#latex), das Format für die mathematischen Rechnungen, das ich nutze, anzeigen kann. Das hat 
+[LaTeX](about/about_documentation.md#latex), das Format für die mathematischen Rechnungen, das ich nutze, anzeigen kann. Das hat 
 erstmal nicht geklappt, weil das Encoding nicht `UTF-8`war. Dann gab es Probleme, dass *pandoc*, das Programm, das ich 
 zum Konvertieren der Markdown-Datei zu HTML nutze, keine vollständige HTML-Datei produziert hat, sondern nur den Text in
 HTML, es fehlten also Meta-Informationen, wie Kodierung, Autor, Skripte, die zur Ausführung benötigt wurden, Style (in 
@@ -242,16 +241,16 @@ keinen Darkmode.
 
 ## Tag 22 - 11.9.2024
 
-Heute habe ich mir angeguckt, wie man UML-Diagramme in Markdown[^3] einbettet.
+Heute habe ich mir angeguckt, wie man UML-Diagramme in Markdown einbettet.
 
-Dann habe ich angefangen, die [Was ist Markdown-Sektion](explanations.md#markdown) anzufangen. Gerade war ich bei dem 
+Dann habe ich angefangen, die [Was ist Markdown-Sektion](about/about_documentation.md#markdown) anzufangen. Gerade war ich bei dem 
 $\LaTeX$-Teil, als ich gemerkt habe, dass die Gleichung oben (Ende des Eintrags an [Tag 18](#tag-18-792024)) falsch war.
 Das habe ich jetzt korrigiert. Ich habe die Gaußsche Summenformel nur falsch wiederholt.
 
 Habe jetzt den Abschnitt über Markdown fertig. Musste etwas herumprobieren mit dem letzten Code-Block, weil Markdown den
 zu HTML konvertieren wollte.
 
-Jetzt existiert auch noch der Abschnitt über [$\LaTeX$](explanations.md#latex).
+Jetzt existiert auch noch der Abschnitt über [$\LaTeX$](about/about_documentation.md#latex).
 
 ## Tag 23 - 12.9.2024
 
@@ -381,21 +380,22 @@ Nächster Versuch, passiert wieder nichts ...
 
 ## Tag 37 - 26.9.2024
 
-Ich habe grade das Inhaltsverzeichnis des Tagebuchs verbessert und neue Dokumente ([Erklärungen](explanations.md) und 
-[die Startseite](index.md)) hinzugefügt. Dann noch alle Links geändert, so dass sie auf diese Dateien verweisen.
+Ich habe grade das Inhaltsverzeichnis des Tagebuchs verbessert und neue Dokumente (Erklärungen (Nachträglich 
+[About](about/about_documentation.md) verschoben) und [die Startseite](index.md)) hinzugefügt. Dann noch alle Links 
+geändert, so dass sie auf diese Dateien verweisen.
 
 Da dieses Dokument (Tagebuch) dann nur noch auf einer Überschrift mit nur einem Unterthema war, habe ich die 
 Hauptüberschrift entfernt.
 
 ## Tag 38 - 27.9.2024
 
-Heute wollte ich wieder programmieren. In PyCharm[^4] kan dann aber die Nachricht, dass eine neuere Version 
+Heute wollte ich wieder programmieren. In PyCharm kan dann aber die Nachricht, dass eine neuere Version 
 verfügbar ist. Diese wollte ich installieren. Also auf `Update` klicken. Dann Restarten, damit die Änderungen übernommen
 werden. Dann kam der Fehler, dass ich nicht mehr genug Speicherplatz habe (Ich hatte gestern noch ca. 4 GB). Also,
 was macht man sonst, suche ich in den Windows-Speichereinstellungen nach den größten Apps und Ordnern. Dabei habe ich
 ein Programm gefunden, das ich nicht mehr brauche. Also will ich es deinstallieren. Geht aber nicht, da meine Dateien
 für dieses Programm (`RoboPRO`) noch in den Programmdateien gespeichert waren. Also wollte ich sie auf einen USB-Stick
-ziehen. Das ging nach einer 15-minütigen Formation auch. Als ich dann alle PyCharm[^4]-Projekte (ca. 5 GB)
+ziehen. Das ging nach einer 15-minütigen Formation auch. Als ich dann alle PyCharm-Projekte (ca. 5 GB)
 auf den USB-Stick ziehen wollte, hat es voraussichtlich 4 Stunden gebraucht. Dann ist alles abgestürzt und ich habe im
 Task-Manager den Explorer geschlossen. Keine gute Idee! Die Taskleiste ist verschwunden, das Programmwechselmenü
 (++alt+tab++) und wahrscheinlich auch noch andere Sachen. Die ++win++-Taste ging nicht mehr, ++ctrl+alt+delete++ aber
@@ -467,7 +467,7 @@ kann. Der RegEx ist `int(?:\((-?\d+)\)|(\d+))?-(?:\((-?\d+)\)|(\d+))?(?:%(\d+))?
 
 Die RegEx-Erklärung oben zu erstellen/formatieren hat sehr lange gebraucht, weil ich die Beschreibung kopiert habe und 
 sie extrem unformatiert war. Ich habe halt den Text kopiert und nicht die Formatierungen. Dann hatte ich noch Probleme,
-dass Material for MkDocs `\(` als [LaTeX](explanations.md#latex) interpretiert hat und ich daher immer `\(` im RegEx mit
+dass Material for MkDocs `\(` als [LaTeX](about/about_documentation.md#latex) interpretiert hat und ich daher immer `\(` im RegEx mit
 `\\(` austauschen musste. Dann waren die Listen falsch formatiert. Ich hatte jeden Untereintrag nur 2 statt 4 
 Leerzeichen eingerückt. Bis ich das aber herausgefunden habe, hat es etwa 30 Minuten gebraucht.
 
@@ -1479,15 +1479,3 @@ Suchmaschinen) zugänglich machen, damit sich diese noch vor der Präsentation u
 
 Ich meine jetzt, dass ich alles Wichtige in der Dokumentation behandelt habe. Wenn dem auch andere Leute (meine Eltern)
 zustimmen, kann ich endlich das PDF erstellen.
-
-[^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
-eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.
-
-[^2]: Heuristik: Methoden, die mit begrenztem Wissen und wenig Zeit zu wahrscheinlichen Aussagen oder praktikablen 
-Lösungen führen.
-
-[^3]: 
-    Markdown ist ein menschenfreundliches Textformat, das in HTML konvertiert werden kann, um eine formatierte Ansicht
-    zu erhalten. Beispiele in der [Erklärung](explanations.md#markdown).
-
-[^4]: Die IDE/das Programm, das ich zum Programmieren und zum Tagebuchschreiben nutze.
