@@ -21,8 +21,8 @@ herauszufinden, werden als Erstes die Daten aus dem Würfel extrahiert. Diese ha
 Da die Orientierungen im sogenannten Ternärsystem (alle Zahlen zwischen 0 und 2) sind, kann man die Werte mit einem
 jeweiligen Stellenwert multiplizieren, um die Zahl im Dezimalsystem (0 bis 9, das *normale* System) zu erhalten.
 
-$O$ repräsentiert hier die Orientierungen. Die letzte Ecke wird ignoriert, weil die Summe immer 0 sein muss und sie sich
-so aus den Anderen ergibt.
+$O$ repräsentiert hier die Orientierungen. Die letzte Ecke wird ignoriert, weil die Summe modulo 3 immer 0 sein muss und
+sie sich so aus den Anderen ergibt.
 
 $$
 o = \sum^{7}_{i=0}{O_i \cdot 3^{6-i}}
