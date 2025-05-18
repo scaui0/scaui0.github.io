@@ -59,6 +59,7 @@ plugins:
                   - docs/assets/stylesheets/pdf.scss
                 covers:
                   front: docs/assets/covers/front.html.j2
+                  back: docs/assets/covers/back.html.j2
                 browser:
                   debug: false
                 aggregator:
@@ -145,7 +146,7 @@ nav:
   - Fazit: conclusion.md
 
   - Glossar: glossary.md
-  - Anhang A – Galerie: gallery.md
-  - Anhang B – About:
+  - Anhang A – About:
       - about/index.md
       - about/about_documentation.md
+  - Anhang B – Galerie: gallery.md

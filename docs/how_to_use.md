@@ -43,7 +43,20 @@ geöffnet haben, damit mein Programm den `Cube Explorer` im Hintergrund per API 
 
 Im Folgenden eine Liste mit Befehlen (erstellt von `python main.py --help`):
 ```
-api-gui: Startet die API mit GUI.
+╭─ Commands ─────────────────────────────────────────────────────────────────────────────╮
+│ korf             Solves the cube with the given moves using korfs algorithm.           │
+│ thistlethwaite   Solves the cube with the given moves using thistlethwaites algorithm. │
+│ kociemba         Solves the cube with the given moves using kociemba algorithm.        │
+│ prune            Prunes the given moves.                                               │
+│ loop             How many times can you run this moves until the cube is solved again  │
+│ to-string        Tool to recreate moves from a string. Developer only!                 │
+│ gui              Starts the GUI                                                        │
+│ deps             Generates the dependencies like the color detection model             │
+│ api              Starts the API.                                                       │
+│ api-gui          Start the API-GUI manager.                                            │
+│ ai               The AI subcommand for interacting with the color detection model.     │
+╰────────────────────────────────────────────────────────────────────────────────────────╯
+
 ```
 
 Um sich die Optionen/Argumente der Befehle anzeigen zu lassen, können Sie `--help` anhängen.
