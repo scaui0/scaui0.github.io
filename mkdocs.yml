@@ -142,7 +142,7 @@ nav:
       - Korf: solver/korf.md
       - Thistlethwaite: solver/thistlethwaite.md
   - Der Roboter: robot.md
-  - How to use: how_to_use.md
+  - Nutzung des Programms: using_the_program.md
   - Fazit: conclusion.md
 
   - Glossar: glossary.md
