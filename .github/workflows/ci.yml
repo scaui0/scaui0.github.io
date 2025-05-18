@@ -30,18 +30,19 @@ jobs:
 
       - run: pip install mkdocs-material mkdocs-material[imaging]
 
-#      - run: mkdocs gh-deploy --force
-#        env:
-#          GITHUB: ${{ vars.GITHUB }}
-#          RCS_DOCS_PDF: ${{ vars.RCS_DOCS_PDF }}
-#          RCS_DOCS_SOCIAL: ${{ vars.RCS_DOCS_SOCIAL }}
+      - run: mkdocs gh-deploy --force
+        env:
+          GITHUB: ${{ vars.GITHUB }}
+          RCS_DOCS_PDF: ${{ vars.RCS_DOCS_PDF }}
+          RCS_DOCS_SOCIAL: ${{ vars.RCS_DOCS_SOCIAL }}
 
-      - run: |
-          git fetch --all
-          git branch --all
-          git checkout gh-pages
-          git restore --source=origin/gh-pages-pdf -- documentation.pdf
-          git add documentation.pdf
-          git commit -m "Update documentation.pdf from gh-pages-pdf"
-#          git restore --source gh-pages-pdf documentation.pdf
-      # Copy the PDF file from the PDF branch
+# Not working - sadly:
+#      - run: |
+#          git fetch --all
+#          git branch --all
+#          git checkout gh-pages
+#          git restore --source=origin/gh-pages-pdf -- documentation.pdf
+#          git add documentation.pdf
+#          git commit -m "Update documentation.pdf from gh-pages-pdf"
+##          git restore --source gh-pages-pdf documentation.pdf
+#      # Copy the PDF file from the PDF branch
