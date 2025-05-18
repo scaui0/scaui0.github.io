@@ -39,6 +39,7 @@ jobs:
       - run: |
           git fetch --all
           git branch --all
+          git checkout gh-pages
           git restore --source=origin/gh-pages-pdf -- documentation.pdf
           git add documentation.pdf
           git commit -m "Update documentation.pdf from gh-pages-pdf"
