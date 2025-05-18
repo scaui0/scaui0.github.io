@@ -9,4 +9,4 @@ In letzter Zeit sind einige ~~fehlerfreie~~ Programme entstanden. Eine kleine Li
 | [FunnyFileFilters](https://github.com/scaui0/images)     | Ein einfaches Programm das einen einfachen Farbfilter auf Bilder anwendet.  |
 | DatapackUpdater                                          | Ein Updater für Minecraft Datapacks. Wird demnächst veröffentlicht.         |
 
-Alle Programe werden auf meinem GitHub veröffentlicht: [github.com/scaui0](https://github.com/scaui0)
+Alle Programe werden auf meinem GitHub-Profil veröffentlicht: [github.com/scaui0](https://github.com/scaui0)
