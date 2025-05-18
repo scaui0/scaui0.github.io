@@ -120,7 +120,7 @@ nav:
       - Korf: solver/korf.md
       - Thistlethwaite: solver/thistlethwaite.md
   - Der Roboter: robot.md
-  - How to use: how_to_use.md
+  - How to use: using_the_programm.md
   - About:
       - about/index.md
       - about/about_documentation.md
