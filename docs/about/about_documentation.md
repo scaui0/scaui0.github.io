@@ -1,3 +1,7 @@
+---
+hidden:
+  - covers
+---
 # Über diese Dokumentation
 
 Diese Dokumentation basiert auf Markdown, einer Auszeichnungssprache, die in Plain-Text geschrieben wird. Sie beinhaltet

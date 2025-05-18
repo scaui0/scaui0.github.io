@@ -1,3 +1,7 @@
+---
+hidden:
+  - covers
+---
 # Thistlethwaite Algorithmus
 
 !!! info "Leichte Abweichungen zum Original"

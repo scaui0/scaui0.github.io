@@ -1,3 +1,7 @@
+---
+hidden:
+  - covers
+---
 # Zauberwürfellöseroboter
 
 !!! info "Webseite"

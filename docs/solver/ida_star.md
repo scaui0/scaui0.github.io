@@ -1,3 +1,7 @@
+---
+hidden:
+  - covers
+---
 # IDA\* - Iterative Deepening A\*
 
 !!! info inline end "Namensursprung"
