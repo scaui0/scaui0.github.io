@@ -1,3 +1,7 @@
+---
+hidden:
+  - covers
+---
 # Koordinaten-Berechnung
 
 Alle Algorithmen, die ich nutze, funktionieren ähnlich: sie haben alle Pattern-Databases, in denen sie die benötigte

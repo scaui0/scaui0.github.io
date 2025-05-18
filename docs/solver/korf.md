@@ -1,3 +1,7 @@
+---
+hidden:
+  - covers
+---
 # Korfs Algorithmus
 
 --8<-- "docs/includes/algorithm_from_benotto.md"
