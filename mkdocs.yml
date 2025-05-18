@@ -5,12 +5,8 @@ copyright: Copyright &copy; 2024-2025 Franz Weingartz
 theme:
   language: de
   name: material
-#  logo: assets/images/icon.svg
   icon:
     logo: material/cube
-#  favicon: assets/images/icon.svg
-#  favicon: material/cube
-  custom_dir: docs/overrides
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -125,8 +121,6 @@ nav:
       - Thistlethwaite: solver/thistlethwaite.md
   - Der Roboter: robot.md
   - How to use: how_to_use.md
-#  - Erklärungen: explanations.md
-#  - Informationen: about.md
   - About:
       - about/index.md
       - about/about_documentation.md
