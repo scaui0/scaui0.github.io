@@ -123,8 +123,7 @@ nav:
       - IDA*: solver/ida_star.md
       - Korf: solver/korf.md
       - Thistlethwaite: solver/thistlethwaite.md
-  - Der Roboter:
-      robot/index.md
+  - Der Roboter: robot.md
   - How to use: how_to_use.md
 #  - Erklärungen: explanations.md
 #  - Informationen: about.md
