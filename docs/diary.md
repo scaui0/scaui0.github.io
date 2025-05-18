@@ -1482,6 +1482,16 @@ Ich habe jetzt ein brauchbares PDF erstellt. Ein paar Sachen muss ich noch bearb
 habe ich jetzt noch das Problem, dass ich keine Tagebucheinträge in beiden Git-Branches (Verzweigungen der Änderungen)
 machen kann, weshalb das PDF wahrscheinlich plötzlich enden wird.
 
+## Tag 271 - 18.5.2025
+
+Ich habe jetzt ein Cover für das PDF erstellt. Darauf steht 
+
+> Jahresarbeit - Zauberwürfellöseroboter
+> 
+> Franz Weingartz
+
+mit einem Bild.
+
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.
 
