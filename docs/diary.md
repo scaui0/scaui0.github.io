@@ -1486,8 +1486,23 @@ machen kann, weshalb das PDF wahrscheinlich plötzlich enden wird.
 
 Ich habe jetzt ein Cover für das PDF erstellt. Darauf steht 
 
-> Jahresarbeit - Zauberwürfellöseroboter
-> 
-> Franz Weingartz
+!!! quote ""
+
+    Jahresarbeit - Zauberwürfellöseroboter
+
+    Franz Weingartz
 
 mit einem Bild.
+
+Da ich in diesem PDF immer mehr Probleme habe, das Tagebuch fortzuführen, werde ich es nun beenden. Auf meiner Webseite
+werde ich es bis zur Präsentation fortführen. Wenn Sie es geschafft haben sollten, sich dieses Tagebuch durchzulesen,
+meinen Respekt, ich hätte es nicht geschafft. Wenn Sie es nicht geschafft haben, habe ich an Tag 11 recht behalten:
+
+!!! quote "Zitat"
+
+    Wenn ich dieses Tagebuch so weiterführe, wird es am Ende niemand lesen, weil es so lang ist.
+
+Damals hatte es nur 120 Zeilen, jetzt mehr als das 10-fache. Probieren Sie auch gerne mein Programm aus, die Anleitung
+haben Sie ja.
+
+Auf Wiedersehen.
