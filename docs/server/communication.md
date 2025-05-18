@@ -1,7 +1,3 @@
----
-hidden:
-  - covers
----
 # Kommunikation
 
 Der Server kommuniziert mit dem Client (Roboter), um wichtige Informationen wie Konfiguration, Farben oder Züge zu übertragen.

@@ -1,8 +1,3 @@
----
-hidden:
-  - covers
----
-
 # Zauberwürfellöseroboter
 
 

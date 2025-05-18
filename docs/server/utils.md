@@ -1,7 +1,3 @@
----
-hidden:
-  - covers
----
 # Hilfsmittel
 
 Der Server nutzt verschiedene Werkzeuge, wie den Move-Pruner oder den Farbkorrigierer.
