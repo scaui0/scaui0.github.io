@@ -37,6 +37,7 @@ jobs:
           RCS_DOCS_SOCIAL: ${{ vars.RCS_DOCS_SOCIAL }}
 
       - run: |
+          git fetch --all
           git branch --all
           git restore --source=origin/gh-pages-pdf -- documentation.pdf
 #          git restore --source gh-pages-pdf documentation.pdf
