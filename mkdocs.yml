@@ -1,5 +1,5 @@
 site_name: Zauberwürfellöseroboter
-site_url: https://scaui0.github.io
+#site_url: http://127.0.0.1:8000/
 site_description: Erstellung eines Zauberwürfel-lösenden Roboters.
 copyright: Copyright &copy; 2024-2025 Franz Weingartz
 theme:
