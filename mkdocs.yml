@@ -85,8 +85,8 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.keys
   - pymdownx.blocks.caption
-  - pymdownx.tabbed:
-      alternate_style: true
+  - pymdownx.tabbed
+#      alternate_style: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.superfences:
@@ -142,8 +142,10 @@ nav:
       - Thistlethwaite: solver/thistlethwaite.md
   - Der Roboter: robot.md
   - How to use: how_to_use.md
+  - Fazit: conclusion.md
+
   - Glossar: glossary.md
-  - About:
+  - Anhang A – Galerie: gallery.md
+  - Anhang B – About:
       - about/index.md
       - about/about_documentation.md
-  - Anhang A – Galerie: gallery.md
