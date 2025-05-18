@@ -37,5 +37,6 @@ jobs:
           RCS_DOCS_SOCIAL: ${{ vars.RCS_DOCS_SOCIAL }}
 
       - run: |
-          git restore --source gh-pages-pdf documentation.pdf
+          git restore --source=origin/gh-pages-pdf -- documentation.pdf
+#          git restore --source gh-pages-pdf documentation.pdf
       # Copy the PDF file from the PDF branch
