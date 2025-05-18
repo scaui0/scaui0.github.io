@@ -37,7 +37,10 @@ jobs:
           RCS_DOCS_SOCIAL: ${{ vars.RCS_DOCS_SOCIAL }}
 
       - run: |
+          git fetch --all
           git branch --all
-          git restore --source=remotes/origin/gh-pages-pdf -- documentation.pdf
+          git restore --source=origin/gh-pages-pdf -- documentation.pdf
+          git add documentation.pdf
+          git commit -m "Update documentation.pdf from gh-pages-pdf"
 #          git restore --source gh-pages-pdf documentation.pdf
       # Copy the PDF file from the PDF branch
