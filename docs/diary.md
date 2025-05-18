@@ -1469,10 +1469,6 @@ schreiben.
 
 ## Tag 269 - 16.5.2025
 
-An diesem Tag habe ich irgendetwas an der Dokumentation gemacht.
-
-## Tag 270 - 17.5.2025
-
 Ich schreibe jetzt ersteinmal weiter, dann versuche ich jetzt am Wochenende (heute ist Freitag) das PDF fertig zu 
 machen, um es dann auszudrucken. Dann muss ich auch schnell die Webseite für Crawler (Webseiten-Finder von
 Suchmaschinen) zugänglich machen, damit sich diese noch vor der Präsentation updaten können.
@@ -1480,7 +1476,7 @@ Suchmaschinen) zugänglich machen, damit sich diese noch vor der Präsentation u
 Ich meine jetzt, dass ich alles Wichtige in der Dokumentation behandelt habe. Wenn dem auch andere Leute (meine Eltern)
 zustimmen, kann ich endlich das PDF erstellen.
 
-## Tag 271 - 17.5.2025
+## Tag 270 - 17.5.2025
 
 Ich habe jetzt ein brauchbares PDF erstellt. Ein paar Sachen muss ich noch bearbeiten, damit es wirklich gut ist. Dann
 habe ich jetzt noch das Problem, dass ich keine Tagebucheinträge in beiden Git-Branches (Verzweigungen der Änderungen)
