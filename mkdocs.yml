@@ -65,7 +65,7 @@ plugins:
                 aggregator:
                   enabled: true
                   output: documentation.pdf
-                  covers: book
+                  covers: none  # book
 
 markdown_extensions:
   - toc:
