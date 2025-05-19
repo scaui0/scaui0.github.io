@@ -19,4 +19,4 @@ auftaucht.
 | PDB               | Pattern Database, eine Datenbank, die speichert, wie viele Züge es braucht, bis der Würfel geöst ist. Wird von der Heuristik verwendet.                                                               |
 | Argument          | Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit diese eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.                         |
 | Heuristik         | Methoden, die mit begrenztem Wissen und wenig Zeit zu wahrscheinlichen Aussagen oder praktikablen Lösungen führen.                                                                                    |
-| Markdown          | Markdown ist ein menschenfreundliches Testformat, das in HTML konvertiert werden kann, um eine formatierte Ansicht zu erhalten. Beispiele in [Über diese Dokumentation](about/about_documentation.md) |
+| Markdown          | Markdown ist ein menschenfreundliches Testformat, das in HTML konvertiert werden kann, um eine formatierte Ansicht zu erhalten. Beispiele in [Über diese Dokumentation](about_documentation.md)       |

@@ -1,4 +1,4 @@
-# Anhang B – Galerie
+# Anhang C – Galerie
 
 Während des Projekts sind einige Bilder entstanden. Im Folgenden eine Sammlung.
 

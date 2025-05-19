@@ -211,7 +211,7 @@ gefunden. Das heißt, ich muss sie selbst erstellen. Vielleicht von Hand, aber e
 
 Ich hätte heute auch programmiert, hatte allerdings zu viel damit zu tun, die mathematischen Formeln oben zu
 korrigieren. Als das dann ging, musste ich die Dokumentation noch in HTML umwandeln, um zu sehen, ob Firefox 
-[LaTeX](about/about_documentation.md#latex), das Format für die mathematischen Rechnungen, das ich nutze, anzeigen kann. Das hat 
+[LaTeX](about_documentation.md#latex), das Format für die mathematischen Rechnungen, das ich nutze, anzeigen kann. Das hat 
 erstmal nicht geklappt, weil das Encoding nicht `UTF-8`war. Dann gab es Probleme, dass *pandoc*, das Programm, das ich 
 zum Konvertieren der Markdown-Datei zu HTML nutze, keine vollständige HTML-Datei produziert hat, sondern nur den Text in
 HTML, es fehlten also Meta-Informationen, wie Kodierung, Autor, Skripte, die zur Ausführung benötigt wurden, Style (in 
@@ -243,14 +243,14 @@ keinen Darkmode.
 
 Heute habe ich mir angeguckt, wie man UML-Diagramme in Markdown einbettet.
 
-Dann habe ich angefangen, die [Was ist Markdown-Sektion](about/about_documentation.md#markdown) anzufangen. Gerade war ich bei dem 
+Dann habe ich angefangen, die [Was ist Markdown-Sektion](about_documentation.md#markdown) anzufangen. Gerade war ich bei dem 
 $\LaTeX$-Teil, als ich gemerkt habe, dass die Gleichung oben (Ende des Eintrags an [Tag 18](#tag-18-792024)) falsch war.
 Das habe ich jetzt korrigiert. Ich habe die Gaußsche Summenformel nur falsch wiederholt.
 
 Habe jetzt den Abschnitt über Markdown fertig. Musste etwas herumprobieren mit dem letzten Code-Block, weil Markdown den
 zu HTML konvertieren wollte.
 
-Jetzt existiert auch noch der Abschnitt über [$\LaTeX$](about/about_documentation.md#latex).
+Jetzt existiert auch noch der Abschnitt über [$\LaTeX$](about_documentation.md#latex).
 
 ## Tag 23 - 12.9.2024
 
@@ -381,7 +381,7 @@ Nächster Versuch, passiert wieder nichts ...
 ## Tag 37 - 26.9.2024
 
 Ich habe grade das Inhaltsverzeichnis des Tagebuchs verbessert und neue Dokumente (Erklärungen (Nachträglich 
-[About](about/about_documentation.md) verschoben) und [die Startseite](index.md)) hinzugefügt. Dann noch alle Links 
+[About](about_documentation.md) verschoben) und [die Startseite](index.md)) hinzugefügt. Dann noch alle Links 
 geändert, so dass sie auf diese Dateien verweisen.
 
 Da dieses Dokument (Tagebuch) dann nur noch auf einer Überschrift mit nur einem Unterthema war, habe ich die 
@@ -467,7 +467,7 @@ kann. Der RegEx ist `int(?:\((-?\d+)\)|(\d+))?-(?:\((-?\d+)\)|(\d+))?(?:%(\d+))?
 
 Die RegEx-Erklärung oben zu erstellen/formatieren hat sehr lange gebraucht, weil ich die Beschreibung kopiert habe und 
 sie extrem unformatiert war. Ich habe halt den Text kopiert und nicht die Formatierungen. Dann hatte ich noch Probleme,
-dass Material for MkDocs `\(` als [LaTeX](about/about_documentation.md#latex) interpretiert hat und ich daher immer `\(` im RegEx mit
+dass Material for MkDocs `\(` als [LaTeX](about_documentation.md#latex) interpretiert hat und ich daher immer `\(` im RegEx mit
 `\\(` austauschen musste. Dann waren die Listen falsch formatiert. Ich hatte jeden Untereintrag nur 2 statt 4 
 Leerzeichen eingerückt. Bis ich das aber herausgefunden habe, hat es etwa 30 Minuten gebraucht.
 

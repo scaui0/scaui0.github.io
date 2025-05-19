@@ -146,7 +146,6 @@ nav:
   - Fazit: conclusion.md
 
   - Glossar: glossary.md
-  - Anhang A – About:
-      - about/index.md
-      - about/about_documentation.md
-  - Anhang B – Galerie: gallery.md
+  - Anhang A – Über mich: about.md
+  - Anhang B – Über diese Documentation: about_documentation.md
+  - Anhang C – Galerie: gallery.md
