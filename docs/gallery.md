@@ -4,7 +4,7 @@ Während des Projekts sind einige Bilder entstanden. Im Folgenden eine Sammlung.
 
 ## Der Roboter
 
-![Der Roboter, wie er im Dunkeln leuchtet](/images/robot_glowing_in_dark.jpg){ width="50%" }
+![Der Roboter, wie er im Dunkeln leuchtet](/images/robot_glowing_in_dark.jpg){ width="40%" }
 /// caption
 Der Roboter, wie er im Dunkeln leuchtet
 ///
@@ -13,6 +13,8 @@ Der Roboter, wie er im Dunkeln leuchtet
 /// caption
 Der fertige Roboter
 ///
+
+<div class="page-break"></div>
 
 ## Das Programm
 
