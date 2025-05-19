@@ -18,19 +18,19 @@ Der fertige Roboter
 
 ## Das Programm
 
-![Ein zweidimensionaler Würfel in der GUI](/images/gui.png){ width="50%" }
+![Ein zweidimensionaler Würfel in der GUI](/images/gui.png){ width="40%" }
 /// caption
 Ein zweidimensionaler Würfel in der GUI
 ///
 
-![Ein Schachbrettmuster in der neuen GUI](/images/new_gui_image.png){ width="50%" }
+![Ein Schachbrettmuster in der neuen GUI](/images/new_gui_image.png){ width="40%" }
 /// caption
 Ein Schachbrettmuster in der neuen GUI
 ///
 
 ## Hilfsmittel
 
-![Ein aufgeschnittener Würfel](/images/flat_cube.jpg){ width="50%" }
+![Ein aufgeschnittener Würfel](/images/flat_cube.jpg){ width="40%" }
 /// caption
 Ein aufgeschnittener Würfel
 ///
