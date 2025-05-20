@@ -4,7 +4,7 @@ title: Der Roboter
 
 # Der Roboter
 
-![Der Roboter](/images/robot_1.jpg)
+![Der Roboter](/images/robot_1.jpg){ width="70%" }
 
 ///caption
 Der Roboter

@@ -48,10 +48,8 @@ Im Folgenden eine Liste mit Befehlen (erstellt von `python main.py --help`):
 │ thistlethwaite   Solves the cube with the given moves using thistlethwaites algorithm. │
 │ kociemba         Solves the cube with the given moves using kociemba algorithm.        │
 │ prune            Prunes the given moves.                                               │
-│ loop             How many times can you run this moves until the cube is solved again  │
-│ to-string        Tool to recreate moves from a string. Developer only!                 │
-│ gui              Starts the GUI                                                        │
-│ deps             Generates the dependencies like the color detection model             │
+│ loop             How many times can you run this moves until the cube is solved again. │
+│ deps             Generates the dependencies like the color detection model.            │
 │ api              Starts the API.                                                       │
 │ api-gui          Start the API-GUI manager.                                            │
 │ ai               The AI subcommand for interacting with the color detection model.     │
@@ -71,9 +69,9 @@ Der Port-Standard ist `3457`.
 Um die API automatisch starten zu lassen (sodass automatisch angefangen wird, den Würfel zu lösen), nutzen Sie die
 Option `--auto`.
 
-Der Aufbau:
+### Der Aufbau
 
-![Der Aufbau der GUI](/images/api_gui_with_descriptions.png)
+![Der Aufbau der GUI](/images/api_gui_with_descriptions.png){ align=left width=60% }
 
 1. Der Solve-Button zum Lösen des aktuellen Würfels in Feld 6.
 2. Der Scan-Button zum Auffordern des Clients zum Scannen.

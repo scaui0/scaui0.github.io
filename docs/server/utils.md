@@ -40,6 +40,8 @@ von einem Algorithmus korrigiert, wenn der erkannte Würfel nicht existieren kan
 verschiedene Korrektur-Algorithmen entstanden, von denen aber nur einer wirklich zuverlässig arbeitet. Der
 Vollständigkeit halber sind alle hier dokumentiert. Ich möchte keine Beschwerden über die sehr kreativen Namen hören!
 
+<div class="page-break"></div>
+
 ### Neu
 
 Dieser Algorithmus korrigiert eine Farbe, in dem er prüft, welche Zu-Viel-Farbe am ehesten zu der Defizitfarbe passt.
