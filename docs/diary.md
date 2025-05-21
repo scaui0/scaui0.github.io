@@ -1494,6 +1494,8 @@ Ich habe jetzt ein Cover für das PDF erstellt. Darauf steht
 
 mit einem Bild.
 
+<div class="page-break"></div>
+
 Da ich in diesem PDF immer mehr Probleme habe, das Tagebuch fortzuführen, werde ich es nun beenden. Auf meiner Webseite
 werde ich es bis zur Präsentation fortführen. Wenn Sie es geschafft haben sollten, sich dieses Tagebuch durchzulesen,
 meinen Respekt, ich hätte es nicht geschafft. Wenn Sie es nicht geschafft haben, habe ich an Tag 11 recht behalten:
