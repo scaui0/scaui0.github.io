@@ -1,6 +1,6 @@
 # Farberkennung
 
-Die RGB-Werte[^1], die von Roboter eingescannt werden, müssen vor dem Lösen des Würfels noch in die programm-internen
+Die RGB-Werte[^1], die vom Roboter eingescannt werden, müssen vor dem Lösen des Würfels noch in die programm-internen
 Farben umgewandelt werden. Die Farben, die erkannt werden müssen, sind Weiß, Gelb, Grün, Blau, Rot und Orange.
 
 Die Farbstruktur ist eine Liste mit Länge 54 von RGB-Werten. Es gibt von jeder Farbe exakt 9 Farbwerte.

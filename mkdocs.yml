@@ -3,6 +3,7 @@ site_url: https://scaui0.github.io
 site_description: Erstellung eines Zauberwürfel-lösenden Roboters.
 copyright: Copyright &copy; 2024-2025 Franz Weingartz
 theme:
+  custom_dir: docs/overrides
   language: de
   name: material
   icon:
@@ -79,9 +80,7 @@ markdown_extensions:
 #          - overrides/.icons
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.snippets:
-      auto_append:
-        - docs/includes/glossary.md
+  - pymdownx.snippets
   - pymdownx.blocks.tab:
       alternate_style: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
@@ -90,8 +89,6 @@ markdown_extensions:
 
 extra_javascript:
   - assets/javascripts/mathjax.js
-  - assets/javascripts/mathjax.js
-  - assets/javascripts/mkdocs-exporter.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
@@ -120,7 +117,8 @@ nav:
       - Korf: solver/korf.md
       - Thistlethwaite: solver/thistlethwaite.md
   - Der Roboter: robot.md
-  - How to use: using_the_programm.md
+  - Nutzung des Programms: using_the_program.md
+  - Glossar: glossary.md
   - About:
       - about/index.md
       - about/about_documentation.md
