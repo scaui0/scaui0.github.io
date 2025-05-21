@@ -13,7 +13,6 @@ auftaucht.
 | API               | Application Programming Interface – Programm-Schnittstelle                                                                                                                                            |
 | JSON              | JavaScript Object Notation: Strukturiertes, verschachteltes Datenformat                                                                                                                               |
 | RegEx             | Ein RegEx (regular expression) ist eine Syntax zum Beschreiben von Zeichenketten.                                                                                                                     |
-| SFN               | Schülerforschungszentrum Nordhessen.                                                                                                                                                                  |
 | Modulo            | Der Rest beim Teilen.                                                                                                                                                                                 |
 | Permutation       | Anordnung                                                                                                                                                                                             |
 | PDB               | Pattern Database, eine Datenbank, die speichert, wie viele Züge es braucht, bis der Würfel geöst ist. Wird von der Heuristik verwendet.                                                               |

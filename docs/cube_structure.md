@@ -23,7 +23,7 @@ werden soll.
 
 Wenn man die Seite mit der jeweiligen mittleren Ebene drehen will, kann die Seite kleingeschrieben werden.
 
-Die mittleren Ebenen alleine werden durch die Buchstaben `S`, `E` und `M`.
+Die mittleren Ebenen alleine werden durch die Buchstaben `S`, `E` und `M` dargestellt.
 
 | Buchstabe | Folgt welcher Seite |
 |-----------|---------------------|

@@ -144,8 +144,8 @@ garantiert ist, dass IDA\* die optimale Lösung findet. Dieser Wert ist in diese
 Im nächsten Durchlauf geht ersteinmal alles genauso wie davor: Es werden alle f-Scores berechnet und die kleinsten als
 Erstes abgesucht.
 
-Weil sich die f-Scores nicht verändert haben, werden wieder die gleichen Knoten durchsucht, bis wieder die tiefste Ebene
-erreicht wird.
+Weil sich die f-Scores nicht verändert haben und immer noch alle unter dem Limit liegen, werden wieder die gleichen 
+Knoten durchsucht, bis wieder die tiefste Ebene erreicht wird.
 
 Der f-Score 3 liegt mittlerweile nicht mehr über dem Limit, also wird er durchsucht.
 

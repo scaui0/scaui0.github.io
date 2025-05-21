@@ -3,10 +3,9 @@
 Alle Algorithmen, die ich nutze, funktionieren ähnlich: sie haben alle Pattern-Databases, in denen sie die benötigte
 Anzahl von Zügen zum Ziel nachschlagen.
 
-Die PDBs (Pattern-Databases) bestehen aus Nibbles. Ein Nibble ist die Hälfte eines Bytes und kann Zahlen von 1 bis 16
-speichern. Um die Position des aktuellen Nibbles herauszufinden, wird eine Koordinate aus den relevanten Teilen des
-Würfels berechnet und dann in der Liste nachgeschaut. Diese Koordinatenberechnung unterscheidet sich für jede einzelne
-PDB.
+Die PDBs (Pattern-Databases) bestehen aus Nibbles. Ein Nibble ist die Hälfte eines Bytes. Um die Position des benötigten 
+Nibbles herauszufinden, wird eine Koordinate aus den relevanten Teilen des Würfels berechnet und dann in der Liste 
+nachgeschaut. Diese Koordinatenberechnung unterscheidet sich für jede einzelne PDB.
 
 ## Beispiel
 
@@ -16,7 +15,7 @@ herauszufinden, werden als Erstes die Daten aus dem Würfel extrahiert. Diese ha
 * Die Orientierungen sind eine Liste von Zahlen je 0 bis 2. Sie hat die Länge 8.
 * Die Permutationen sind eine Liste der Zahlen von 0 bis 11. Jede Zahl kommt einmal vor.
 
-### Die Orientierungen
+## Die Orientierungen
 
 Da die Orientierungen im sogenannten Ternärsystem (alle Zahlen zwischen 0 und 2) sind, kann man die Werte mit einem
 jeweiligen Stellenwert multiplizieren, um die Zahl im Dezimalsystem (0 bis 9, das *normale* System) zu erhalten.
@@ -34,12 +33,11 @@ $$
 o = O_0 \cdot 3^6 + O_1 \cdot 3^5 + O_2 \cdot 3^4 + O_3 \cdot 3^3 + O_4 \cdot 3^3 + O_5 \cdot 3^1 + O_6 \cdot 3^0
 $$
 
-### Die Permutationen
+## Die Permutationen
 
-Da die Permutationen öfters berechnet werden müssen und komplizierter als die Orientierungen sind, werden sie an anderer
-Stelle berechnet. Siehe [PermutationIndexer](#permutationindexer).
+Da die Permutationen komplizierter sind als die Orientierungen siehe [PermutationIndexer](#permutationindexer).
 
-### Der Gesamtwert
+## Der Gesamtwert
 
 Um am Ende eine Zahl zu haben, müssen die Zahlen noch kombiniert werden. $p$ wird mit $4^7$ multipliziert, weil das die
 größte Zahl ist, die $o$ haben kann und so garantiert ist, dass jeder Würfel einen anden Index hat.
@@ -56,11 +54,11 @@ Liste aller Permutationen zu berechnen.
 Angenommen, wie haben die Zahlen $\{0, 1, 2, 3\}$ und wollen wissen, an welcher Stelle die Permutation $(2, 3, 1, 0)$
 steht. Wir könnten alle Permutationen durchgehen, bis wir sie gefunden haben:
 
-1. $0, 1, 2, 3$
-2. $0, 1, 3, 2$
-3. $0, 2, 1, 3$
-4. $1, 0, 2, 3$
-5. ...
+* $0, 1, 2, 3$
+* $0, 1, 3, 2$
+* $0, 2, 1, 3$
+* $1, 0, 2, 3$
+* ...
 
 Allerdings ist dieses Verfahren sehr ineffizient, weil extrem große Mengen an Permutationen berechnet werden müssen.
 An dieser Stelle kommt der Lehmer-Code ins Spiel:
