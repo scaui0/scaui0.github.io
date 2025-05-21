@@ -1,0 +1,2676 @@
+<!DOCTYPE html>
+<html class="no-js" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Erstellung eines Zauberwürfel-lösenden Roboters." name="description"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
+<title>Diary - Zauberwürfellöseroboter</title>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../assets/stylesheets/extra.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/extra_pdf.css" rel="stylesheet"/>
+<link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="website" property="og:type"/>
+<meta content="Diary - Zauberwürfellöseroboter" property="og:title"/>
+<meta content="Erstellung eines Zauberwürfel-lösenden Roboters." property="og:description"/>
+<meta content="./assets/images/social/diary.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="None" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Diary - Zauberwürfellöseroboter" name="twitter:title"/>
+<meta content="Erstellung eines Zauberwürfel-lösenden Roboters." name="twitter:description"/>
+<meta content="./assets/images/social/diary.png" name="twitter:image"/>
+</head>
+<body data-md-color-accent="light-green" data-md-color-primary="green" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#tagebuch">
+          Zum Inhalt
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Kopfzeile" class="md-header__inner md-grid">
+<a aria-label="Zauberwürfellöseroboter" class="md-header__button md-logo" data-md-component="logo" href=".." title="Zauberwürfellöseroboter">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Zauberwürfellöseroboter
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Diary
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="light-green" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="green" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="light-green" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="green" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Suche" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Suche" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Suche" class="md-search__options">
+<button aria-label="Zurücksetzen" class="md-search__icon md-icon" tabindex="-1" title="Zurücksetzen" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Zauberwürfellöseroboter" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Zauberwürfellöseroboter">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35z"></path></svg>
+</a>
+    Zauberwürfellöseroboter
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Startseite
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cube_structure/">
+<span class="md-ellipsis">
+    Würfelstruktur
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../color_detection/">
+<span class="md-ellipsis">
+    Farberkennung
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../server/">
+<span class="md-ellipsis">
+    Server
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Server
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../server/utils/">
+<span class="md-ellipsis">
+    Hilfsmitttel
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../server/communication/">
+<span class="md-ellipsis">
+    Kommunikation
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../solver/">
+<span class="md-ellipsis">
+    Löser
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Löser
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../solver/coordinates/">
+<span class="md-ellipsis">
+    Koordinaten-Berechnung
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../solver/ida_star/">
+<span class="md-ellipsis">
+    IDA*
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../solver/korf/">
+<span class="md-ellipsis">
+    Korf
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../solver/thistlethwaite/">
+<span class="md-ellipsis">
+    Thistlethwaite
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../robot/">
+<span class="md-ellipsis">
+    Der Roboter
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../using_the_program/">
+<span class="md-ellipsis">
+    Nutzung des Programms
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../conclusion/">
+<span class="md-ellipsis">
+    Fazit
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../glossary/">
+<span class="md-ellipsis">
+    Glossar
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../about/">
+<span class="md-ellipsis">
+    Anhang A – Über mich
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../about_documentation/">
+<span class="md-ellipsis">
+    Anhang B – Über diese Documentation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gallery/">
+<span class="md-ellipsis">
+    Anhang C – Galerie
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-1">
+<span class="md-ellipsis">
+      Tag 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-2">
+<span class="md-ellipsis">
+      Tag 2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-3">
+<span class="md-ellipsis">
+      Tag 3
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-4">
+<span class="md-ellipsis">
+      Tag 4
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-5">
+<span class="md-ellipsis">
+      Tag 5
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-6-2682024">
+<span class="md-ellipsis">
+      Tag 6 - 26.8.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-7-2782024">
+<span class="md-ellipsis">
+      Tag 7 - 27.8.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-8-2882024">
+<span class="md-ellipsis">
+      Tag 8 - 28.8.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-9-2982024">
+<span class="md-ellipsis">
+      Tag 9 - 29.8.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-10-3082024">
+<span class="md-ellipsis">
+      Tag 10 - 30.8.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-11-3182024">
+<span class="md-ellipsis">
+      Tag 11 - 31.8.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-12-192024">
+<span class="md-ellipsis">
+      Tag 12 - 1.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-13-292024">
+<span class="md-ellipsis">
+      Tag 13 - 2.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-14-392024">
+<span class="md-ellipsis">
+      Tag 14 - 3.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-15-492024">
+<span class="md-ellipsis">
+      Tag 15 - 4.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-16-592024">
+<span class="md-ellipsis">
+      Tag 16 - 5.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-17-692024">
+<span class="md-ellipsis">
+      Tag 17 - 6.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-18-792024">
+<span class="md-ellipsis">
+      Tag 18 - 7.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-19-892024">
+<span class="md-ellipsis">
+      Tag 19 - 8.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-20-992024">
+<span class="md-ellipsis">
+      Tag 20 - 9.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-21-1092024">
+<span class="md-ellipsis">
+      Tag 21 - 10.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-22-1192024">
+<span class="md-ellipsis">
+      Tag 22 - 11.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-23-1292024">
+<span class="md-ellipsis">
+      Tag 23 - 12.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-24-1392024">
+<span class="md-ellipsis">
+      Tag 24 - 13.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-25-1492024">
+<span class="md-ellipsis">
+      Tag 25 - 14.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-26-1592024">
+<span class="md-ellipsis">
+      Tag 26 - 15.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-27-1692024-tag-32-2192024">
+<span class="md-ellipsis">
+      Tag 27 (16.9.2024) - Tag 32 (21.9.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-33-2292024">
+<span class="md-ellipsis">
+      Tag 33 - 22.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-34-2392024">
+<span class="md-ellipsis">
+      Tag 34 - 23.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-35-2492024">
+<span class="md-ellipsis">
+      Tag 35 - 24.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-36-2592024">
+<span class="md-ellipsis">
+      Tag 36 - 25.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-37-2692024">
+<span class="md-ellipsis">
+      Tag 37 - 26.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-38-2792024">
+<span class="md-ellipsis">
+      Tag 38 - 27.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-39-2892024">
+<span class="md-ellipsis">
+      Tag 39 - 28.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-40-2992024">
+<span class="md-ellipsis">
+      Tag 40 - 29.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-41-3092024">
+<span class="md-ellipsis">
+      Tag 41 - 30.9.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-42-1102024">
+<span class="md-ellipsis">
+      Tag 42 - 1.10.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-43-2102024">
+<span class="md-ellipsis">
+      Tag 43 - 2.10.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-44-3102024-tag-46-5102024">
+<span class="md-ellipsis">
+      Tag 44 (3.10.2024) - Tag 46 (5.10.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-47-6102024">
+<span class="md-ellipsis">
+      Tag 47 - 6.10.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-48-7102024">
+<span class="md-ellipsis">
+      Tag 48 - 7.10.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-49-8102024-tag-54-13102024">
+<span class="md-ellipsis">
+      Tag 49 (8.10.2024) - Tag 54 (13.10.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-55-14102024">
+<span class="md-ellipsis">
+      Tag 55 - 14.10.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-56-15102024-tag-70-29102024">
+<span class="md-ellipsis">
+      Tag 56 (15.10.2024) - Tag 70 (29.10.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-71-30102024">
+<span class="md-ellipsis">
+      Tag 71 - 30.10.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-72-31102024">
+<span class="md-ellipsis">
+      Tag 72 - 31.10.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-73-1112024">
+<span class="md-ellipsis">
+      Tag 73 - 1.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-74-2112024">
+<span class="md-ellipsis">
+      Tag 74 - 2.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-75-3112024">
+<span class="md-ellipsis">
+      Tag 75 - 3.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-76-4112024">
+<span class="md-ellipsis">
+      Tag 76 - 4.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-77-5112024">
+<span class="md-ellipsis">
+      Tag 77 - 5.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-78-6112024-tag-80-8112024">
+<span class="md-ellipsis">
+      Tag 78 (6.11.2024) - Tag 80 (8.11.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-81-9112024">
+<span class="md-ellipsis">
+      Tag 81 - 9.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-82-10112024-tag-83-11112024">
+<span class="md-ellipsis">
+      Tag 82 (10.11.2024) - Tag 83 (11.11.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-84-12112024">
+<span class="md-ellipsis">
+      Tag 84 - 12.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-85-13112024-tag-88-16112024">
+<span class="md-ellipsis">
+      Tag 85 (13.11.2024) - Tag 88 (16.11.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-89-17112024">
+<span class="md-ellipsis">
+      Tag 89 - 17.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-90-18112024">
+<span class="md-ellipsis">
+      Tag 90 - 18.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-91-19112024-tag-93-21112024">
+<span class="md-ellipsis">
+      Tag 91 (19.11.2024) - Tag 93 (21.11.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-94-22112024">
+<span class="md-ellipsis">
+      Tag 94 - 22.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-95-23112024">
+<span class="md-ellipsis">
+      Tag 95 - 23.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-96-24112024">
+<span class="md-ellipsis">
+      Tag 96 - 24.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-97-25112024">
+<span class="md-ellipsis">
+      Tag 97 - 25.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-98-26112024">
+<span class="md-ellipsis">
+      Tag 98 - 26.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-99-27112024">
+<span class="md-ellipsis">
+      Tag 99 - 27.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-100-28112024">
+<span class="md-ellipsis">
+      Tag 100 - 28.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-101-29112024">
+<span class="md-ellipsis">
+      Tag 101 - 29.11.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-102-30112024-tag-104-2122024">
+<span class="md-ellipsis">
+      Tag 102 (30.11.2024) - Tag 104 (2.12.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-105-3122024">
+<span class="md-ellipsis">
+      Tag 105 - 3.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-106-4122024-tag-109-7122024">
+<span class="md-ellipsis">
+      Tag 106 (4.12.2024) - Tag 109 (7.12.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-110-8122024">
+<span class="md-ellipsis">
+      Tag 110 - 8.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-111-9122024">
+<span class="md-ellipsis">
+      Tag 111 - 9.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-112-10122024">
+<span class="md-ellipsis">
+      Tag 112 - 10.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-113-11122024">
+<span class="md-ellipsis">
+      Tag 113 - 11.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-114-12122024">
+<span class="md-ellipsis">
+      Tag 114 - 12.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-115-13122024">
+<span class="md-ellipsis">
+      Tag 115 - 13.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-116-14122024">
+<span class="md-ellipsis">
+      Tag 116 - 14.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-117-15122024">
+<span class="md-ellipsis">
+      Tag 117 - 15.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-118-16122024">
+<span class="md-ellipsis">
+      Tag 118 - 16.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-119-17122024">
+<span class="md-ellipsis">
+      Tag 119 - 17.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-120-18122024">
+<span class="md-ellipsis">
+      Tag 120 - 18.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-121-19122024">
+<span class="md-ellipsis">
+      Tag 121 - 19.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-122-20122024">
+<span class="md-ellipsis">
+      Tag 122 - 20.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-123-21122024">
+<span class="md-ellipsis">
+      Tag 123 - 21.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-124-22122024">
+<span class="md-ellipsis">
+      Tag 124 - 22.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-125-23122024">
+<span class="md-ellipsis">
+      Tag 125 - 23.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-126-24122024">
+<span class="md-ellipsis">
+      Tag 126 - 24.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-127-25122024">
+<span class="md-ellipsis">
+      Tag 127 - 25.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-128-26122024">
+<span class="md-ellipsis">
+      Tag 128 - 26.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-129-27122024">
+<span class="md-ellipsis">
+      Tag 129 - 27.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-130-28122024-tag-131-29122024">
+<span class="md-ellipsis">
+      Tag 130 (28.12.2024) - Tag 131 (29.12.2024)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-132-30122024">
+<span class="md-ellipsis">
+      Tag 132 - 30.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-133-31122024">
+<span class="md-ellipsis">
+      Tag 133 - 31.12.2024
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-134-112025-tag-135-212025">
+<span class="md-ellipsis">
+      Tag 134 (1.1.2025) - Tag 135 (2.1.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-136-312025">
+<span class="md-ellipsis">
+      Tag 136 - 3.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-137-412025">
+<span class="md-ellipsis">
+      Tag 137 - 4.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-138-512025">
+<span class="md-ellipsis">
+      Tag 138 - 5.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-139-612025">
+<span class="md-ellipsis">
+      Tag 139 - 6.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-140-712025">
+<span class="md-ellipsis">
+      Tag 140 - 7.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-141-812025">
+<span class="md-ellipsis">
+      Tag 141 - 8.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-142-912025">
+<span class="md-ellipsis">
+      Tag 142 - 9.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-143-1012025-tag-144-1112025">
+<span class="md-ellipsis">
+      Tag 143 (10.1.2025) - Tag 144 (11.1.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-145-1212025">
+<span class="md-ellipsis">
+      Tag 145 - 12.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-146-1312025-tag-149-1612025">
+<span class="md-ellipsis">
+      Tag 146 (13.1.2025) - Tag 149 (16.1.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-150-1712025">
+<span class="md-ellipsis">
+      Tag 150 - 17.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-151-1812025">
+<span class="md-ellipsis">
+      Tag 151 - 18.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-152-1912025">
+<span class="md-ellipsis">
+      Tag 152 - 19.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-153-2012025">
+<span class="md-ellipsis">
+      Tag 153 - 20.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-154-2112025">
+<span class="md-ellipsis">
+      Tag 154 - 21.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-155-2212025-tag-156-2312025">
+<span class="md-ellipsis">
+      Tag 155 (22.1.2025) - Tag 156 (23.1.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-157-2412025">
+<span class="md-ellipsis">
+      Tag 157 - 24.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-158-2512025">
+<span class="md-ellipsis">
+      Tag 158 - 25.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-159-2612025">
+<span class="md-ellipsis">
+      Tag 159 - 26.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-160-2712025">
+<span class="md-ellipsis">
+      Tag 160 - 27.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-161-2812025">
+<span class="md-ellipsis">
+      Tag 161 - 28.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-162-2912025">
+<span class="md-ellipsis">
+      Tag 162 - 29.1.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-163-3012025-tag-171-722025">
+<span class="md-ellipsis">
+      Tag 163 (30.1.2025) - Tag 171 (7.2.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-172-822025-tag-176-1222025">
+<span class="md-ellipsis">
+      Tag 172 (8.2.2025) - Tag 176 (12.2.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-177-1322025">
+<span class="md-ellipsis">
+      Tag 177 - 13.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-178-1422025">
+<span class="md-ellipsis">
+      Tag 178 - 14.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-179-1522025">
+<span class="md-ellipsis">
+      Tag 179 - 15.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-180-1622025">
+<span class="md-ellipsis">
+      Tag 180 - 16.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-181-1722025">
+<span class="md-ellipsis">
+      Tag 181 - 17.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-182-1822025">
+<span class="md-ellipsis">
+      Tag 182 - 18.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-183-1922025">
+<span class="md-ellipsis">
+      Tag 183 - 19.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-184-2022025">
+<span class="md-ellipsis">
+      Tag 184 - 20.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-185-2122025">
+<span class="md-ellipsis">
+      Tag 185 - 21.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-186-2222025">
+<span class="md-ellipsis">
+      Tag 186 - 22.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-187-2322025">
+<span class="md-ellipsis">
+      Tag 187 - 23.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-188-2422025">
+<span class="md-ellipsis">
+      Tag 188 - 24.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-189-2522025">
+<span class="md-ellipsis">
+      Tag 189 - 25.2.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-190-2622025-tag-200-832025">
+<span class="md-ellipsis">
+      Tag 190 (26.2.2025) - Tag 200 (8.3.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-201-932025">
+<span class="md-ellipsis">
+      Tag 201 - 9.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-202-1032025-tag-203-1132025">
+<span class="md-ellipsis">
+      Tag 202 (10.3.2025) - Tag 203 (11.3.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-204-1232025-tag-205-1332025">
+<span class="md-ellipsis">
+      Tag 204 (12.3.2025) - Tag 205 (13.3.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-206-1432025">
+<span class="md-ellipsis">
+      Tag 206 - 14.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-207-1532025">
+<span class="md-ellipsis">
+      Tag 207 - 15.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-208-1632025">
+<span class="md-ellipsis">
+      Tag 208 - 16.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-209-1732025">
+<span class="md-ellipsis">
+      Tag 209 - 17.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-210-1832025">
+<span class="md-ellipsis">
+      Tag 210 - 18.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-211-1932025">
+<span class="md-ellipsis">
+      Tag 211 - 19.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-212-2032025">
+<span class="md-ellipsis">
+      Tag 212 - 20.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-213-2132025">
+<span class="md-ellipsis">
+      Tag 213 - 21.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-214-2232025">
+<span class="md-ellipsis">
+      Tag 214 - 22.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-215-2332025">
+<span class="md-ellipsis">
+      Tag 215 - 23.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-216-2432025-tag-218-2632025">
+<span class="md-ellipsis">
+      Tag 216 (24.3.2025) - Tag 218 (26.3.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-219-2732025">
+<span class="md-ellipsis">
+      Tag 219 - 27.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-220-2832025">
+<span class="md-ellipsis">
+      Tag 220 - 28.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-221-2932025">
+<span class="md-ellipsis">
+      Tag 221 - 29.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-222-3032025">
+<span class="md-ellipsis">
+      Tag 222 - 30.3.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-223-3132025-tag-225-242025">
+<span class="md-ellipsis">
+      Tag 223 (31.3.2025) - Tag 225 (2.4.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-226-342025-tag-229-642025">
+<span class="md-ellipsis">
+      Tag 226 (3.4.2025) - Tag 229 (6.4.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-230-742025">
+<span class="md-ellipsis">
+      Tag 230 - 7.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-231-842025">
+<span class="md-ellipsis">
+      Tag 231 - 8.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-232-942025">
+<span class="md-ellipsis">
+      Tag 232 - 9.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-233-1042025">
+<span class="md-ellipsis">
+      Tag 233 - 10.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-234-1142025">
+<span class="md-ellipsis">
+      Tag 234 - 11.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-235-1242025-tag-239-1642025">
+<span class="md-ellipsis">
+      Tag 235 (12.4.2025) - Tag 239 (16.4.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-240-1742025">
+<span class="md-ellipsis">
+      Tag 240 - 17.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-241-1842025">
+<span class="md-ellipsis">
+      Tag 241 - 18.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-242-1942025-tag-244-2142025">
+<span class="md-ellipsis">
+      Tag 242 (19.4.2025) - Tag 244 (21.4.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-245-2242025-tag-246-2342025">
+<span class="md-ellipsis">
+      Tag 245 (22.4.2025) - Tag 246 (23.4.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-247-2442025">
+<span class="md-ellipsis">
+      Tag 247 - 24.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-248-2542025">
+<span class="md-ellipsis">
+      Tag 248 - 25.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-249-2642025">
+<span class="md-ellipsis">
+      Tag 249 - 26.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-250-2742025">
+<span class="md-ellipsis">
+      Tag 250 - 27.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-251-2842025">
+<span class="md-ellipsis">
+      Tag 251 - 28.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-252-2942025">
+<span class="md-ellipsis">
+      Tag 252 - 29.4.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-253-3042025-tag-256-352025">
+<span class="md-ellipsis">
+      Tag 253 (30.4.2025) - Tag 256 (3.5.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-257-452025">
+<span class="md-ellipsis">
+      Tag 257 - 4.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-258-552025">
+<span class="md-ellipsis">
+      Tag 258 - 5.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-259-652025">
+<span class="md-ellipsis">
+      Tag 259 - 6.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-260-752025-tag-261-852025">
+<span class="md-ellipsis">
+      Tag 260 (7.5.2025) - Tag 261 (8.5.2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-262-952025">
+<span class="md-ellipsis">
+      Tag 262 - 9.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-263-1052025">
+<span class="md-ellipsis">
+      Tag 263 - 10.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-264-1152025">
+<span class="md-ellipsis">
+      Tag 264 - 11.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-265-1252025">
+<span class="md-ellipsis">
+      Tag 265 - 12.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-266-1352025">
+<span class="md-ellipsis">
+      Tag 266 - 13.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-267-1452025">
+<span class="md-ellipsis">
+      Tag 267 - 14.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-268-1552025">
+<span class="md-ellipsis">
+      Tag 268 - 15.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-269-1652025">
+<span class="md-ellipsis">
+      Tag 269 - 16.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-270-1752025">
+<span class="md-ellipsis">
+      Tag 270 - 17.5.2025
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tag-271-1852025">
+<span class="md-ellipsis">
+      Tag 271 - 18.5.2025
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+
+<h1 id="tagebuch">Tagebuch<a class="headerlink" href="#tagebuch" title="Permanent link">¶</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Fremdwörter</p>
+<p>Da in dieser Dokumentation einige nicht umgangssprachliche oder programmierspezifische Wörter genutzt werden, habe
+ich ein Glossar erstellt. Die meisten Wörter sollten Sie dort finden.</p>
+</div>
+<p>Die Tage 1–5 beziehen sich auf Arbeitstage, die Tage danach allerdings auf *echte* Tage.</p>
+<h2 id="tag-1">Tag 1<a class="headerlink" href="#tag-1" title="Permanent link">¶</a></h2>
+<p>Würfelobjekt erstellt. Die einzelnen Seiten können verschiedene Farben haben.</p>
+<h2 id="tag-2">Tag 2<a class="headerlink" href="#tag-2" title="Permanent link">¶</a></h2>
+<p>Bessere — lesbare — Ausgabe der Würfelobjekte erstellt.</p>
+<h2 id="tag-3">Tag 3<a class="headerlink" href="#tag-3" title="Permanent link">¶</a></h2>
+<p>Zugriff auf einzelne Seiten des Würfels / mehrere Seiten erleichtert.</p>
+<h2 id="tag-4">Tag 4<a class="headerlink" href="#tag-4" title="Permanent link">¶</a></h2>
+<p>Nach langer Pause grafische Darstellung des Würfels erstellt. Dabei aus Bequemlichkeitsgründen die Struktur einer
+Würfelseite geändert.</p>
+<p></p><div class="highlight"><pre><span></span><code>[W, W, W, W, W, W, W, W]
+</code></pre></div>
+→
+<div class="highlight"><pre><span></span><code>[
+    [W, W, W],
+    [W, W, W],
+    [W, W, W]
+]
+</code></pre></div>
+<p>Ein Bild aus der GUI:</p>
+<p><img alt="Einfacher aufgeklappter Würfel" src="/images/gui.png"/></p>
+<h2 id="tag-5">Tag 5<a class="headerlink" href="#tag-5" title="Permanent link">¶</a></h2>
+<p>Erste Drehungen hinzugefügt: die Vorderseite im Uhrzeigersinn(<code>f</code>) und die Vorderseite gegen den Uhrzeigersinn(<code>f'</code>).
+Diese Drehungen sind auch auf der GUI zu sehen.</p>
+<h2 id="tag-6-2682024">Tag 6 - 26.8.2024<a class="headerlink" href="#tag-6-2682024" title="Permanent link">¶</a></h2>
+<p>Heute war der erste Schultag im neuen Schuljahr, an dem unser Lehrer uns gesagt hat, dass wir jeden Tag etwas ins
+Tagebuch schreiben sollen, und nicht nur an den Tagen, an denen wir an dem Projekt arbeiten. Ich werde versuchen, das
+umzusetzen, auch wenn ich nicht weiß, ob es zu 100 % geht.</p>
+<p>Nachdem ich den kurzen Text oben geschrieben habe und mich mit Problemen der Darstellung von geschützten Leerzeichen (
+<code></code>) beschäftigt habe, habe ich keine Lust, auch noch zu programmieren. Habe aber grade doch noch
+das Fremdwortregister hinzugefügt.</p>
+<div class="admonition note">
+<p class="admonition-title">Notiz</p>
+<p>Das Fremdwortregister wurde am 22.9.2024 in Fußnoten geändert. Die Fremdwörter können dort (am Ende des Dokuments)
+eingesehen werden.</p>
+</div>
+<p>Später (15:33) doch noch die nächsten zwei Drehungen hinzugefügt. Diese sind <code>r</code> (rechte Seite im Uhrzeigersinn) und
+<code>r'</code> (rechte Seite gegen den Uhrzeigersinn).</p>
+<h2 id="tag-7-2782024">Tag 7 - 27.8.2024<a class="headerlink" href="#tag-7-2782024" title="Permanent link">¶</a></h2>
+<p>Ich habe heute keine Lust zum Schreiben. Habe gerade die Drehbewegungen in eine JSON-Datei verfrachtet.
+Ein Beispiel aus dieser JSON-Datei (gekürzt, weil es statt 2 Bewegungen der Plättchenfarben (der Cubies, kleinerer 
+Unterwürfel) immer exakt 5 gibt, eine zum Drehen der Hauptseite und 4 zum Drehen der Ränder):</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"moves"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"f"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"face"</span><span class="p">:</span><span class="w"> </span><span class="s2">"front"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"counterclockwise"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"from_face"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"from_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"horizontal"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"from_index"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"to_face"</span><span class="p">:</span><span class="w"> </span><span class="s2">"right"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"to_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vertical"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"to_index"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Jedes der Elemente in dem <code>f</code> (front; Vorderseite in Uhrzeigersinn)-Array ist entweder:</p>
+<ul>
+<li>eine Referenz auf einem anderen Zug (, der aus mehreren Bewegungen, oder auch Referenzen, bestehen kann),</li>
+<li>die Drehung einer Seite (nicht deren Kanten) oder</li>
+<li>die Bewegung von einer Reihe/Spalte (Orientierung ist das Feld <code>from_type</code>) an Index <code>from_index</code> von Seite
+  <code>from_face</code> zu den Stellen an Seite <code>to_face</code>. Ein optionaler Parameter <code>reverse</code> bestimmt dabei, ob die ausgewählten
+  Farben vor dem Einfügen umgedreht werden sollen.</li>
+</ul>
+<p>Die gesamten bis jetzt verfügbaren Drehungen (<code>f</code>, <code>f'</code>, <code>r</code>, <code>r'</code>) sind jetzt auf das neue Format umgestellt.</p>
+<h2 id="tag-8-2882024">Tag 8 - 28.8.2024<a class="headerlink" href="#tag-8-2882024" title="Permanent link">¶</a></h2>
+<p>Wollte heute nichts machen, habe dann aber doch die Drehungen der Oberseite (<code>t</code> und <code>t'</code>) hinzugefügt.
+Die Drehungsdatei hat schon 242 Zeilen!</p>
+<h2 id="tag-9-2982024">Tag 9 - 29.8.2024<a class="headerlink" href="#tag-9-2982024" title="Permanent link">¶</a></h2>
+<p>Ich habe gerade die Bewegung der linken Seite in die Datei eingegeben. Beim Testen ist mir aufgefallen, dass das
+<code>reverse</code>-Argument nicht an die Drehfunktion übergeben würde. Eine Katastrophe! Keine Drehung geht mehr! Das heißt,
+ich muss mehr als 350 Zeilen neuschreiben! Los geht's...</p>
+<p>Es ist doch fast alles OK. Das Problem war nur, dass ich nicht gesehen hatte, dass das Default des <code>reverse</code> Arguments
+<code>True</code> und nicht <code>False</code> war. Das habe ich jetzt geändert.</p>
+<p>Habe noch schnell die nächsten Bewegungen hinzugefügt (<code>l</code> und <code>l'</code>).</p>
+<h2 id="tag-10-3082024">Tag 10 - 30.8.2024<a class="headerlink" href="#tag-10-3082024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich mal einen Tag Pause gemacht und darüber nachgedacht, wie ich das mit dem Lösen hinkriegen will.
+Korfs Algorithmus (eng. <code>Korf's algorithm</code>) ist die beste Lösung, um einen Zauberwürfel zu lösen. Sie braucht maximal 20 
+Züge. Weniger geht oft, aber nicht immer. Die Anleitung ist 6 Seiten lang und auf Englisch. Die erste Seite habe ich 
+schon gelesen, aber mehr als, dass es <span class="arithmatex">\(\frac{8! \cdot 3^8 \cdot 12! \cdot 2^{12}}{12} = 43.252.003.274.489.856.000\)</span>, 
+also 43 Trillionen Kombinationen gibt, habe ich nicht verstanden.</p>
+<h2 id="tag-11-3182024">Tag 11 - 31.8.2024<a class="headerlink" href="#tag-11-3182024" title="Permanent link">¶</a></h2>
+<p>Wenn ich dieses Tagebuch so weiterführe, wird es am Ende niemand lesen, weil es so lang ist. Ich habe allerdings nicht
+vor, es kürzer zu fassen.</p>
+<p>Ich wollte gerade eigentlich noch die letzten beiden 90° Seitendrehungen hinzufügen (<code>b</code> und <code>b'</code>; back, hinten), hab es
+aber nicht hingekriegt, weil die Kanten von rechts nach links umgreifen, und es daher schwer zu verstehendes ist.
+Jetzt habe ich einen echten aufklappbaren Würfel zu bauen, damit ich nicht so viel denken muss und die zu bewegenden
+Streifen einfach ablesen kann. :)</p>
+<h2 id="tag-12-192024">Tag 12 - 1.9.2024<a class="headerlink" href="#tag-12-192024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich den oben genannten Würfel gebaut.
+<img alt="Flaches Stück Papier in der Form, wie der Würfel in der GUI" src="/images/flat_cube.jpg"/></p>
+<h2 id="tag-13-292024">Tag 13 - 2.9.2024<a class="headerlink" href="#tag-13-292024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich gemerkt (beim Recherchieren), dass ich die Notation verwechselt habe. Es ist nämlich <code>R</code>und nicht <code>r</code>.
+Das gleiche auch bei allen anderen Zügen, die ich oben verwendet habe. Ich könnte das ändern, werde es aber nicht
+machen, weil dies ein Tagebuch und keine exakte Dokumentation ist.</p>
+<h2 id="tag-14-392024">Tag 14 - 3.9.2024<a class="headerlink" href="#tag-14-392024" title="Permanent link">¶</a></h2>
+<p>Nachtrag:
+Ich habe keine Ahnung, warum ich hier keinen Eintrag gemacht habe.</p>
+<h2 id="tag-15-492024">Tag 15 - 4.9.2024<a class="headerlink" href="#tag-15-492024" title="Permanent link">¶</a></h2>
+<p>Hier wollte ich eigentlich einen Eintrag machen, kann mich aber nicht mehr erinnern, was ich an diesem Tag gemacht habe.</p>
+<h2 id="tag-16-592024">Tag 16 - 5.9.2024<a class="headerlink" href="#tag-16-592024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich ChatGPT gefragt, wie Korfs Algorithmus funktioniert. Ich glaube, verstanden zu haben, dass der
+Algorithmus alle möglichen Kombinationen an Zügen von 1 Zug zu 20 Zügen durchgeht und für jede Zugfolge die
+Heuristik berechnet, um herauszufinden, welche Kombination am Wahrscheinlichsten zum Erfolg (gelöster Würfel) führt.</p>
+<p>Die Heuristik habe ich noch nicht implementiert, aber dafür kann das Programm einen Würfel mit wenigen Drehungen lösen,
+sofern der Würfel nicht zu sehr verdreht ist. Das Maximum an Zügen zum Lösen ist 20, das Programm braucht dafür
+allerdings mehr als 2 Tage. Sind halt auch mehr als <span class="arithmatex">\(12^{20}\)</span> Zugkombinationen, die durchlaufen werden müssen. Kurz
+nachgerechnet (kann Fehler enthalten) sind das etwa <span class="arithmatex">\(7.294.063.912.571.299\)</span> Jahre Laufzeit. Das ist länger, als es
+Menschen auf der Erde geben wird.</p>
+<h2 id="tag-17-692024">Tag 17 - 6.9.2024<a class="headerlink" href="#tag-17-692024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich die Kopierungsfunktion von <code>Cube</code>-Objekten optimiert. Sie ist jetzt etwa doppelt so schnell! Also nur
+noch <span class="arithmatex">\(3.647.031.956.285.649,5\)</span> Jahre …</p>
+<p>Damit ich nicht so lange warten muss, werde ich ab Morgen den Code auf <code>numpy</code>, ein Python-Package, das in C oder C++
+geschrieben ist, und deshalb bessere Laufzeit hat, umstellen. Heute kann ich das leider nicht, da meine Mutter oder mein
+Vater mich aus dem Internet geworfen haben, und ich das Package ohne Internet nicht installieren kann.</p>
+<h2 id="tag-18-792024">Tag 18 - 7.9.2024<a class="headerlink" href="#tag-18-792024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich, wie gestern angekündigt, das Projekt auf <code>numpy</code> umgestellt. Es ist jetzt etwas schneller. Allerdings
+habe ich in der obigen Berechnung nicht bedacht, dass eine Lösung auch aus nur 19 oder weniger Lösungen bestehen kann.
+Das macht dann <span class="arithmatex">\(12^{\sum_{k=1}^{d} k}\)</span> Kombinationen, wobei <span class="arithmatex">\(d\)</span> für <em>depth</em>, also <em>tiefe</em> steht. Das macht dann
+mit <span class="arithmatex">\(d=20\)</span></p>
+<div class="arithmatex">\[
+12^{\sum_{k=1}^{20} k}
+\]</div>
+<p>Kombinationen. Um das Auszurechnen kann man, wenn man nicht über die Zahlen iterieren will,
+die Gaußsche Summenformel nutzen. Sie besagt, dass </p>
+<div class="arithmatex">\[
+\sum_{k=1}^{n} k = \frac{n(n+1)}{2} = \frac{n^2+n}{2}
+\]</div>
+<p>Hier die Rechnung, um die Anzahl der Kombinationen herauszufinden.</p>
+<div class="arithmatex">\[
+12^{\sum_{k=1}^{20} k} = 12^{\frac{20^2 + 20}{2}} = 12^{\frac{420}{2}} = 12^{210} = 4,24679 \times 10^{226}
+\]</div>
+<h2 id="tag-19-892024">Tag 19 - 8.9.2024<a class="headerlink" href="#tag-19-892024" title="Permanent link">¶</a></h2>
+<p>Ich habe mir gestern noch einmal angeschaut, wie Korfs Algorithmus funktioniert. Es gibt eine Heuristik, die abschätzt,
+wie viele Züge man noch braucht, um den Würfel zu lösen. Diese wird für jede Zugfolge ausgeführt. Dann gibt es noch
+sogenannte Pattern-Databases, die die Teilinformationen zum Lösen des Würfels beinhalten. Das heißt, der Algorithmus
+fügt die kleineren Teilinformationen zusammen, um den Würfel zu lösen.</p>
+<p>Das Generieren der Pattern-Databases braucht wohl sehr lange, und ich habe keine kostenlos verwendbare im Internet
+gefunden. Das heißt, ich muss sie selbst erstellen. Vielleicht von Hand, aber eher mit einem Hilfsprogramm.</p>
+<p>Ich hätte heute auch programmiert, hatte allerdings zu viel damit zu tun, die mathematischen Formeln oben zu
+korrigieren. Als das dann ging, musste ich die Dokumentation noch in HTML umwandeln, um zu sehen, ob Firefox 
+<a href="../about_documentation/#latex">LaTeX</a>, das Format für die mathematischen Rechnungen, das ich nutze, anzeigen kann. Das hat 
+erstmal nicht geklappt, weil das Encoding nicht <code>UTF-8</code>war. Dann gab es Probleme, dass <em>pandoc</em>, das Programm, das ich 
+zum Konvertieren der Markdown-Datei zu HTML nutze, keine vollständige HTML-Datei produziert hat, sondern nur den Text in
+HTML, es fehlten also Meta-Informationen, wie Kodierung, Autor, Skripte, die zur Ausführung benötigt wurden, Style (in 
+CSS) etc. Das ging eigentlich ganz einfach zu lösen, ich musste nur ein <code>-s</code> (oder <code>--standalone</code>) an den Befehl in der
+CLI anhängen.</p>
+<p>Wenn ich programmiert hätte, statt diesen Text – fast schon ein Buch – zu schreiben, wäre Korfs Algorithmus 
+wahrscheinlich schon fertig. <img alt="😂" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f602.svg" title=":joy:"/></p>
+<div class="admonition abstract">
+<p class="admonition-title">Fun Fact</p>
+<p>Hier stand lange Zeit <code>FIXME: Why does this symbol not work?</code>.</p>
+<p>Das lag daran, dass pandoc keine Emojis supportet hat. Nach der Umstellung auf <em>Material for MkDocs</em> geht es 
+jetzt. Da ich den Kommentar nicht für immer löschen wollte, habe ich diese Infobox hinzugefügt.</p>
+</div>
+<h2 id="tag-20-992024">Tag 20 - 9.9.2024<a class="headerlink" href="#tag-20-992024" title="Permanent link">¶</a></h2>
+<p>Heute hatte ich wegen Orchester keine Zeit, um zu programmieren und an diesem Tagebuch zu schreiben.</p>
+<h2 id="tag-21-1092024">Tag 21 - 10.9.2024<a class="headerlink" href="#tag-21-1092024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich nicht programmiert, mich aber etwas mit pandoc auseinandergesetzt. Ich wollte, dass es einen Darkmode
+gibt, wenn man ihn im Browser oder in den Betriebssystemeinstellungen aktiviert hat. Das ist extrem schiefgegangen, und
+der Text war extrem angezogen / extrem lange Zeilen. Das habe ich nicht hingekriegt zu fixen, und deshalb gibt es jetzt
+keinen Darkmode.</p>
+<h2 id="tag-22-1192024">Tag 22 - 11.9.2024<a class="headerlink" href="#tag-22-1192024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich mir angeguckt, wie man UML-Diagramme in Markdown einbettet.</p>
+<p>Dann habe ich angefangen, die <a href="../about_documentation/#markdown">Was ist Markdown-Sektion</a> anzufangen. Gerade war ich bei dem 
+<span class="arithmatex">\(\LaTeX\)</span>-Teil, als ich gemerkt habe, dass die Gleichung oben (Ende des Eintrags an <a href="#tag-18-792024">Tag 18</a>) falsch war.
+Das habe ich jetzt korrigiert. Ich habe die Gaußsche Summenformel nur falsch wiederholt.</p>
+<p>Habe jetzt den Abschnitt über Markdown fertig. Musste etwas herumprobieren mit dem letzten Code-Block, weil Markdown den
+zu HTML konvertieren wollte.</p>
+<p>Jetzt existiert auch noch der Abschnitt über <a href="../about_documentation/#latex"><span class="arithmatex">\(\LaTeX\)</span></a>.</p>
+<h2 id="tag-23-1292024">Tag 23 - 12.9.2024<a class="headerlink" href="#tag-23-1292024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich mich um ein Darkmode in CSS für die Dokumentation gekümmert. Manche Sachen sehen noch seltsam aus, aber
+der Großteil geht schon. Es gab noch Probleme mit den <code>invert</code>-Filter in CSS, weil der alle Farben eines Objekts
+umdreht, also auch die Auswahlfarbe, und nicht nur die normalerweise Sichtbare.</p>
+<h2 id="tag-24-1392024">Tag 24 - 13.9.2024<a class="headerlink" href="#tag-24-1392024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich an dem Darkmode weitergemacht. Das Problem mit <code>invert</code> hat sich jetzt geregelt, nachdem ich ein Programm
+geschrieben habe, das Hexadezimalfarben umkehrt. Dann habe ich noch das Inhaltsverzeichnis nach links an den Rand 
+geschoben, damit es immer sichtbar ist. Es hat jetzt einen Schatten und eine Hover-Animation.</p>
+<h2 id="tag-25-1492024">Tag 25 - 14.9.2024<a class="headerlink" href="#tag-25-1492024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich auf einem Raspberry Pi einen kleinen Server aufgesetzt, der jetzt in unserem lokalen Netzwerk läuft. Er
+stellt dieses Tagebuch zur Verfügung, so dass man es von allen Geräten im Netzwerk abrufen kann. Der Server läuft mit
+<code>flask</code>, einem Python-Modul für Server. Die Dateien muss ich bei jeder Änderung über PSFTP (PuTTY Secure FTP, einem
+FTP-Programm von PuTTY) neu pushen. Damit ich nicht immer jede einzelne Datei bei jeder einzelnen Änderung von Hand
+übermitteln muss, habe ich mir von ChatGPT ein Bash-Skript erstellen lassen, das das Password für den Remote-User 
+abfragt, eine Verbindung über PSFTP aufbaut und die Dateien überträgt. Der Server lässt sich im Browser öffnen, die 
+IP-Adresse ist <code>192.168.178.59</code>. Diese Adresse geht nur in diesem Netzwerk, in jedem anderen würde ein anderes Gerät 
+angesprochen.</p>
+<p>Als ich mir heute diesen Text durchgelesen habe, habe ich so viele Fehler gesehen, dass diese nicht mehr auf eine Seite
+Text passen. Unter anderem war die Tag-Nummerierung komplett falsch. 10 und 11 gab es doppelt. Diesen Fehler habe ich
+jetzt behoben, den Rest noch nicht.</p>
+<h2 id="tag-26-1592024">Tag 26 - 15.9.2024<a class="headerlink" href="#tag-26-1592024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich weiter an meinem sinnlosen Server programmiert. Dazu habe ich ein Bash Skript erstellt, das ein paar
+nacheinander Schritte ausführt.
+Hier ein Pseudocode (als UML-Ablaufdiagramm, erstellt mit Mermaid):</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ursprünglich war der Code in <em>PlantUML</em> geschrieben, wegen späteren Änderungen des Markdown-zu-HTML-Konvertierers
+jetzt aber in <em>Mermaid</em>.</p>
+</div>
+<pre class="mermaid"><code>graph LR
+    A[Start] --&gt; B[Frage nach Passwort für Remote]
+    B --&gt; C{Passwort richtig?}
+    C --&gt;|Nein| B
+    C --&gt;|Ja| D{Konvertierungsflag gesetzt?}
+    D --&gt;|Nein| G[Baue SSH-Verbindung zum Remote auf]
+    D --&gt;|Ja| E[Konvertiere Dokumentation zu HTML]
+    E --&gt; F[Gib Informationen über den Status der Konvertierung aus]
+    F --&gt; G
+    G --&gt; H[Übertrage relevante Dateien]
+    H --&gt; I[Starte Remote-Server neu]
+    I --&gt; J{Dateien erneut übertragen?}
+    J --&gt;|Ja| D
+    J --&gt;|Nein| K[Ende]</code></pre>
+<h2 id="tag-27-1692024-tag-32-2192024">Tag 27 (16.9.2024) - Tag 32 (21.9.2024)<a class="headerlink" href="#tag-27-1692024-tag-32-2192024" title="Permanent link">¶</a></h2>
+<p>In diesem langen Zeitraum hatte ich andere Sachen zu tun, als zu Programmieren. Allerdings habe ich mir überlegt, wie
+ich den Löse-Algorithmus programmieren werde. Da Korfs Algorithmus eine Heuristik und eine riesige Datenbank für die
+Teilschritte nutzt, und ich keine Ahnung von Heuristiken (die Benötigte heißt irgendwie <em>IDA</em>* oder so, das ist glaube
+ich eine Heuristik, die nie über dem Ziel liegt/voraussagt) habe, habe ich mich dazu entschieden, ersteinmal einen
+Algorithmus, der den Würfel mit den gleichen Lösungen wie ein normaler Mensch (, der den Würfel lösen kann) löst, zu 
+implementieren. Damit der Roboter/die Maschine nicht immer 50–100 Schritte zur Lösung des Würfels ausführen muss, werde 
+ich eine Datenbank programmieren, die die einzelnen Schritte vereinfacht, z. B. <code>FFF</code> → <code>F'</code>.</p>
+<h2 id="tag-33-2292024">Tag 33 - 22.9.2024<a class="headerlink" href="#tag-33-2292024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich keine Zeit mehr zu schreiben, weil meine Schwester an den Laptop will. Ich werde es morgen nachtragen.</p>
+<p>Nachtrag:
+Oder auch heute noch. Heute bin ich von <em>pandoc</em> (Programm zum Konvertieren von Markdown zu HTML) auf
+<em>Material for MkDocs</em> umgestiegen. Letzteres erstellt vollständige HTML-Seiten, mit Inhaltsverzeichnis, anderen
+Themen/Artikeln, stellt eine Suche bereit und unterstützt auch mobile Endgeräte. Allerdings supportet
+<em>Material for MkDocs</em> kein <em>PlantUML</em> (mit dem das Ablaufdiagramm oben ursprünglich erstellt wurde), sondern nur
+<em>Mermaid</em> (etwas Ähnliches). Habe jetzt das obige Ablaufdiagramm zu Mermaid geändert. Hat ewig gebraucht, und das, 
+obwohl das Skript gar nicht mehr genutzt wird.</p>
+<p>Habe jetzt noch das Fremdwortregister in Fußnoten umgeändert und oben eine solche Notiz hinzugefügt.</p>
+<h2 id="tag-34-2392024">Tag 34 - 23.9.2024<a class="headerlink" href="#tag-34-2392024" title="Permanent link">¶</a></h2>
+<p>Gestern habe ich noch einen Fehler in einer Drehung gefunden. <code>B'</code> hat nur Mist gemacht. Das lag daran, dass von einer
+Seite ein Streifen zu einer anderen Seite kopiert wurde, die ursprüngliche Seite aber gedreht wurde, und daher manche
+Steine (auch Cubies genannt) vervielfältigt wurden.</p>
+<p>Ich installiere gerade Rust und ein *paar* Packages. Das braucht ewig! Ich hasse Rust jetzt schon … Warum braucht 
+das zum Kompilieren so lange? Hat aber schon 200 von 269 Paketen. Habe grade boch gesehen, dass immer 4 Pakete 
+gleichzeitig verarbeitet werden. Macht's aber auch nicht besser … Jetzt warte ich schon 15 Minuten.</p>
+<p>Hat immer noch nicht installiert, dafür habe ich jetzt die nächsten Bewegungen hinzugefügt. Das sind <code>S</code>, <code>E</code> und <code>M</code>, 
+wie immer auch mit <code>'</code>. Damit kann man endlich ein Muster machen! 
+<img alt="Muster in GUI" src="/images/new_gui_image.png"/></p>
+<h2 id="tag-35-2492024">Tag 35 - 24.9.2024<a class="headerlink" href="#tag-35-2492024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich den Raspberry Pi den Server für die neue Dokumentation eingerichtet. Das heißt, ein Binary von GitHub 
+herunterladen, entpacken, verschieben und ausführbar machen. Zum Glück habe ich ja ChatGPT <img alt="😂" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f602.svg" title=":joy:"/></p>
+<h2 id="tag-36-2592024">Tag 36 - 25.9.2024<a class="headerlink" href="#tag-36-2592024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich im SFN nach einem Mentor/einer Mentorin geguckt und auch jemanden gefunden, der diese Aufgabe 
+übernehmen wird. Als ich der Person (hab den Namen vergessen) das Programm zeigen wollte, ist ganz Windows gecrasht, 
+weil der USB-Stick, auf dem das Programm war, nicht mehr ging. Ich habe es grad noch mal an meinem Laptop zu Hause 
+probiert, Windows sagt nur</p>
+<div class="admonition warning">
+<p class="admonition-title">Problem an Laufwerk K:</p>
+<p>Es liegt ein Problem an Laufwerk K: vor. Möchten sie es überprüfen und reparieren oder nicht?</p>
+</div>
+<p>Als ich dann auf <code>Überprüfen</code> geklickt habe, hat sich ein Fenster geöffnet, das sich seit ca. 3 Minuten nicht verändert
+hat:</p>
+<div class="admonition bug">
+<p class="admonition-title">Repariere Laufwerk K:</p>
+<p>Wird gescannt und repariert.</p>
+</div>
+<p>Dann kam der Fehler:</p>
+<div class="admonition failure">
+<p class="admonition-title">Problem beim Reparieren des Laufwerks</p>
+<p>Das Laufwerk konnte nicht repariert werden. Schließen Sie das
+Dialogfeld, und versuchen Sie anschließend erneut, das
+Laufwerk zu reparieren.</p>
+</div>
+<p>Das ist nicht gut, ich weiß nicht, ob ich noch eine Sicherheitskopie gemacht habe ...</p>
+<p>Nächster Versuch, passiert wieder nichts ...</p>
+<h2 id="tag-37-2692024">Tag 37 - 26.9.2024<a class="headerlink" href="#tag-37-2692024" title="Permanent link">¶</a></h2>
+<p>Ich habe grade das Inhaltsverzeichnis des Tagebuchs verbessert und neue Dokumente (Erklärungen (Nachträglich 
+<a href="../about_documentation/">About</a> verschoben) und <a href="../">die Startseite</a>) hinzugefügt. Dann noch alle Links 
+geändert, so dass sie auf diese Dateien verweisen.</p>
+<p>Da dieses Dokument (Tagebuch) dann nur noch auf einer Überschrift mit nur einem Unterthema war, habe ich die 
+Hauptüberschrift entfernt.</p>
+<h2 id="tag-38-2792024">Tag 38 - 27.9.2024<a class="headerlink" href="#tag-38-2792024" title="Permanent link">¶</a></h2>
+<p>Heute wollte ich wieder programmieren. In PyCharm kan dann aber die Nachricht, dass eine neuere Version 
+verfügbar ist. Diese wollte ich installieren. Also auf <code>Update</code> klicken. Dann Restarten, damit die Änderungen übernommen
+werden. Dann kam der Fehler, dass ich nicht mehr genug Speicherplatz habe (Ich hatte gestern noch ca. 4 GB). Also,
+was macht man sonst, suche ich in den Windows-Speichereinstellungen nach den größten Apps und Ordnern. Dabei habe ich
+ein Programm gefunden, das ich nicht mehr brauche. Also will ich es deinstallieren. Geht aber nicht, da meine Dateien
+für dieses Programm (<code>RoboPRO</code>) noch in den Programmdateien gespeichert waren. Also wollte ich sie auf einen USB-Stick
+ziehen. Das ging nach einer 15-minütigen Formation auch. Als ich dann alle PyCharm-Projekte (ca. 5 GB)
+auf den USB-Stick ziehen wollte, hat es voraussichtlich 4 Stunden gebraucht. Dann ist alles abgestürzt und ich habe im
+Task-Manager den Explorer geschlossen. Keine gute Idee! Die Taskleiste ist verschwunden, das Programmwechselmenü
+(<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span>) und wahrscheinlich auch noch andere Sachen. Die <span class="keys"><kbd class="key-windows">Win</kbd></span>-Taste ging nicht mehr, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span> aber
+schon. Nach einem Neustart ging aber alles wieder.</p>
+<h2 id="tag-39-2892024">Tag 39 - 28.9.2024<a class="headerlink" href="#tag-39-2892024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich mir ein eigenes Logo in InkScape erstellt: <img alt="Mein Icon" src="/assets/images/icon.svg"/></p>
+<p>Das Design habe ich mit ChatGPT ausdiskutiert. Eigentlich sollte es türkis sein, aber das sähe im Header der 
+Dokumentation seltsam aus, weil die Farben (Lila und Türkis) nicht gut zusammen aussahen.</p>
+<p>Dann habe ich noch die Farben der Dokumentation geändert. Der Header ist jetzt grün (vorher indigo) und die 
+Zweitfarbe ist jetzt türkis (welche Farbe es vorher war, weiß ich nicht, Nachtrag: war auch indigo). Ich habe 
+mittlerweile mehr Zeit in die Dokumentation gesteckt, als in das Programm. Das muss ich unbedingt ändern.</p>
+<p>Habe grade noch sehr viele Rechtschreibe– und Grammatikfehler behoben.</p>
+<h2 id="tag-40-2992024">Tag 40 - 29.9.2024<a class="headerlink" href="#tag-40-2992024" title="Permanent link">¶</a></h2>
+<p>Hatte heute keine Zeit zum Schreiben, da ich auf einem Geburtstag war.</p>
+<h2 id="tag-41-3092024">Tag 41 - 30.9.2024<a class="headerlink" href="#tag-41-3092024" title="Permanent link">¶</a></h2>
+<p>Heute wollte ich endlich einen Algorithmus hinzufügen, der einen Stein an die richtige Stelle auf der weißen Seite
+bringt, das ging aber nicht, da ich mir den Algorithmus vorher nicht überlegt habe.</p>
+<h2 id="tag-42-1102024">Tag 42 - 1.10.2024<a class="headerlink" href="#tag-42-1102024" title="Permanent link">¶</a></h2>
+<p>Heute wollte ich – wie gestern auch – den Algorithmus programmieren. Dazu habe ich die Struktur der Bewegungs-JSON-Datei
+von <a href="#tag-7-2782024">Tag 7</a> geändert. Die Referenz ist jetzt kein Objekt mit einem Key mehr, sondern nur ein String.</p>
+<p></p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F"</span>
+<span class="p">}</span>
+</code></pre></div>
+→
+<div class="highlight"><pre><span></span><code><span class="s2">"F"</span>
+</code></pre></div>
+Jetzt kann man auch mehrere Züge angeben: <code>"F U' M'"</code> Dabei werden die Züge durch Leerzeichen getrennt.
+<h2 id="tag-43-2102024">Tag 43 - 2.10.2024<a class="headerlink" href="#tag-43-2102024" title="Permanent link">¶</a></h2>
+<p>Ich habe grad' mal zu dem Löseroboter recherchiert. Ich werde wahrscheinlich einen Logo-Roboter nutzen, um den Würfel am 
+Ende zu lösen. Das benötigte Set ist das
+<a href="https://www.lego.com/en-us/product/lego-mindstorms-ev3-31313">LEGO MINDSTORMS EV3 (31313) home set</a>.
+Dieses werde ich mir wahrscheinlich ausleihen können.</p>
+<h2 id="tag-44-3102024-tag-46-5102024">Tag 44 (3.10.2024) - Tag 46 (5.10.2024)<a class="headerlink" href="#tag-44-3102024-tag-46-5102024" title="Permanent link">¶</a></h2>
+<p>In diesem Zeitraum habe ich versucht, ein Update-Programm für <a href="https://minecraft.wiki/w/Data_pack">Minecraft-Datapacks</a>
+zu programmieren. Dies ist aber extrem gescheitert. Wenn ich erklären würde, woran, würde ich nie fertig werden und es
+wäre nicht verständlich. Gestern Abend hatte ich eine neue Idee, die umzusetzen würde aber noch länger brauchen.</p>
+<p>Allgemein ist diese Idee schwer umzusetzen, aber mit mehr Zeit (die ich noch nicht habe) ist es gut möglich. Das könnte 
+das nächste Projekt nach dem jetzigen (<a href="../"><code>Rubiks Cube Solver</code></a>) werden.</p>
+<h2 id="tag-47-6102024">Tag 47 - 6.10.2024<a class="headerlink" href="#tag-47-6102024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich einen RegEx für mein Datapack-Updater geschrieben, damit der Typ <code>int</code> besser überprüft werden
+kann. Der RegEx ist <code>int(?:\((-?\d+)\)|(\d+))?-(?:\((-?\d+)\)|(\d+))?(?:%(\d+))?(?:!%(\d+))?</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Ehemalige RegEx Erklärung</p>
+<p>Hier standursprünglich eine RegEx-Erklärung, die von <a href="https://regex101.com">Regex101</a> generiert wurde. 
+Diese wurde allerdings entfernt.</p>
+</div>
+<p>Die RegEx-Erklärung oben zu erstellen/formatieren hat sehr lange gebraucht, weil ich die Beschreibung kopiert habe und 
+sie extrem unformatiert war. Ich habe halt den Text kopiert und nicht die Formatierungen. Dann hatte ich noch Probleme,
+dass Material for MkDocs <code>\(</code> als <a href="../about_documentation/#latex">LaTeX</a> interpretiert hat und ich daher immer <code>\(</code> im RegEx mit
+<code>\\(</code> austauschen musste. Dann waren die Listen falsch formatiert. Ich hatte jeden Untereintrag nur 2 statt 4 
+Leerzeichen eingerückt. Bis ich das aber herausgefunden habe, hat es etwa 30 Minuten gebraucht.</p>
+<h2 id="tag-48-7102024">Tag 48 - 7.10.2024<a class="headerlink" href="#tag-48-7102024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich weiter an meinem DatapackUpdater programmiert. Da die Fortschritte dort nicht in dieses Tagebuch gehören,
+schreibe ich sie dort auch nicht hin.</p>
+<h2 id="tag-49-8102024-tag-54-13102024">Tag 49 (8.10.2024) - Tag 54 (13.10.2024)<a class="headerlink" href="#tag-49-8102024-tag-54-13102024" title="Permanent link">¶</a></h2>
+<p>In dieser Zeit habe ich die Ferien genossen und werde dies wahrscheinlich auch noch etwas weiter tun. Ferien genießen 
+heißt, nicht zu programmieren, und wenn doch, dann nur Sachen, die für mich im Moment einen Nutzen haben (hat dieses
+Projekt nicht).</p>
+<h2 id="tag-55-14102024">Tag 55 - 14.10.2024<a class="headerlink" href="#tag-55-14102024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich versucht, meine Dokumentation in ein PDF zu verwandeln/zu konvertieren. Dies ist gescheitert, weil ich
+nicht, weiß, welches von den zwei <em>Material for Mkdocs</em>-Plugins, die ich ausprobiert habe, jetzt welche Funktionalität 
+bereitstellt. Es gab zwei verschiedene Arten: eins, das bei <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span> (Drucken) im Browser ein PDF erstellt, und eins,
+das eine Unterwebsite (<code>/pdf</code> oder ähnlich) bereitstellt. Nachdem alle möglichen Versuche fehlgeschlagen sind, habe ich
+aufgehört und angefangen, den heutigen Tag zu dokumentieren.</p>
+<h2 id="tag-56-15102024-tag-70-29102024">Tag 56 (15.10.2024) - Tag 70 (29.10.2024)<a class="headerlink" href="#tag-56-15102024-tag-70-29102024" title="Permanent link">¶</a></h2>
+<p>Ferien genießen. <img alt="🏖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3d6.svg" title=":beach_with_umbrella:"/></p>
+<h2 id="tag-71-30102024">Tag 71 - 30.10.2024<a class="headerlink" href="#tag-71-30102024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich versucht, das Projekt in eine PDF-Datei umzuwandeln, und bin wieder auf ganzer Linie gescheitert. Ich 
+habe drei verschiedene Plugins für Material for MkDocs ausprobiert, jedes hatte seine eigenen Fehler. Ich werde in 
+Zukunft abwägen, welches das Plugin mit den wenigsten Fehlern ist, und dieses dann am Ende nutzen. Fürs Erste wird sich 
+mein Lehrer mit einigen HTML-Dateien zufriedengeben müssen.</p>
+<h2 id="tag-72-31102024">Tag 72 - 31.10.2024<a class="headerlink" href="#tag-72-31102024" title="Permanent link">¶</a></h2>
+<p><img alt="🦇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f987.svg" title=":bat:"/> Heute ist Halloween! <img alt="👻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f47b.svg" title=":ghost:"/></p>
+<p>Aber ich habe trotzdem versucht zu programmieren. Was schlecht ist, wenn man mal wieder kein Internet hat (Eltern 
+halt!). Daher konnte ich nicht recherchieren, warum numpy (Python Modul zum Rechnen mit arrays) keine Enums supportet
+und sie immer in Strings umwandelt! Dann beschwert sich halt ein Modul, dass es keinen String braucht. Das Ziel war es,
+eine KI zu programmieren, die den Würfel löst. Dafür brauche ich eigentlich eine Heuristik, die abschätzt, wie viele 
+Züge man maximal noch braucht, damit der Würfel gelöst wird. Diese brauche ich auch für das normale Lösungsprogramm, das
+dann alle möglichen Züge durchgeht und für jeden berechnet, wie viele Züge es zum gelösten Zustand noch sind. Dann
+wird der mit den wenigsten Zügen gewählt und das Prinzip für diesen Zug, besser gesagt diesen Zustand, wieder 
+ausgeführt. Die KI (ein künstliches neuronales Netz = KNN) würde ausrechnen, welcher Zug der beste ist, und dann zum
+Lernen mit Backpropaganda herausfinden, welches der beste Zug gewesen wäre. Dann würde das Model (die KI) die Gewichtung
+der Neuronen mit Backpropaganda ändern, und so dazulernen. Im nächsten Versuch wäre es dann vielleicht besser und würde
+etwas richtig raten (eigentlich ist es kein Raten, sondern komplexes ausrechnen).</p>
+<h2 id="tag-73-1112024">Tag 73 - 1.11.2024<a class="headerlink" href="#tag-73-1112024" title="Permanent link">¶</a></h2>
+<p>Nachtrag: An diesem Tag habe ich irgendetwas gemacht, aber vergessen den Eintrag ins Tagebuch zu schreiben. Jetzt kann
+ich mich nicht mehr erinnern, was an diesem Tag passiert ist.</p>
+<h2 id="tag-74-2112024">Tag 74 - 2.11.2024<a class="headerlink" href="#tag-74-2112024" title="Permanent link">¶</a></h2>
+<p>Heute war das Probenwochenende des Orchesters, weshalb ich keine Zeit zu programmieren hatte.</p>
+<h2 id="tag-75-3112024">Tag 75 - 3.11.2024<a class="headerlink" href="#tag-75-3112024" title="Permanent link">¶</a></h2>
+<p>Ich habe gestern mal nachgedacht, ob ich das Program nicht besser in C++ schreiben sollte. Muss jetzt Minecraft spielen,
+um meine Schwester zu beschäftigen.</p>
+<h2 id="tag-76-4112024">Tag 76 - 4.11.2024<a class="headerlink" href="#tag-76-4112024" title="Permanent link">¶</a></h2>
+<p><img alt="❗" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2757.svg" title=":exclamation:"/> Ich bin <strong>unglaublich</strong> aggressiv! Eigentlich wollte ich nur ein C++ Compiler installieren, damit ich 
+anfangen kann, ein Teil des Projekts in C++ zu schreiben, aber nein, ich brauche ein Compiler, ein Built-Tool, ein 
+Package Manager und noch irgendwelche anderen Programme, von denen ich noch nir etwas gehört habe. Warum ist C++ nicht
+einfach so leicht zu installieren und nutzen? Python: herunterladen, installieren, nutzen. C++: Compiler herunterladen, 
+zig weitere Programme herunterladen und aufgeben. Von Nutzen kann hier nach 3 Stunden nicht die Rede sein. Ich habe auch 
+nur noch 4 GB Speicherplatz frei, eigentlich müsste ich alles resetten. <img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f440.svg" title=":eyes:"/></p>
+<h2 id="tag-77-5112024">Tag 77 - 5.11.2024<a class="headerlink" href="#tag-77-5112024" title="Permanent link">¶</a></h2>
+<p>Ich habe gerade angefangen, die Pattern Database zu generieren. Dafür gehe ich alle Züge bis zu einem Tiefenlimit durch
+und berechne den sha256 Hash der Ecken des Würfels, nachdem die Züge auf ihm ausgeführt werden. Das hat schon mit einer
+Tiefe von 4 etwa 10 Minuten gebraucht. Bei einer Tiefe von 20 würde das dann Jahre dauern. Also muss ich das in C++
+implementieren. Was, wie ich gerade herausgefunden habe, ohne gute C++ IDE schwer ist. Und leider habe ich dafür keinen
+Speicherplatz mehr. Ich werde es aber trotzdem versuchen.</p>
+<p>Die Anzahl der zu durchlaufenden Züge:</p>
+<div class="arithmatex">\[
+12^{\sum^{d}_{k=1}k}
+\]</div>
+<p>Mit <span class="arithmatex">\(d=4\)</span> ist das <span class="arithmatex">\(61.917.364.224\)</span>.
+Die Ausführung hat 10,6 Sekunden gebraucht.</p>
+<div class="arithmatex">\[
+\frac{61.917.364.224}{10.6} = 5.841.260.775,849
+\]</div>
+<div class="arithmatex">\[
+4,24679 \times 10^{226} \cdot 5.841.260.775,849 = 2,48066 \times 10^{236}
+\]</div>
+<p>Ist also nicht machbar, das so lange laufen zu lassen. Braucht nämlich mehr als <span class="arithmatex">\(1 \times 10^{200}\)</span> Jahre.</p>
+<h2 id="tag-78-6112024-tag-80-8112024">Tag 78 (6.11.2024) - Tag 80 (8.11.2024)<a class="headerlink" href="#tag-78-6112024-tag-80-8112024" title="Permanent link">¶</a></h2>
+<p>Pause machen. <img alt="☕" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2615.svg" title=":coffee:"/></p>
+<h2 id="tag-81-9112024">Tag 81 - 9.11.2024<a class="headerlink" href="#tag-81-9112024" title="Permanent link">¶</a></h2>
+<p>Nachtrag: Ich habe irgendetwas versucht, was aber nicht geklappt hat. Keine Ahnung mehr, was das war.</p>
+<h2 id="tag-82-10112024-tag-83-11112024">Tag 82 (10.11.2024) - Tag 83 (11.11.2024)<a class="headerlink" href="#tag-82-10112024-tag-83-11112024" title="Permanent link">¶</a></h2>
+<p>Pause machen <img alt="☕" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2615.svg" title=":coffee:"/> und aktuell Wichtigeres zu programmieren.</p>
+<h2 id="tag-84-12112024">Tag 84 - 12.11.2024<a class="headerlink" href="#tag-84-12112024" title="Permanent link">¶</a></h2>
+<p>An diesem Tag war ich im SFN und habe klargemacht, dass ich den Roboter auf LEGO MINDSTORMS bauen werde. Dieses werde
+ich mir dort ausleihen.</p>
+<h2 id="tag-85-13112024-tag-88-16112024">Tag 85 (13.11.2024) - Tag 88 (16.11.2024)<a class="headerlink" href="#tag-85-13112024-tag-88-16112024" title="Permanent link">¶</a></h2>
+<p>Da mein Vater in ein paar Tagen Geburtstag hat, programmiere ich ihm gerade einen Bildschirmschoner.</p>
+<h2 id="tag-89-17112024">Tag 89 - 17.11.2024<a class="headerlink" href="#tag-89-17112024" title="Permanent link">¶</a></h2>
+<p>Heute hat mein Vater Geburtstag <img alt="🎂" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f382.svg" title=":birthday_cake:"/>. Natürlich hatte der Bildschirmschoner direkt beim Anschalten einen 
+Fehler: Die Sprüche, die angezeigt werden, wurden nur so kurz angezeigt, dass man sie kaum lesen konnte. Müsste ich aber
+in den nächsten Tagen beheben können.</p>
+<p>Ich habe gerade alle Tage, angefangen an <a href="#tag-81-9112024">Tag 81</a>, nachgetragen. Ist ganz schön verwirrend, wenn man
+ausrechnen muss, welche Tagnummer am 17.11.2024 war.</p>
+<p>Der weitere Plan:</p>
+<ul>
+<li>Den Roboter bauen.</li>
+<li>Parallel den Lösealgorithmus programmieren.</li>
+</ul>
+<h2 id="tag-90-18112024">Tag 90 - 18.11.2024<a class="headerlink" href="#tag-90-18112024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich noch einmal die Pattern Database programmiert.</p>
+<h2 id="tag-91-19112024-tag-93-21112024">Tag 91 (19.11.2024) - Tag 93 (21.11.2024)<a class="headerlink" href="#tag-91-19112024-tag-93-21112024" title="Permanent link">¶</a></h2>
+<p>Mal wieder Pause machen.</p>
+<h2 id="tag-94-22112024">Tag 94 - 22.11.2024<a class="headerlink" href="#tag-94-22112024" title="Permanent link">¶</a></h2>
+<p>Habe grade die Pattern Database laufen lassen und gemerkt, dass ich die Zeitabschätzung irgendwie neu machen muss.
+Die aktuelle Anzahl der Züge ist:</p>
+<div class="arithmatex">\[
+12 * 11 ^ {\sum_{2}^{d}}
+\]</div>
+<p>Für eine bestimmte Ebene:</p>
+<div class="arithmatex">\[
+12 * (11 ^ {d - 1})
+\]</div>
+<p>Das <span class="arithmatex">\(-1\)</span> bei <span class="arithmatex">\(d\)</span> ist nur, weil ich ein paar Züge einspare, indem ich die Kombinationen ignoriere, bei denen sich die
+letzten zwei Züge aufheben würden (z. B. <code>F</code> und <code>F'</code>)</p>
+<p>An den Berechnungen stimmt irgendwas aber nicht. Muss ich noch mal überarbeiten.</p>
+<p>Das Programm zum Generieren der Pattern Database braucht viel zu lange. Heißt, ich werde es in C++ schreiben. Kann ich
+heute leider nicht mehr machen, da meine Eltern das Internet ausgemacht haben.</p>
+<h2 id="tag-95-23112024">Tag 95 - 23.11.2024<a class="headerlink" href="#tag-95-23112024" title="Permanent link">¶</a></h2>
+<p>Heute wieder versucht, ein Package (<code>Eigen</code>, ein Matrix-Vektoren-Package für C++) zu installieren. Dazu brauchte ich
+CMake, conan, ninja und den Compiler. Dann brauchte ich irgendwelche Verknüpfungen.</p>
+<h2 id="tag-96-24112024">Tag 96 - 24.11.2024<a class="headerlink" href="#tag-96-24112024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich mit CMake usw. weitergemacht. Ist schrecklich. Dann wollte ich ein Testprojekt erstellen, hatte dafür
+aber keinen Speicherplatz mehr. Jetzt habe ich wieder welchen. Das mit CMake und conan geht aber immer noch nicht. Muss
+ich morgen weitermachen.</p>
+<h2 id="tag-97-25112024">Tag 97 - 25.11.2024<a class="headerlink" href="#tag-97-25112024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich weiter versucht, das Package zu installieren. Hat immer noch nicht geklappt.</p>
+<h2 id="tag-98-26112024">Tag 98 - 26.11.2024<a class="headerlink" href="#tag-98-26112024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich weiter an dem Lego Roboter gebaut. Ich habe leider vergessen, ein Bild zu machen. Der Roboter besteht
+jetzt aus einem Gestell mit einer Art Schale für den Zauberwürfel.</p>
+<h2 id="tag-99-27112024">Tag 99 - 27.11.2024<a class="headerlink" href="#tag-99-27112024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich es geschafft, eine kleine Revolution zu machen: Ich habe es geschafft, ein C++ Package zu installieren
+und zu nutzen. Dies habe ich allerdings nicht mit conan gemacht, sondern die Package-Dateien heruntergeladen und mit dem
+C++-Compiler gelinkt. Der Befehl zum Compilen hat sich wie folgt verändert: <code>g++ src/cpp/test.cpp -o test.exe</code> →
+<code>g++ -I build/eigen3 -o test.exe src/cpp/test.cpp</code></p>
+<h2 id="tag-100-28112024">Tag 100 - 28.11.2024<a class="headerlink" href="#tag-100-28112024" title="Permanent link">¶</a></h2>
+<p>Nichts gemacht.</p>
+<h2 id="tag-101-29112024">Tag 101 - 29.11.2024<a class="headerlink" href="#tag-101-29112024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich die Pythonfunktion zum Ausgeben des Würfels in C++ übersetzt. Ist eine Katastrophe:</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><label for="__tabbed_1_1">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">enum</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Colours</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">StrEnum</span><span class="p">):</span>
+    <span class="n">WHITE</span> <span class="o">=</span> <span class="n">enum</span><span class="o">.</span><span class="n">auto</span><span class="p">()</span>
+    <span class="n">RED</span> <span class="o">=</span> <span class="n">enum</span><span class="o">.</span><span class="n">auto</span><span class="p">()</span>
+    <span class="n">BLUE</span> <span class="o">=</span> <span class="n">enum</span><span class="o">.</span><span class="n">auto</span><span class="p">()</span>
+    <span class="n">ORANGE</span> <span class="o">=</span> <span class="n">enum</span><span class="o">.</span><span class="n">auto</span><span class="p">()</span>
+    <span class="n">GREEN</span> <span class="o">=</span> <span class="n">enum</span><span class="o">.</span><span class="n">auto</span><span class="p">()</span>
+    <span class="n">YELLOW</span> <span class="o">=</span> <span class="n">enum</span><span class="o">.</span><span class="n">auto</span><span class="p">()</span>
+
+<span class="n">COLOUR_TO_SHORT_REPR</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">Colours</span><span class="o">.</span><span class="n">WHITE</span><span class="p">:</span> <span class="s2">"W"</span><span class="p">,</span>
+    <span class="n">Colours</span><span class="o">.</span><span class="n">RED</span><span class="p">:</span> <span class="s2">"R"</span><span class="p">,</span>
+    <span class="n">Colours</span><span class="o">.</span><span class="n">BLUE</span><span class="p">:</span> <span class="s2">"B"</span><span class="p">,</span>
+    <span class="n">Colours</span><span class="o">.</span><span class="n">ORANGE</span><span class="p">:</span> <span class="s2">"O"</span><span class="p">,</span>
+    <span class="n">Colours</span><span class="o">.</span><span class="n">GREEN</span><span class="p">:</span> <span class="s2">"G"</span><span class="p">,</span>
+    <span class="n">Colours</span><span class="o">.</span><span class="n">YELLOW</span><span class="p">:</span> <span class="s2">"Y"</span>
+<span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">print_cube_faces</span><span class="p">(</span><span class="o">*</span><span class="n">faces</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">face</span> <span class="ow">in</span> <span class="n">faces</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">colour</span> <span class="ow">in</span> <span class="n">face</span><span class="p">[</span><span class="n">line</span><span class="p">]:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">COLOUR_TO_SHORT_REPR</span><span class="p">[</span><span class="n">colour</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">"  "</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">suffix</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><label for="__tabbed_1_2">C++</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">COLOUR_TO_SHORT_REPR</span><span class="err">\</span><span class="p">{</span><span class="err">\</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">"W"</span><span class="p">},</span><span class="w"> </span><span class="err">\</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">"O"</span><span class="p">},</span><span class="w"> </span><span class="err">\</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">"G"</span><span class="p">},</span><span class="w"> </span><span class="err">\</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">"R"</span><span class="p">},</span><span class="w"> </span><span class="err">\</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">"B"</span><span class="p">},</span><span class="w"> </span><span class="err">\</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">"Y"</span><span class="p">}};</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">printCubeFaces</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">faces</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">suffix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ranges</span><span class="o">::</span><span class="n">iota_view</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">faces</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">prefix</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">face</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="n">line</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">COLOUR_TO_SHORT_REPR</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">colour</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"  "</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">suffix</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h2 id="tag-102-30112024-tag-104-2122024">Tag 102 (30.11.2024) - Tag 104 (2.12.2024)<a class="headerlink" href="#tag-102-30112024-tag-104-2122024" title="Permanent link">¶</a></h2>
+<p>Pause machen. :coffe:</p>
+<h2 id="tag-105-3122024">Tag 105 - 3.12.2024<a class="headerlink" href="#tag-105-3122024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich den Roboter fertig gebaut.
+<img alt="Der fertige Roboter" src="/images/robot_1.jpg"/></p>
+<p>Die Dekoration, die hinten auf den Augen ist, habe ich weggelassen, weil ich die Teile nicht gefunden habe.</p>
+<p>Hier noch der Link zum Original: <a href="http://www.mindcuber.com/mindcub3r/mindcub3r.html">MindCub3r</a></p>
+<h2 id="tag-106-4122024-tag-109-7122024">Tag 106 (4.12.2024) - Tag 109 (7.12.2024)<a class="headerlink" href="#tag-106-4122024-tag-109-7122024" title="Permanent link">¶</a></h2>
+<p>Pause machen und am DatapackUpdater programmieren. <img alt="👩‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f469-200d-1f4bb.svg" title=":woman_technologist:"/></p>
+<h2 id="tag-110-8122024">Tag 110 - 8.12.2024<a class="headerlink" href="#tag-110-8122024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich wieder versucht, die Pattern Database in C++ voranzutreiben. Hat wieder nicht geklappt, weil ich immer
+noch kein C++ kann. Ich habe nicht einmal geschafft, eine sinnvolle Ausgabe des Würfels zu erstellen.</p>
+<h2 id="tag-111-9122024">Tag 111 - 9.12.2024<a class="headerlink" href="#tag-111-9122024" title="Permanent link">¶</a></h2>
+<p>Ich gebe auf mit C++.</p>
+<p>Es kostet mich zu viel Zeit, nur um ein paar Stunden einzusparen. Es gibt allerdings ein Tool für Python, das den Code
+10–100 Mal schneller ausführt.</p>
+<p>Habe gerade gemerkt, dass meine Berechnung der Tiefe falsch ist. Es ist nämlich </p>
+<div class="arithmatex">\[
+\sum_{k=1}^{d}{12 · 11^{d-1}}
+\]</div>
+<h2 id="tag-112-10122024">Tag 112 - 10.12.2024<a class="headerlink" href="#tag-112-10122024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich es geschafft, ein Programm zu installieren, das Python Code viel schneller ausführt. Der erste Test mit 
+der Fibonacci-Folge (wie immer beim Programmieren) hat sehr gut geklappt. Python hat 28 Sekunden gebraucht, Codon (der 
+Compiler) nur 1,3 Sekunden. Wenn das bei meinem Programm genauso ist, kann ich die drei Datenbanken an einem Tag 
+generieren. Warum es nicht gestern schon geklappt hat, liegt daran, dass ich das Programm nur auf einem Linux oder macOS
+Betriebssystem ausführen kann. Heute habe ich dann auf unserem alten Ubuntu-Rechner Codon installiert. Gab wie immer 
+noch kleinere Probleme, aber die habe ich alle behoben. Ich musste z. B. das Passwort zurücksetzen, wein mein Vater 
+nicht da war.</p>
+<p>Ich würde eigentlich auch weiterprobieren, aber der Ubuntu-Rechner ist irgendwie nicht mehr im Netzwerk und 
+dementsprechend kann ich auch keine Dateien übertragen.</p>
+<h2 id="tag-113-11122024">Tag 113 - 11.12.2024<a class="headerlink" href="#tag-113-11122024" title="Permanent link">¶</a></h2>
+<p>Der Ubuntu-Computer ist immer noch nicht im Netzwerk. Angeblich, weil er keinen Netzwerkadapter hat, obwohl er das 
+vorher auch nicht hatte. </p>
+<p>Ich wollte jetzt eigentlich versuchen, das Programm für Codon umzuschreiben, scheitere aber 
+daran, dass ich wieder kein Modul installieren kann.</p>
+<h2 id="tag-114-12122024">Tag 114 - 12.12.2024<a class="headerlink" href="#tag-114-12122024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich versucht, das Programm zu optimieren, damit es nicht 1 000 Jahre braucht, wie gestern die Schätzung 
+war. Allerdings habe ich es nicht geschafft und weiß nicht, ob es überhaupt möglich ist, das Programm mit meinen 
+Mitteln (Python) weiter zu optimieren. Wenn ich nicht in der nächsten Zeit Fortschritte mache, werde ich versuchen, eine
+vorgefertigte Pattern-Database zu nutzen.</p>
+<p>Mein Plan für die Ferien in einer Woche ist, den Roboter zu programmieren, damit ich dann mit dem Projekt
+schnell fertig werde, damit ich noch die Dokumentation schreiben kann und mich wieder mit interessanteren Projekten 
+beschäftigen kann.</p>
+<h2 id="tag-115-13122024">Tag 115 - 13.12.2024<a class="headerlink" href="#tag-115-13122024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich wie gestern versucht, das Programm schneller zu machen.</p>
+<h2 id="tag-116-14122024">Tag 116 - 14.12.2024<a class="headerlink" href="#tag-116-14122024" title="Permanent link">¶</a></h2>
+<p>So auch heute. Heute habe ich eine eindimensionale Speicherung des Würfels 'erfunden'. Das Problem ist nur, dass sich
+die Berechnung des PDB-Index nicht so verhält wie bei der 3-dimensionalen Struktur. Das werde ich aber wann anders 
+(nicht mehr heute) machen müssen.</p>
+<h2 id="tag-117-15122024">Tag 117 - 15.12.2024<a class="headerlink" href="#tag-117-15122024" title="Permanent link">¶</a></h2>
+<p>Bugs in meinen anderen Programmen fixen. <img alt="🐛" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f41b.svg" title=":bug:"/></p>
+<h2 id="tag-118-16122024">Tag 118 - 16.12.2024<a class="headerlink" href="#tag-118-16122024" title="Permanent link">¶</a></h2>
+<p>Ich habe mich gerade dazu entschlossen, die PDB (Pattern Database) nicht selbst zu erstellen, weil ich nicht 1000 Jahre 
+warten kann. Dann habe ich im Internet nach einer existierenden gesucht und eine gefunden, die allerdings keine Lizenz
+hat. Also darf ich sie strenggenommen nicht nutzen, deshalb habe ich eine Anfrage geschickt, ob eine Lizenz hinzugefügt
+werden kann. Ich gehe aber nicht davon aus, dass ich eine Antwort erhalten werde, da der/die Ersteller*in schon lange
+nicht mehr auf Fragen geantwortet hat. Ich schätze, ich werde es einfach nutzen.</p>
+<p>20 Minuten später, der Ersteller hat geantwortet, dass er/sie*es in Zukunft vielleicht eine Lizenz hinzufügen wird und
+dass ich es einfach als MIT betrachten soll. Das heißt, ich darf es unter bestimmten Bedingungen verwenden.</p>
+<h2 id="tag-119-17122024">Tag 119 - 17.12.2024<a class="headerlink" href="#tag-119-17122024" title="Permanent link">¶</a></h2>
+<p>Heute habe ich den Roboter in Betrieb genommen und das Löseprogramm (das Mitgelieferte) aufgespielt. Der Roboter löst 
+einen normalen Würfel in ca. 20 Zügen. Mit Scannen sind das etwa 90 Sekunden.
+de gemerkt, dass ich mich die ganze Zeit vertan habe, ich brauche nämlich nir eine Tiefe von 11 und nicht 
+von 14 zum Generieren der Datenbank.</p>
+<p>Ich war gerade dabei, die Positionsberechnung eines Würfels in der PDB zu erstellen, als ich gemerkt habe, dass ich in
+der Berechnung der Positionsswitches einen Fehler gemacht habe, der dazu führte, dass die Züge kompletten Schwachsinn
+machten. Mit Positionsswitches meine ich die Felder in dem eindimensionalen Array, die bei einem Zug die Position 
+wechseln. Das Problem habe ich jetzt behoben, ich hatte nur <code>from_index</code> statt <code>to_index</code> 
+(siehe <a href="#tag-7-2782024">Tag 7</a>).</p>
+<h2 id="tag-120-18122024">Tag 120 - 18.12.2024<a class="headerlink" href="#tag-120-18122024" title="Permanent link">¶</a></h2>
+<p>Nichts machen.</p>
+<h2 id="tag-121-19122024">Tag 121 - 19.12.2024<a class="headerlink" href="#tag-121-19122024" title="Permanent link">¶</a></h2>
+<p>Ich habe einen Flyer für die Schule designt. <img alt="📗" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4d7.svg" title=":green_book:"/></p>
+<h2 id="tag-122-20122024">Tag 122 - 20.12.2024<a class="headerlink" href="#tag-122-20122024" title="Permanent link">¶</a></h2>
+<p>Geburtstag feiern. <img alt="🥳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f973.svg" title=":partying_face:"/></p>
+<h2 id="tag-123-21122024">Tag 123 - 21.12.2024<a class="headerlink" href="#tag-123-21122024" title="Permanent link">¶</a></h2>
+<p>Heute wollte ich eigentlich anfangen, den Roboter zu programmieren, habe aber keinen MicroSD-Karten-Adapter. 
+Beziehungsweise, ich habe einen, der aber in irgendeiner Kiste ist, wo ich ihn nur schwer finden kann. Daher werde ich
+jetzt versuchen, mit den Datenbanken weiterzukommen.</p>
+<p>Ich habe eben 2 Probleme behoben:</p>
+<ul>
+<li>Einmal hatte ich in der Ausgabe der Würfel nach einmaligem Drehen vertikale Streifen drin. Das war nur eine falsche 
+    Darstellung des Würfels.</li>
+<li>Und dann hat die Berechnung der Indizes bei verdrehten Würfeln eine Ecke weggelassen. Lag daran, dass eine Ecke 
+    falsche Koordinaten zugewiesen bekommen hat.</li>
+</ul>
+<h2 id="tag-124-22122024">Tag 124 - 22.12.2024<a class="headerlink" href="#tag-124-22122024" title="Permanent link">¶</a></h2>
+<p>Hatte wieder Probleme damit, dass, immer wenn mehrere Züge auf einmal ausgeführt werden, es nicht klappt. Muss ich 
+wann anders beheben.</p>
+<h2 id="tag-125-23122024">Tag 125 - 23.12.2024<a class="headerlink" href="#tag-125-23122024" title="Permanent link">¶</a></h2>
+<p>Ich habe heute das <code>ev3dev</code> Betriebssystem auf dem EV3 installiert. Ich könnte jetzt Programme schreiben und auf dem
+Roboter ausführen. Das Problem: es braucht unfassbar lange. Das heißt, ich werde irgendeine andere Option finden müssen.
+Ich habe jetzt überlegt, dass ich eine REST-API auf meinem Laptop laufen lassen könnte, die den Würfel auf Anfrage des
+EV3s löst. Das Ausführen der zurückgegebenen Züge würde dann der EV3 machen.</p>
+<p>Ich habe endlich den Fehler gefunden! Es lag daran, dass ich bei der Umwandlung von der Move-Json-Struktur
+(<a href="#tag-7-2782024">Tag 7</a>) zu Index-Verschiebungen vergessen hatte, dass es auch Seiten gibt, die gegen den Uhrzeigersinn
+gedreht werden müssen. Dann ist es halt auch kein Wunder, dass eine Ecke zwei grüne Plättchen hat.</p>
+<h2 id="tag-126-24122024">Tag 126 - 24.12.2024<a class="headerlink" href="#tag-126-24122024" title="Permanent link">¶</a></h2>
+<p>Ich habe es hingekriegt, dafür zu sorgen, dass die Ecken theoretisch gelöst werden können. Dafür musste ich einiges tun.</p>
+<p>Die Indexierung der Ecken besteht aus zwei Teilen: der Permutation (welche Ecke wo ist) und der Orientation (wie die 
+Ecke gedreht ist). Um einen vollständigen Index zu erhalten, muss man einen Index aus der Permutation erstellen. Dafür 
+habe ich den Lehmer Code verwendet. Keine Ahnung, wie der funktioniert, ich habe ihn nur aus einem anderen Projekt von 
+C++ nach Python übersetzt.</p>
+<p>Um die Anzahl der Züge herauszufinden, die benötigt werden, um den Würfel zu lösen, muss man einfach nur in der 
+Datenbank nachschauen.</p>
+<h2 id="tag-127-25122024">Tag 127 - 25.12.2024<a class="headerlink" href="#tag-127-25122024" title="Permanent link">¶</a></h2>
+<p>Mein Programm kann jetzt die Ecken von einem Würfel lösen. Dann muss ich nur noch die anderen PDBs mit einbeziehen. 
+Dann brauche ich noch eine effiziente Suchstruktur (IDA*), die alle Züge bis zur Lösung durchgeht und dabei die Routen 
+mit niedrigen Erfolgschancen ausschließt. Dann brauche ich noch eine Heuristik <span class="arithmatex">\(h(n)\)</span>, die abschätzt, wie viele Züge es
+noch braucht, um dem Würfel zu lösen. Diese ist die Summe aus dem PDB-Werten des aktuellen Würfels. Ich habe zwar etwa 
+verstanden, wie es funktioniert, aber erklären wird nochmals viel schwieriger.</p>
+<h2 id="tag-128-26122024">Tag 128 - 26.12.2024<a class="headerlink" href="#tag-128-26122024" title="Permanent link">¶</a></h2>
+<p>War wohl so im Programmier-Workflow, dass ich vergessen habe, einen Eintrag hier zu machen. </p>
+<h2 id="tag-129-27122024">Tag 129 - 27.12.2024<a class="headerlink" href="#tag-129-27122024" title="Permanent link">¶</a></h2>
+<p>Ich bin gerade dabei, den Code auf mehrere Prozesse aufzuteilen, weil es sonst zu lange dauern würde, einen Würfel zu 
+lösen. </p>
+<p>Die neue Version mit Aufteilen braucht 160 Sekunden, die Andere nur 0.03. Ich habe keine Ahnung, was ich falsch gemacht 
+habe!</p>
+<h2 id="tag-130-28122024-tag-131-29122024">Tag 130 (28.12.2024) - Tag 131 (29.12.2024)<a class="headerlink" href="#tag-130-28122024-tag-131-29122024" title="Permanent link">¶</a></h2>
+<p>Am Projekt programmiert, aber vergessen, einen Eintrag zu machen.</p>
+<h2 id="tag-132-30122024">Tag 132 - 30.12.2024<a class="headerlink" href="#tag-132-30122024" title="Permanent link">¶</a></h2>
+<p>Ich habe mich jetzt entschieden, den Thistlethwaite Algorithmus zu implementieren. Dieser ist wohl deutlich schneller, 
+liefert aber nicht so gute Ergebnisse. Dann habe ich aufgrund von mangelndem Internet angefangen die Algorithmen zu 
+dokumentieren.</p>
+<h2 id="tag-133-31122024">Tag 133 - 31.12.2024<a class="headerlink" href="#tag-133-31122024" title="Permanent link">¶</a></h2>
+<p>Ich habe heute die Dokumentierung der Algorithmen (IDA* und Korfs Algorithmus) fortgesetzt und noch einmal neu 
+angesetzt.</p>
+<h2 id="tag-134-112025-tag-135-212025">Tag 134 (1.1.2025) - Tag 135 (2.1.2025)<a class="headerlink" href="#tag-134-112025-tag-135-212025" title="Permanent link">¶</a></h2>
+<p>Irgendwas an der Dokumentation programmiert, aber vergessen, es zu dokumentieren.</p>
+<h2 id="tag-136-312025">Tag 136 - 3.1.2025<a class="headerlink" href="#tag-136-312025" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">pass</span>
+</code></pre></div>
+<h2 id="tag-137-412025">Tag 137 - 4.1.2025<a class="headerlink" href="#tag-137-412025" title="Permanent link">¶</a></h2>
+<p>Wieder vergessen einen Eintrag zu machen.</p>
+<h2 id="tag-138-512025">Tag 138 - 5.1.2025<a class="headerlink" href="#tag-138-512025" title="Permanent link">¶</a></h2>
+<p>Es funktioniert! Das Programm kann jetzt einen Würfel lösen! Obwohl das auch mit der schnelleren Methode noch sehr lange
+braucht, zumindest Schritt 3, der Rest geht innerhalb von Millisekunden. Da muss ich eventuell noch mal mit 
+Parallelisierung experimentieren.</p>
+<h2 id="tag-139-612025">Tag 139 - 6.1.2025<a class="headerlink" href="#tag-139-612025" title="Permanent link">¶</a></h2>
+<p>An diesem Tag habe ich versucht, eine Verbindung zwischen Client und Server mittels WebSockets zu programmieren. Das 
+ging auch alles gut, bis ein Prozess auf einmal nicht mehr reagiert hat, so dass ich ihn schließen musste. War keine 
+gute Idee, weil dann alles abgestürzt ist und der Server einfach nicht mehr reagiert hat, auch nicht nach mehreren 
+Neustarts (des Servers).</p>
+<h2 id="tag-140-712025">Tag 140 - 7.1.2025<a class="headerlink" href="#tag-140-712025" title="Permanent link">¶</a></h2>
+<p>Ich habe eben wieder an der Kommunikation zwischen Client (der Roboter) und dem Server (mein Laptop) gearbeitet. Das 
+Protokoll ist WebSocket (<code>ws</code>), ein Protokoll, das einfach eine zwei-direktionale Verbindung ist. </p>
+<p>Ich muss mal kurz (auch für mich) ein kleines Diagramm schreiben:</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><label for="__tabbed_2_1">Server</label><div class="tabbed-content">
+<pre class="mermaid"><code>graph RL
+    A(Client connected) --&gt; B(Send Config)
+    B --&gt; C(Receive cube state)
+    C --&gt; D(Solve given cube)
+    D --&gt; E(Send the solution)
+    E --&gt; C</code></pre>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><label for="__tabbed_2_2">Client</label><div class="tabbed-content">
+<pre class="mermaid"><code>graph RL
+    A(Connect to server) --&gt; B(Receive Config)
+    B --&gt; C(Send cube state)
+    C --&gt; D(Wait for solution)
+    D --&gt; C</code></pre>
+</div>
+</div>
+<h2 id="tag-141-812025">Tag 141 - 8.1.2025<a class="headerlink" href="#tag-141-812025" title="Permanent link">¶</a></h2>
+<p>Der Roboter kann jetzt schon alle Bewegungen ausführen, die gebraucht werden, um den Würfel zu lösen, also die 
+Unterseite (unterste Ebene) des Würfels drehen und den gesamten Würfel um 90° drehen. Jetzt wollte ich dann die 
+Verbindung zwischen Roboter und Laptop erstellen, als ich gemerkt habe, dass ich kein <em>venv</em> hatte. Ein venv (virtual 
+environment) ist eine virtuelle Umgebung, in der man Python-Pakete installieren kann, ohne die Gefahr zu haben, das
+System zu schädigen. Also, wie immer, <code>python3 -m venv .venv</code> ausführen, damit die Umgebung in <code>.venv</code>  erstellt wird.
+Ging aber nicht, weil auf den EV3 eine minimale Pythonversion installiert war und das <code>venv</code>-Modul deshalb nicht 
+mitgeliefert wurde. Das zu installieren hat auch nicht geklappt, bis ich mit eine <code>get-pip.py</code>-Datei heruntergeladen
+habe, damit Pip, der Python-Package-Manager das Modul installieren konnte, das ich brauchte, um eine venv zu erstellen,
+um das System eventuell nicht zu beschädigen. Nach einigen Fehlern und sehr viel Zeit (der EV3 ist sehr, sehr langsam) 
+hatte ich dann das Modul, aber es ging immer noch nicht, weil irgendwelche Dateien fehlten. Ich installiere jetzt das 
+Modul einfach ohne venv, das System ist egal.</p>
+<h2 id="tag-142-912025">Tag 142 - 9.1.2025<a class="headerlink" href="#tag-142-912025" title="Permanent link">¶</a></h2>
+<p>Das Installieren des Moduls hat geklappt, das Verbinden mit dem Laptop nicht so gut. Das Programm könnte jetzt 
+theoretisch ausgeführt werden, wenn ich es hinkriegen würde, den EV3 mit dem Laptop im Subnetz kommunizieren zu lassen.
+Das Subnetz steht, der Computer kann sich auch mit dem EV3 verbinden, nur andersherum geht es irgendwie nicht.</p>
+<h2 id="tag-143-1012025-tag-144-1112025">Tag 143 (10.1.2025) - Tag 144 (11.1.2025)<a class="headerlink" href="#tag-143-1012025-tag-144-1112025" title="Permanent link">¶</a></h2>
+<p>Waren Verwandte besuchen und konnten Roboter nicht mitnehmen, daher nicht programmiert.</p>
+<h2 id="tag-145-1212025">Tag 145 - 12.1.2025<a class="headerlink" href="#tag-145-1212025" title="Permanent link">¶</a></h2>
+<p>Ich habe es endlich geschafft, den Laptop vom EV3 zu pingen! Es kam eine Antwort!</p>
+<p>Es geht jetzt! Die Verbindung klappt jetzt, das heißt, der Würfel könnte bald gelöst werden. Das Problem war, dass die
+Verbindung über das USB-Kabel immer auf <em>öffentlich</em> gestellt war, und das dafür gesorgt hat, dass die Firewall alle 
+Anfragen an einen bestimmten Port blockiert hat.</p>
+<h2 id="tag-146-1312025-tag-149-1612025">Tag 146 (13.1.2025) - Tag 149 (16.1.2025)<a class="headerlink" href="#tag-146-1312025-tag-149-1612025" title="Permanent link">¶</a></h2>
+<p>Weiter am Roboter programmieren, aber vergessen, hier einen Eintrag (oder sogar mehrere) zu machen.</p>
+<h2 id="tag-150-1712025">Tag 150 - 17.1.2025<a class="headerlink" href="#tag-150-1712025" title="Permanent link">¶</a></h2>
+<p>Heute wollte ich eigentlich den Roboter dazu bringen, dass er die Farben einscannt (nicht auswertet!), aber als ich 
+schon davor die letzten Tage nachtragen wollte, habe ich gemerkt, dass es sehr schwer ist, die richtigen Daten und 
+Tag-Nummern auszurechnen. Und da ich oben bestimmt Fehler gemacht habe, habe ich ein Programm geschrieben, das die 
+Überschriften validiert und eine Fehlermeldung für jede falsche Überschrift aufgibt. Es gab erst noch Probleme, weil der
+Unterschied der Daten nicht die Anzahl an Tagen ist, die man zum letzten Datum zuaddieren muss, um das aktuelle Datum zu 
+erhalten (es fehlte nur ein <code>+ 1</code>!). Jetzt habe ich die unterschiedlichsten Fehler gefunden. Von doppelten oder gar 
+keinen <code>Tag</code>en in den Zeitraum-Überschriften bis zu fehlenden Teilen war vieles dabei, nur nicht falsche Zeitspannen.</p>
+<p>Ach ja, und das Tagebuch hat jetzt im Rohformat (wer's jetzt noch nicht wissen sollte: Markdown) mehr als 1 000 
+Zeilen.</p>
+<h2 id="tag-151-1812025">Tag 151 - 18.1.2025<a class="headerlink" href="#tag-151-1812025" title="Permanent link">¶</a></h2>
+<p>Ich habe meinen Entwicklungszyklus bei der Roboter-Programmierung gerade sehr viel schneller gemacht. Wenn ich vorher 
+eine Änderung gemacht habe, das aktualisierte Projekt übertragen und gestartet hatte, mussten immer einige Module 
+importiert werden. Bei einem normalen Computer wäre das kein Problem gewesen, beim EV3 aber schon: Es braucht mehr als
+20 Sekunden. Also habe ich ein Skript geschrieben, das das Hauptmodul (mein eigentliches Programm) importiert und 
+ausführt. Da Python Module cached, werden die so benötigten Module nur einmal geladen und beim nächsten Mal 
+wiederverwendet.</p>
+<h2 id="tag-152-1912025">Tag 152 - 19.1.2025<a class="headerlink" href="#tag-152-1912025" title="Permanent link">¶</a></h2>
+<p>Wieder vergessen einen Eintrag zu machen.</p>
+<h2 id="tag-153-2012025">Tag 153 - 20.1.2025<a class="headerlink" href="#tag-153-2012025" title="Permanent link">¶</a></h2>
+<p>Als ich eben einen Test machen, wollte, ob der Roboter funktioniert, habe ich gemerkt, dass die Farberkennung Orange mit
+Gelb verwechselt. Das habe ich nicht hingekriegt zu beheben.</p>
+<h2 id="tag-154-2112025">Tag 154 - 21.1.2025<a class="headerlink" href="#tag-154-2112025" title="Permanent link">¶</a></h2>
+<p>Ich wollte gerade eine KI zur Farberkennung erstellen, habe aber nicht genug Speicherplatz, um die ganzen Module zu 
+installieren, die so ein neuronales Netz braucht. Dann schreibe ich halt ersteinmal an der Dokumentation.</p>
+<h2 id="tag-155-2212025-tag-156-2312025">Tag 155 (22.1.2025) - Tag 156 (23.1.2025)<a class="headerlink" href="#tag-155-2212025-tag-156-2312025" title="Permanent link">¶</a></h2>
+<p>Den Client dazu bringen, den Würfel mehrfach (100-mal) einzuscannen, damit man die KI basierend auf diesen
+Trainingsdaten trainieren kann.</p>
+<h2 id="tag-157-2412025">Tag 157 - 24.1.2025<a class="headerlink" href="#tag-157-2412025" title="Permanent link">¶</a></h2>
+<p>Der Roboter kann jetzt endlich den Würfel mehrfach einscannen. Dann muss ich ihn jetzt sehr lange laufen lassen und dann 
+die KI trainieren.</p>
+<h2 id="tag-158-2512025">Tag 158 - 25.1.2025<a class="headerlink" href="#tag-158-2512025" title="Permanent link">¶</a></h2>
+<p>Die KI funktioniert jetzt, fehlt nur noch die Integration in den Server.</p>
+<h2 id="tag-159-2612025">Tag 159 - 26.1.2025<a class="headerlink" href="#tag-159-2612025" title="Permanent link">¶</a></h2>
+<p>Vergessen einen Eintrag zu machen, habe aber am Projekt (der KI) gearbeitet.</p>
+<h2 id="tag-160-2712025">Tag 160 - 27.1.2025<a class="headerlink" href="#tag-160-2712025" title="Permanent link">¶</a></h2>
+<p>Die KI geht, ihr Fehlen nur noch Trainingsdaten. Dann habe ich noch einen einfachen Korrektur-Algorithmus programmiert,
+der eine falsche Farbe an die richtige Stelle bringt. Bei mehreren Stellen geht das leider nicht, aber es hilft schon,
+weil oft eine Farbe falsch ist.</p>
+<h2 id="tag-161-2812025">Tag 161 - 28.1.2025<a class="headerlink" href="#tag-161-2812025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich mir überlegt, wie der Mehrfach-Korrigier-Algorithmus funktionieren soll.</p>
+<h2 id="tag-162-2912025">Tag 162 - 29.1.2025<a class="headerlink" href="#tag-162-2912025" title="Permanent link">¶</a></h2>
+<p>Und heute dann umgesetzt. Funktioniert sehr gut.</p>
+<h2 id="tag-163-3012025-tag-171-722025">Tag 163 (30.1.2025) - Tag 171 (7.2.2025)<a class="headerlink" href="#tag-163-3012025-tag-171-722025" title="Permanent link">¶</a></h2>
+<p>War krank und habe nicht programmiert.</p>
+<h2 id="tag-172-822025-tag-176-1222025">Tag 172 (8.2.2025) - Tag 176 (12.2.2025)<a class="headerlink" href="#tag-172-822025-tag-176-1222025" title="Permanent link">¶</a></h2>
+<p>Hatte keine Lust, an diesem Programm zu arbeiten.</p>
+<h2 id="tag-177-1322025">Tag 177 - 13.2.2025<a class="headerlink" href="#tag-177-1322025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich wieder weiterprogrammiert. Der Algorithmus von Thistlethwaite braucht für sehr einfache Würfel (3 Züge
+von Lösung entfernt) mehrere Minuten. Manche Würfel (z. B. 10 Züge) gehen aber viel schneller (wenige Sekunden). 
+Allerdings war die Lösung nicht perfekt, weil sie unnötige Züge enthalten hat. Also habe ich programmiert, dass die Züge 
+vereinfacht werden, wie <code>L R L</code> → <code>L2 R</code>. Das muss ich dann Morgen dokumentieren.</p>
+<h2 id="tag-178-1422025">Tag 178 - 14.2.2025<a class="headerlink" href="#tag-178-1422025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich dann angefangen, den Algorithmus zu programmieren, als ich gesehen habe, dass man eigene Glossare mit 
+Tooltips hinzufügen kann. Ein Beispiel: HTML. Dann habe ich noch alle Fußnoten in Tooltips geändert. Das Problem ist, 
+dass ich in den Tooltips kein Markdown nutzen kann, sondern nur Plain-Text; aber die Nutzenden können dann halt googeln.
+Die Dokumentation hat schon 21 Dateien. Irgendwie nerven die Tooltips ein bisschen, sie sind einfach überall.</p>
+<h2 id="tag-179-1522025">Tag 179 - 15.2.2025<a class="headerlink" href="#tag-179-1522025" title="Permanent link">¶</a></h2>
+<p>Ich habe eben die Tooltips des Glossars etwas reduziert, damit man nicht dauernd abgelenkt wird. Einige der alten 
+Fußnoten existieren jetzt wieder, allerdings nur 4 von über 10. Allerdings wäre es schöner, wenn die Fußnoten auch als 
+Tooltips gehen würden, allerdings habe ich kein Geld, um mir die Insiders-Version von Material for MkDocs zu kaufen, 
+also vielleicht selbst machen? <img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f440.svg" title=":eyes:"/></p>
+<h2 id="tag-180-1622025">Tag 180 - 16.2.2025<a class="headerlink" href="#tag-180-1622025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich, wie gestern angefangen, den <em>Verteiler</em> auf die verschiedenen Skripte zu programmieren. Es geht mir 
+darum, dass ich schnell Zugriff auf jeden Programmteil habe, damit ich die einzelnen Teile testen kann. Aktuell 
+unterstützt werden die verschiedenen Löse-Algorithmen (Korf, Thistlethwaite und ein TestThistlethwaite, der einen 
+Schritt in anderen Prozessen ausführt), der Move-Pruner und ein kleines Programm (drei Zeilen!), das eine Python-Liste 
+in Züge umwandelt (zum Entwickeln nützlich).</p>
+<p>Ich habe gerade mal testweise einmal Korfs und Thistlethwaites Algorithmen mit den gleichen Zügen gestartet, beide 
+laufen jetzt schon seit mehr als 10 Minuten, ich habe für den Würfel (mit Ausführen) nur 2 ½ Minuten gebraucht.</p>
+<h2 id="tag-181-1722025">Tag 181 - 17.2.2025<a class="headerlink" href="#tag-181-1722025" title="Permanent link">¶</a></h2>
+<p>Tatsächlich wurde der Würfel auch nach mehr als 30 Minuten nicht gelöst. Dann habe ich gestern abgebrochen.</p>
+<p>Hatte eben noch sehr viele Probleme mit GitHub Actions (seit gestern ist die Dokumentation auf 
+<a href="https://scaui0.github.io">scaui0.github.io</a> verfügbar) und konnte nicht weiterprogrammieren.</p>
+<h2 id="tag-182-1822025">Tag 182 - 18.2.2025<a class="headerlink" href="#tag-182-1822025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich die zwei Versionen des Programms (ich habe meinen USB-Stick vor 2 Wochen vergessen) zu einer gemacht.
+Nach einigen Problemen mit Git hat es dann auch geklappt.</p>
+<h2 id="tag-183-1922025">Tag 183 - 19.2.2025<a class="headerlink" href="#tag-183-1922025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich den gemeinsamen Entry-Point meines Programms um die KI-Funktionen erweitert.</p>
+<h2 id="tag-184-2022025">Tag 184 - 20.2.2025<a class="headerlink" href="#tag-184-2022025" title="Permanent link">¶</a></h2>
+<p>Habe wieder mal Fehler in GitHub Actions gehoben.</p>
+<h2 id="tag-185-2122025">Tag 185 - 21.2.2025<a class="headerlink" href="#tag-185-2122025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich</p>
+<div class="admonition info">
+<p class="admonition-title">Fehlender Eintrag</p>
+<p>Ich habe keine Ahnung, warum ich hier abgebrochen habe oder was ich genau gemacht habe, es war aber nichts 
+Wichtiges.</p>
+</div>
+<h2 id="tag-186-2222025">Tag 186 - 22.2.2025<a class="headerlink" href="#tag-186-2222025" title="Permanent link">¶</a></h2>
+<p>Ich habe eben ein Analytics-Tool hinzugefügt, mit dem ich jetzt sehen kann, wie viele Leute mein Projekt gelesen haben,
+von wo sie kamen, welche Browser genutzt wurden, welches Betriebssystem, welche Bildschirmgröße und von wo sie mein 
+Projekt angeschaut haben (welches Land).</p>
+<p>Weil ich keine personalisierten Daten wie IPs sammle, habe ich auch keine Cookie-Information hinzugefügt.</p>
+<h2 id="tag-187-2322025">Tag 187 - 23.2.2025<a class="headerlink" href="#tag-187-2322025" title="Permanent link">¶</a></h2>
+<p>Ich habe mich jetzt entschlossen, den Algorithmus von Kociemba zu implementieren. </p>
+<h2 id="tag-188-2422025">Tag 188 - 24.2.2025<a class="headerlink" href="#tag-188-2422025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich weiter an dem Datapack-Updater programmiert.</p>
+<h2 id="tag-189-2522025">Tag 189 - 25.2.2025<a class="headerlink" href="#tag-189-2522025" title="Permanent link">¶</a></h2>
+<p>Heute auch.</p>
+<h2 id="tag-190-2622025-tag-200-832025">Tag 190 (26.2.2025) - Tag 200 (8.3.2025)<a class="headerlink" href="#tag-190-2622025-tag-200-832025" title="Permanent link">¶</a></h2>
+<p>In dieser Zeit hatte ich keine Lust zu programmieren (muss auch mal sein).</p>
+<h2 id="tag-201-932025">Tag 201 - 9.3.2025<a class="headerlink" href="#tag-201-932025" title="Permanent link">¶</a></h2>
+<p>Ich habe jetzt ein alternatives Würfelspeichersystem programmiert. Dieses System basiert nicht auf den einzelnen Farben 
+(Facelets), sondern auf den Teilstrukturen (Cubies). Es wird also gespeichert, wo die Ecken und Kanten sind und wie sie 
+gedreht sind.</p>
+<p>Ein paar Tests haben ergeben, dass das Drehen des Würfels zwar etwas länger braucht, dafür aber die Positionsberechnung
+der Ecken und Kanten in den PDBs extrem verschnellert wurden (beim Neuen besteht der Würfel schon aus diesen 
+Informationen, sodass sie nicht extrahiert werden müssen). Dadurch könnte der Lösealgorithmus eine 10-fache
+Beschleunigung erhalten.</p>
+<h2 id="tag-202-1032025-tag-203-1132025">Tag 202 (10.3.2025) - Tag 203 (11.3.2025)<a class="headerlink" href="#tag-202-1032025-tag-203-1132025" title="Permanent link">¶</a></h2>
+<p>Ich habe ein Problem. Die neue Speicherart verändert sich nicht richtig, wenn eine Seite des Würfels gedreht wird: wenn 
+ich ein Gegenteil ausführe, sind die Ecken genauso verdreht, wie, wenn ich nicht das Gegenteil genommen hätte (<code>R'</code> und 
+<code>R</code>). Die Daten kommen aber aus einer Berechnung, auf der alles andere (auch die bisherigen PDBs) basiert. Das könnte
+heißen, dass, wenn diese Berechnung richtig funktioniert, der Algorithmus schneller werden könnte (weil die richtigen 
+Daten vorhanden sind), oder, dass er gar nicht mehr funktioniert, weil die Berechnung doch irgendwie funktioniert hat
+(warum auch immer sie dann falsche Ergebnisse liefert).</p>
+<h2 id="tag-204-1232025-tag-205-1332025">Tag 204 (12.3.2025) - Tag 205 (13.3.2025)<a class="headerlink" href="#tag-204-1232025-tag-205-1332025" title="Permanent link">¶</a></h2>
+<p>Keine Zeit zum Programmieren.</p>
+<h2 id="tag-206-1432025">Tag 206 - 14.3.2025<a class="headerlink" href="#tag-206-1432025" title="Permanent link">¶</a></h2>
+<p>Der Fehler hat sich behoben. Nachdem ich mit sehr komplizierten und langen RegExen vom Original die ganzen Ecken, Kanten
+und Orientierungen extrahiert, ein Programm geschrieben, dass die Werte in mein Format umwandelt, und alles zum Laufen
+gebracht habe, habe ich gemerkt, dass doch alles in Ordnung war. Der Fehler kam daher, dass der Löse-Algorithmus den
+Würfel mit der roten Seite vorne, braucht und normalerweise die grüne Seite vorne ist. Ich kann mir vorstellen, dass
+ich irgendwann weitere Probleme damit kriege, aber dann kann ich einfach einen Konverter programmieren, der die zwei 
+Formate umkonvertiert. </p>
+<h2 id="tag-207-1532025">Tag 207 - 15.3.2025<a class="headerlink" href="#tag-207-1532025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich nur dokumentiert. Als ich dabei mathematische Formeln schreiben wollte, habe ich gemerkt, dass sie nicht 
+angezeigt werden konnten. Jetzt (mehrere Stunden später) weiß ich, dass https://unpkg.com down ist. Die Startseite geht 
+noch, alle Unterseiten aber nicht. Ich steige jetzt ersteinmal auf einen anderen CDN umzusteigen.</p>
+<h2 id="tag-208-1632025">Tag 208 - 16.3.2025<a class="headerlink" href="#tag-208-1632025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich wieder mal weiter dokumentiert. Der CDN-Server geht wieder.</p>
+<p>Die Dokumentation hat alleine schon 849 Zeilen, das Tagebuch 1218. Also habe ich alleine an der Dokumentation 2.067 
+Zeilen geschrieben. Eine genauere Auswertung, etwa wie viele Buchstaben eine Zeile durchschnittlich hat, will ich auch 
+noch machen, aber wahrscheinlich wie die Auswertung der einzelnen Tage am Ende, damit sich das danach nicht noch 
+verändert.</p>
+<h2 id="tag-209-1732025">Tag 209 - 17.3.2025<a class="headerlink" href="#tag-209-1732025" title="Permanent link">¶</a></h2>
+<p>Keine Zeit zum Programmieren.</p>
+<h2 id="tag-210-1832025">Tag 210 - 18.3.2025<a class="headerlink" href="#tag-210-1832025" title="Permanent link">¶</a></h2>
+<p>Nachtrag: An diesem Tag habe ich recherchiert, wie ich den letzten Lösealgorithmus (den Two-Phase Algorithm von
+Kociemba) umsetzen kann. Dann bin ich auf die 
+<a href="https://github.com/hkociemba/RubiksCube-TwophaseSolver">Python-Implementierung</a> gestoßen. Als ich dann den Programmcode
+angeschaut habe, habe ich gemerkt, dass ich den Algorithmus unterschätzt habe. Wenn schon die Datei zum Drehen der 
+Würfel über 500 Zeilen hat, will ich gar nicht wissen, wie viele Zeilen es insgesamt gibt. Dann habe ich aufgegeben und
+beschlossen, die API des <a href="https://kociemba.org/download.htm">Cube Explorers</a> zu nutzen. Diese löst einen Würfel in 
+wenigen Sekunden (oft unter einer) und liefert dabei nur Ergebnisse unter 22 Zügen.</p>
+<h2 id="tag-211-1932025">Tag 211 - 19.3.2025<a class="headerlink" href="#tag-211-1932025" title="Permanent link">¶</a></h2>
+<p>Ich versuche gerade, den Cube Explorer per API einzubinden. Er ist schoneinmal bei 10 verschiedenen Würfeln gleichzeitig
+optimal Lösen abgestürzt (hat Windows nicht ausgehalten).</p>
+<h2 id="tag-212-2032025">Tag 212 - 20.3.2025<a class="headerlink" href="#tag-212-2032025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich eine Klasse programmiert, die die einzelnen Teile des Programms vereint. Da es dann sehr lange gebraucht 
+hat, habe ich versucht, ein Tool zu finden, das die Importe analysiert und mir ein Diagramm erstellt, damit ich weiß, 
+warum es so lange braucht.</p>
+<h2 id="tag-213-2132025">Tag 213 - 21.3.2025<a class="headerlink" href="#tag-213-2132025" title="Permanent link">¶</a></h2>
+<p>Nachdem es jetzt mit <em>pydeps</em> als Dependencies-Diagramm-Erstell-Programm geklappt hat, habe ich gemerkt, warum die 
+Importe so lange gebraucht haben. Es lag an der API und der GUI, die immer geladen wurden, auch wenn sie nicht genutzt
+wurden. Jetzt habe ich die Importe so verschoben, dass sie nur noch importiert werden, wenn ich sie brauche (also fast 
+nie).</p>
+<h2 id="tag-214-2232025">Tag 214 - 22.3.2025<a class="headerlink" href="#tag-214-2232025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich angefangen, eine GUI für den Server zu programmieren, damit man den Roboter auch virtuell beobachten 
+kann und immer schauen kann, wie der Würfel gerade gedreht ist. Dann habe ich bemerkt, dass ich dafür die Verbindung
+ändern muss, weil dann viel mehr Daten ausgetauscht werden müssen.</p>
+<h2 id="tag-215-2332025">Tag 215 - 23.3.2025<a class="headerlink" href="#tag-215-2332025" title="Permanent link">¶</a></h2>
+<p>Die GUI ist auf einem guten Weg. Ich habe schon verschiedene Knöpfe und einen 2D-Würfel, allerdings ohne Funktionalität.
+Um die zu implementieren, brauche ich erst ein neues API-Design. Damit habe ich schon angefangen: Der Server sendet 
+immer verschiedene Befehle, wie <code>run_moves</code>, die der Roboter dann ausführt und gegebenenfalls den aktuellen Zug 
+zurücksendet.</p>
+<h2 id="tag-216-2432025-tag-218-2632025">Tag 216 (24.3.2025) - Tag 218 (26.3.2025)<a class="headerlink" href="#tag-216-2432025-tag-218-2632025" title="Permanent link">¶</a></h2>
+<p>In diesen drei Tagen habe ich programmiert, aber vergessen, einen Tagebucheintrag zu machen und wusste nicht mehr, was
+ich gemacht habe.</p>
+<h2 id="tag-219-2732025">Tag 219 - 27.3.2025<a class="headerlink" href="#tag-219-2732025" title="Permanent link">¶</a></h2>
+<p>Heute will ich es schaffen, die GUI halbwegs brauchbar zu machen, und dafür sorgen, dass die API Sinn ergibt.</p>
+<h2 id="tag-220-2832025">Tag 220 - 28.3.2025<a class="headerlink" href="#tag-220-2832025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich eigentlich die GUI mit der API weitergemacht. Aber jetzt (später am Abend) habe ich mal probiert, den 
+Roboter mit Farberkennung unter einer starken Lichtquelle zu probieren. Das Ergebnis beim Training der KI basierend auf 
+den neuen Daten: Die Accuracy (Genauigkeit) ist im Training schon nach ¼ auf 100 % gestiegen. Da das bei den 
+vorherigen Daten nicht so war, schließe ich daraus, dass die Daten sehr viel berechenbarer sind. Ein Testscan hat 
+ergeben, dass das Einscannen jetzt extrem viel weniger Probleme bereitet: 100 % richtig eingescannt! Das Würfellösen
+geht leider noch nicht, weil die Farbauswertung doch noch leicht hängt: Es wird oft eine Farbe falsch zugeordnet.
+Den Farbkorrigierer kann ich noch nicht anwenden, weil ich aktuell nicht erkennen kann, ob der Würfel möglich ist.</p>
+<h2 id="tag-221-2932025">Tag 221 - 29.3.2025<a class="headerlink" href="#tag-221-2932025" title="Permanent link">¶</a></h2>
+<p>Die KI hat leider auch mit starker Lampe noch Probleme, die Farben zu erkennen. Habe ich aber ehrlich gesagt auch:</p>
+<p><img alt="Das Schachbrettmuster, wie der Roboter es wahrnimmt" src="/images/robot_view_checkerboard.png"/></p>
+<p>Wo ist Rot und wo Orange? Die anderen Farben sind auch nicht sehr eindeutig. Hier noch mal extremer:</p>
+<p><img alt="Ein zufälliger Würfel aus der Sicht des Roboters" src="/images/robot_view_random_cube.png"/></p>
+<h2 id="tag-222-3032025">Tag 222 - 30.3.2025<a class="headerlink" href="#tag-222-3032025" title="Permanent link">¶</a></h2>
+<p>Der Roboter scannt die Farben auch unter sehr verschiedenen Lichtbedingungen noch nicht richtig ein.</p>
+<h2 id="tag-223-3132025-tag-225-242025">Tag 223 (31.3.2025) - Tag 225 (2.4.2025)<a class="headerlink" href="#tag-223-3132025-tag-225-242025" title="Permanent link">¶</a></h2>
+<p>Das Projekt geht mir extrem auf die Nerven. Ich will es endlich beenden!</p>
+<h2 id="tag-226-342025-tag-229-642025">Tag 226 (3.4.2025) - Tag 229 (6.4.2025)<a class="headerlink" href="#tag-226-342025-tag-229-642025" title="Permanent link">¶</a></h2>
+<p>Ich hatte Probleme, weil <em>tensorflow</em> (das Package, das ich für die KI nutze) plötzlich nicht mehr ging.</p>
+<h2 id="tag-230-742025">Tag 230 - 7.4.2025<a class="headerlink" href="#tag-230-742025" title="Permanent link">¶</a></h2>
+<p>Das hoffe ich jetzt zu beheben. In einer neuen Umgebung (venv) ging es jetzt. Aber in der Projektumgebung nicht. Deshalb
+setzte ich diese gerade neu auf.</p>
+<p>Es geht! Warum es funktioniert, weiß ich nicht. Es könnte aber daran liegen, dass ich Tensorflow aus einem anderen 
+Thread heraus gestartet habe. Ein Thread ist ein paralleler Teil einer Anwendung.</p>
+<h2 id="tag-231-842025">Tag 231 - 8.4.2025<a class="headerlink" href="#tag-231-842025" title="Permanent link">¶</a></h2>
+<p>Es klappt jetzt. Die Farberkennung kann jetzt theoretisch wieder funktionieren, praktisch macht sie das aber immer noch 
+nicht, weshalb ich die orange Seite des Würfels schwarz abkleben werde. Dann muss ich das noch mit dem Roboter verbinden
+und alle noch verbleibenden Fehler beheben (ich kenne schon einige). Dafür habe ich noch etwa eine Woche, dann sind die
+Ferien vorbei, da wir noch Verwandte besuchen. Und danach noch ein bisschen an der Dokumentation weiterschreiben.</p>
+<p>Aber jetzt ersteinmal die ganzen unnötigen Testdateien löschen …</p>
+<p>Jetzt habe ich mindestens 10 nicht verwendete Dateien gelöscht. Ich habe jetzt nach über vier Monaten den Ordner 
+<code>remote_tests</code> in <code>robot</code> umbenannt. Der Name kam daher, dass ich dort eigentlich nur Tests machen wollte, aber dann das
+ganze Programm geschrieben habe.</p>
+<h2 id="tag-232-942025">Tag 232 - 9.4.2025<a class="headerlink" href="#tag-232-942025" title="Permanent link">¶</a></h2>
+<p>Die GUI ist fast fertig, es kann aber noch sein, dass ich Probleme bekomme, weil man den Automatic-Mode ich ausschalten 
+kann, weil es ein Popup gibt, das anzeigt, dass der Würfel eingescannt wird, damit man nicht andere Aktionen macht, die
+dann mit dem Einscannen kollidieren.</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><label for="__tabbed_3_1">Automatic Mode beim Ausführen der Züge</label><div class="tabbed-content">
+<p><img alt="Automatic Mode beim Ausführen der Züge" src="/images/automatic_mode_running_moves.png"/></p>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><label for="__tabbed_3_2">Manual Mode beim Lösen eines Würfels</label><div class="tabbed-content">
+<p><img alt="Manual Mode beim Lösen eines Würfels" src="/images/manual_mode_solving_cube.png"/></p>
+</div>
+</div>
+<p>Jetzt fehlt nur noch die Farberkennung und dann kann ich die GUI/API mit dem Roboter verbinden und Fertig!</p>
+<h2 id="tag-233-1042025">Tag 233 - 10.4.2025<a class="headerlink" href="#tag-233-1042025" title="Permanent link">¶</a></h2>
+<p>Ich habe heute die orange Seite mit schwarz abgeklebt. Die KI, die ich damit trainiert habe, ist besser gewesen als die
+davor, allerdings hat sie immer noch Probleme.</p>
+<p>Weil es sein kann, dass das daran liegt, dass die umliegenden Facelets den Farbwert leicht verändern, habe ich einfach
+einen verdrehten Würfel als KI-Trainingsdaten-Basis genommen. Das Ergebnis: 99,8 % Genauigkeit – auf den
+Trainingsdaten, bei denen 12 Würfel leider nicht ausreichen. Aber trotzdem: Manche Würfel können gelöst werden! Aber
+manchmal stürzt die Verbindung ab, weil es einen Ping gibt, der aber nicht beantwortet werden kann, weil der Client
+gerade die Züge ausführt. Kann aber auh daran liegen, dass der Server die Farben zu lange auswertet.</p>
+<p>Später: Ich werde ersteinmal versuchen, den Korrekturalgorithmus so zu erweitern, dass alle möglichen Korrekturen
+geprüft werden, statt nur der am Wahrscheinlichsten.</p>
+<h2 id="tag-234-1142025">Tag 234 - 11.4.2025<a class="headerlink" href="#tag-234-1142025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich den neuen Korrekturalgorithmus programmiert und geschafft, zu prüfen, ob ein Würfel existieren kann. 
+Dann habe ich genau das noch dokumentiert.</p>
+<h2 id="tag-235-1242025-tag-239-1642025">Tag 235 (12.4.2025) - Tag 239 (16.4.2025)<a class="headerlink" href="#tag-235-1242025-tag-239-1642025" title="Permanent link">¶</a></h2>
+<p>Wir waren Verwandte besuchen und ich konnte den Roboter nicht mitnehmen.</p>
+<h2 id="tag-240-1742025">Tag 240 - 17.4.2025<a class="headerlink" href="#tag-240-1742025" title="Permanent link">¶</a></h2>
+<p>Kaum aus dem Urlaub zurück direkt eines der größten PyCharm Updates jemals machen. Angeblich sollte ich jetzt Jupiter
+Notebooks nutzen können, praktisch klappt das noch nicht, weil ich irgendeine andere Version brauche, egal.</p>
+<h2 id="tag-241-1842025">Tag 241 - 18.4.2025<a class="headerlink" href="#tag-241-1842025" title="Permanent link">¶</a></h2>
+<p>Gestern und heute habe ich es geschafft, die grundlegende Verbindung zwischen Roboter und Server zu machen. Das heißt,
+eigentlich sollte jetzt alles funktionieren.</p>
+<h2 id="tag-242-1942025-tag-244-2142025">Tag 242 (19.4.2025) - Tag 244 (21.4.2025)<a class="headerlink" href="#tag-242-1942025-tag-244-2142025" title="Permanent link">¶</a></h2>
+<p>Wir sind wieder im Urlaub.</p>
+<h2 id="tag-245-2242025-tag-246-2342025">Tag 245 (22.4.2025) - Tag 246 (23.4.2025)<a class="headerlink" href="#tag-245-2242025-tag-246-2342025" title="Permanent link">¶</a></h2>
+<p>Wichtigere Dinge zu tun.</p>
+<h2 id="tag-247-2442025">Tag 247 - 24.4.2025<a class="headerlink" href="#tag-247-2442025" title="Permanent link">¶</a></h2>
+<p>Ich habe morgen ein Probereferat über die Jahresarbeit! Gestern habe ich schon das Meiste vorbereitet.</p>
+<p>Ich habe eben die verschiedenen Korrektur-Algorithmen dokumentiert. Und dann den Text hier geschrieben und mittels
+meines Tagebuch-Tag-Überprüfers bemerkt, dass ich seit einigen Tagen die Tagnummern falsch hatte. Und dann noch, dass
+das Programm in bestimmten Fällen den Fehler nicht bemerkt hat.</p>
+<h2 id="tag-248-2542025">Tag 248 - 25.4.2025<a class="headerlink" href="#tag-248-2542025" title="Permanent link">¶</a></h2>
+<p>Das Referat lief gut.</p>
+<h2 id="tag-249-2642025">Tag 249 - 26.4.2025<a class="headerlink" href="#tag-249-2642025" title="Permanent link">¶</a></h2>
+<p>Der Roboter funktioniert sehr gut. Die Farberkennung braucht nur noch etwas mehr (mehr als 300 Würfel!) Trainingsdaten,
+dann klappt es endlich! Aber auch jetzt geht es meistens schon. Eben hat der Roboter sich fast selbst zerstört, weil er
+den Würfel nicht richtig hatte und es nicht bemerkt hat, wie soll er auch.</p>
+<h2 id="tag-250-2742025">Tag 250 - 27.4.2025<a class="headerlink" href="#tag-250-2742025" title="Permanent link">¶</a></h2>
+<p>War wohl so im Flow, dass ich vergessen habe, hier einen Kommentar zu machen.</p>
+<h2 id="tag-251-2842025">Tag 251 - 28.4.2025<a class="headerlink" href="#tag-251-2842025" title="Permanent link">¶</a></h2>
+<p>Der Roboter hat seit gestern eine extrem gute Quote beim Farbenerkennen – alle, bis auf einen, Würfel richtig erkannt.
+Der eine Würfel, der nicht gelöst werden konnte, hatte das Problem, dass es zwei leicht falsche Farben gab, von denen 
+nur eine korrigiert werden konnte. Das heißt, ich muss einen Algorithmus machen, der mehr als eine Farbe korrigiert.
+Ansonsten bin ich mit dem Roboter sehr zufrieden, es funktioniert fast alles perfekt. Das Einzige, was noch verändert 
+werden muss, ist die GUI und vielleicht ein kleiner Teil des Restprogramms. In der GUI funktioniert z. B. der 
+automatische Modul nicht richtig und mein Programm hat noch einige <code>TODO</code>-Kommentare.</p>
+<h2 id="tag-252-2942025">Tag 252 - 29.4.2025<a class="headerlink" href="#tag-252-2942025" title="Permanent link">¶</a></h2>
+<p>Ein paar Fehler in der Dokumentation behoben. </p>
+<p>Und danach wohl noch etwas am Programm …</p>
+<p>Immer, wenn man etwas Kleines ändert, verändert sich alles andere mit, sodass am Ende gar nichts mehr funktioniert.</p>
+<h2 id="tag-253-3042025-tag-256-352025">Tag 253 (30.4.2025) - Tag 256 (3.5.2025)<a class="headerlink" href="#tag-253-3042025-tag-256-352025" title="Permanent link">¶</a></h2>
+<p>Wir hatten ein langes Wochenende und waren nicht zu Hause.</p>
+<h2 id="tag-257-452025">Tag 257 - 4.5.2025<a class="headerlink" href="#tag-257-452025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich versucht, den neuen <em>New-Complex</em>-Korrektur-Algorithmus zu erstellen. Ist leider bei Weitem nicht so 
+einfach wie alle anderen.</p>
+<h2 id="tag-258-552025">Tag 258 - 5.5.2025<a class="headerlink" href="#tag-258-552025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich die Dokumentation in PDF umgewandelt. Fast 100 Seiten! Leider gibt es noch Formatierungsfehler.</p>
+<h2 id="tag-259-652025">Tag 259 - 6.5.2025<a class="headerlink" href="#tag-259-652025" title="Permanent link">¶</a></h2>
+<p>Die Fehler von gestern habe ich jetzt behoben. Waren nur ein paar Skripte, die gefehlt haben.</p>
+<h2 id="tag-260-752025-tag-261-852025">Tag 260 (7.5.2025) - Tag 261 (8.5.2025)<a class="headerlink" href="#tag-260-752025-tag-261-852025" title="Permanent link">¶</a></h2>
+<p>Ich habe versucht, die Dokumentation in PDF umzuwandeln. Dann habe ich aufgegeben.</p>
+<h2 id="tag-262-952025">Tag 262 - 9.5.2025<a class="headerlink" href="#tag-262-952025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich es geschafft, die kleinen Fehler zu beheben. Jetzt habe ich wieder Formeln und Diagramme, auch wenn ich 
+die Diagramme leider drehen musste, so dass man sie jetzt kaum lesen kann.</p>
+<h2 id="tag-263-1052025">Tag 263 - 10.5.2025<a class="headerlink" href="#tag-263-1052025" title="Permanent link">¶</a></h2>
+<p>Ich habe das Programm und die Dokumentation jetzt in andere Projekte verfrachtet, damit ich sie einfacher ändern kann.
+Dann habe ich eben – wie immer nach einigen Fehlern – die erste Sicherheitskopie des Projekts gemacht :party:</p>
+<h2 id="tag-264-1152025">Tag 264 - 11.5.2025<a class="headerlink" href="#tag-264-1152025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich das Dino-Runner-Spiel auf meiner 404-Seite gemacht. Der Statuscode 404 meint, dass die angegebene Seite
+nicht gefunden wurde.</p>
+<h2 id="tag-265-1252025">Tag 265 - 12.5.2025<a class="headerlink" href="#tag-265-1252025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich ein paar kleine Strukturierungsänderungen gemacht.</p>
+<h2 id="tag-266-1352025">Tag 266 - 13.5.2025<a class="headerlink" href="#tag-266-1352025" title="Permanent link">¶</a></h2>
+<p>Ich habe den How-to-use-Teil angefangen.</p>
+<h2 id="tag-267-1452025">Tag 267 - 14.5.2025<a class="headerlink" href="#tag-267-1452025" title="Permanent link">¶</a></h2>
+<p>Heute habe ich die GUI-lose API weitergemacht. Dabei habe ich gemerkt, dass es nicht sinnvoll ist, dass der Computer die
+Roboter-Züge berechnet, weil dann andere Roboter, die eventuell andere Protokolle brauchen, den Würfel nicht ausführen 
+können. Das heißt, dass ich das noch zum Roboter verschieben muss. Das Gleiche ist mit der Konfiguration, die auch
+roboterabhängig ist.</p>
+<h2 id="tag-268-1552025">Tag 268 - 15.5.2025<a class="headerlink" href="#tag-268-1552025" title="Permanent link">¶</a></h2>
+<p>Das mit den Roboterzügen und der Konfiguration ist ein Zukunftsproblem. Jetzt muss ich ersteinmal Dokumentation 
+schreiben.</p>
+<h2 id="tag-269-1652025">Tag 269 - 16.5.2025<a class="headerlink" href="#tag-269-1652025" title="Permanent link">¶</a></h2>
+<p>Ich schreibe jetzt ersteinmal weiter, dann versuche ich jetzt am Wochenende (heute ist Freitag) das PDF fertig zu 
+machen, um es dann auszudrucken. Dann muss ich auch schnell die Webseite für Crawler (Webseiten-Finder von
+Suchmaschinen) zugänglich machen, damit sich diese noch vor der Präsentation updaten können.</p>
+<p>Ich meine jetzt, dass ich alles Wichtige in der Dokumentation behandelt habe. Wenn dem auch andere Leute (meine Eltern)
+zustimmen, kann ich endlich das PDF erstellen.</p>
+<h2 id="tag-270-1752025">Tag 270 - 17.5.2025<a class="headerlink" href="#tag-270-1752025" title="Permanent link">¶</a></h2>
+<p>Ich habe jetzt ein brauchbares PDF erstellt. Ein paar Sachen muss ich noch bearbeiten, damit es wirklich gut ist. Dann
+habe ich jetzt noch das Problem, dass ich keine Tagebucheinträge in beiden Git-Branches (Verzweigungen der Änderungen)
+machen kann, weshalb das PDF wahrscheinlich plötzlich enden wird.</p>
+<h2 id="tag-271-1852025">Tag 271 - 18.5.2025<a class="headerlink" href="#tag-271-1852025" title="Permanent link">¶</a></h2>
+<p>Ich habe jetzt ein Cover für das PDF erstellt. Darauf steht </p>
+<div class="admonition quote">
+<p>Jahresarbeit - Zauberwürfellöseroboter</p>
+<p>Franz Weingartz</p>
+</div>
+<p>mit einem Bild.</p>
+<div class="page-break"></div>
+<p>Da ich in diesem PDF immer mehr Probleme habe, das Tagebuch fortzuführen, werde ich es nun beenden. Auf meiner Webseite
+werde ich es bis zur Präsentation fortführen. Wenn Sie es geschafft haben sollten, sich dieses Tagebuch durchzulesen,
+meinen Respekt, ich hätte es nicht geschafft. Wenn Sie es nicht geschafft haben, habe ich an Tag 11 recht behalten:</p>
+<div class="admonition quote">
+<p class="admonition-title">Zitat</p>
+<p>Wenn ich dieses Tagebuch so weiterführe, wird es am Ende niemand lesen, weil es so lang ist.</p>
+</div>
+<p>Damals hatte es nur 120 Zeilen, jetzt mehr als das 10-fache. Probieren Sie auch gerne mein Programm aus, die Anleitung
+haben Sie ja.</p>
+<p>Auf Wiedersehen.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Zurück zum Seitenanfang
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024-2025 Franz Weingartz
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.indexes", "navigation.top", "navigation.expand", "navigation.footer", "content.tooltips", "search.suggest", "content.code.annotate", "content.code.copy", "toc.follow", "navigation.tracking"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+<script src="../assets/javascripts/mathjax.js"></script>
+<script src="../assets/javascripts/mathjax.js"></script>
+<script src="../assets/javascripts/mkdocs-exporter.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+</body>
+</html>

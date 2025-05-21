@@ -1,0 +1,34 @@
+@media (min-width: 800px) {
+  .responsive-video {
+    width: 600px;
+  }
+}
+
+@media (max-width: 799px) {
+  .responsive-video {
+    width: 100%;
+  }
+}
+
+.responsive-video {
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.youtube-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.youtube-embed {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border: none;
+}
+
+@media (min-width: 800px) {
+  .youtube-embed {
+    width: 600px;
+  }
+}
