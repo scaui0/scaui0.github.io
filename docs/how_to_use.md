@@ -1,4 +1,4 @@
-# How to use
+# Nutzung des Programms
 
 Haben Sie sich im Verlaufe des Lesens gefragt, ob Sie mein Programm selbst testen können? Wenn ja, finden Sie hier einen
 Weg, dies zu tun.
@@ -36,7 +36,7 @@ Testen Sie das Programm mit `python main.py --help` bzw. `python3 main.py --help
 Da mein Programm aus Performancegründen ein externes Programm zum Lösen nutzt, müssen Sie den CubeExplorer von
 [kociemba.org/download.htm](https://kociemba.org/download.htm). Legen Sie die Programmdatei an einen Ort ihrer Wahl und
 starten Sie sie. Gehen Sie nach dem Erstellen einiger benötigter Dateien auf *Options* --> *Web server* und setzten Sie
-einen Haken bei  *Enable Web Server*. Wenn Sie mein Programm nutzen, sollten Sie immer eine Instanz des Programms
+einen Haken bei *Enable Web Server*. Wenn Sie mein Programm nutzen, sollten Sie immer eine Instanz des Programms
 geöffnet haben, damit mein Programm den `Cube Explorer` im Hintergrund per API nutzen kann.
 
 ## Befehle
