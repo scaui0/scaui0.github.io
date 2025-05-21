@@ -41,7 +41,7 @@ theme:
 plugins:
   - search
   - social:
-      enabled: false
+      enabled: true
 #      enabled: !ENV [RCS_DOCS_SOCIAL, false]
 
 markdown_extensions:
