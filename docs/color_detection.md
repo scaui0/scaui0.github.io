@@ -11,8 +11,7 @@ Die KI (neuronales Netzwerk) sortiert die Farben basierend auf verschieden mathe
 herausgefunden wurden. Die KI bekommt die RGB-Werte der Farbe und muss basierend darauf eine Schätzung abgeben, welche
 Farbe es ist. Diese Schätzung ist die Wahrscheinlichkeit für jede einzelne Farbe.
 
-Trainiert wurde die KI mit verschiedenen zufälligen Würfeln, die zuvor eingescannt wurden. Das Training wurde zu dem
-Zeitpunkt des Dokumentierens noch nicht abgeschlossen.
+Trainiert wurde die KI mit 100 Würfeln, die zuvor eingescannt wurde.
 
 Da die KI mit echten Daten trainiert wurde, kann sie die Farben meist richtig erkennen, allerdings auch nicht zu 
 100 %, deshalb wende ich nach dem Erkennen noch meinen [Farbkorrigierer](server/utils.md#farbkorrigierer) an.

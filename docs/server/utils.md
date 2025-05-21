@@ -13,8 +13,8 @@ anderen Typs kommen, also nach einer Gruppe `{R: 1, L: 2}` muss eine Gruppe komm
 Dann werden die Gruppen wieder in Züge umgewandelt, indem für jede Gruppe nacheinander die Anzahl der Rotationen Modulo
 4 gerechnet wird. Dann wird die Seite plus ein Modifikator (`2` und `'`) für die Rotationen 2 und 3 hinzugefügt.
 
-Dadurch verringert sich die Länge der Zugfolgen durchschnittlich um ein Viertel ($\frac{76}{100}$). Dieser Wert stammt
-aus einem Test mit 1 000 verschiedenen zufälligen Zugfolgen der Länge 100.
+Dadurch verringert sich die Länge der Zugfolgen durchschnittlich um ein Viertel (nachher nur noch $\frac{76}{100}$ der 
+Originallänge). Dieser Wert stammt aus einem Test mit 1 000 verschiedenen zufälligen Zugfolgen der Länge 100.
 
 ??? example "Beispiel"
 
@@ -39,6 +39,9 @@ Da die Farben von der [Farberkennung](../color_detection.md) selten zu 100 % st
 von einem Algorithmus korrigiert, wenn der erkannte Würfel nicht existieren kann. Im Laufe der Zeit sind drei
 verschiedene Korrektur-Algorithmen entstanden, von denen aber nur einer wirklich zuverlässig arbeitet. Der
 Vollständigkeit halber sind alle hier dokumentiert. Ich möchte keine Beschwerden über die sehr kreativen Namen hören!
+
+Aktuell nutze ich den Neu-Algorithmus, da er am besten funktioniert und ich kaum Probleme habe. Die Anderen liefern zu 
+oft falsche Würfel.
 
 ### Neu
 
@@ -65,6 +68,6 @@ wird das Feld zu der Defizitfarbe geändert und die Bestände aktualisiert.
 Am Ende sollte es keine Defizitfarbe mehr geben. Da es immer noch die Wahrscheinlichkeit gibt, dass die Farben nicht
 stimmen, wird in einem solchen Fall der Würfel noch einmal eingescannt.
 
-## Einfach
+### Einfach
 
 Hier wird wie in *Neu* eine Farbe korrigiert, nur, dass dabei nicht nur valide Würfel als Ergebnis möglich sind.

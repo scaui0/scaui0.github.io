@@ -9,8 +9,7 @@ neue Programmierarten gelernt und bestimmt noch andere Sachen, die mir jetzt nic
 kann.
 
 * Mathematische Kenntnisse und Logik: Ich habe mir viel Mathematik angeschaut, logische Abläufe und Algorithmen (anderes 
-Wort für die Abläufe). Mögen unsere Lehrkräfte staunen, wenn ich ihnen die Parität einer Permutation erklären kann 
-:wink:
+Wort für die Abläufe).
 
 * Englisch: leider nicht so viel, wie ich wollte (blöde deutsche KIs!)
 
@@ -38,4 +37,5 @@ muss ich Sie hier auch darauf hinweisen, sich immer an die Konventionen zu halte
 [PEP 8](https://peps.python.org/pep-0008/). Lassen Sie sich davon aber nicht entmutigen.
 
 Viel Spaß mit dem Programmieren, mein Programm ausprobieren oder was auch immer Sie jetzt machen wollen
+
 Franz
