@@ -1,6 +1,8 @@
 site_name: Zauberwürfellöseroboter
 site_url: https://scaui0.github.io
 site_description: Erstellung eines Zauberwürfel-lösenden Roboters.
+repo_url: https://github.com/scaui0/RubiksCubeSolver
+repo_name: Programmcode
 copyright: Copyright &copy; 2024-2025 Franz Weingartz
 theme:
   custom_dir: docs/overrides

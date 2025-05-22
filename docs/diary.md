@@ -1495,6 +1495,26 @@ Ich habe jetzt ein Cover für das PDF erstellt. Darauf steht
 
 mit einem Bild.
 
+## Tag 272 (19.5.2025) - Tag 273 (20.5.2025)
+
+Auch wenn ich das Tagebuch hier bis zum Ende führen wollte, habe ich viel Stress und es daher nicht geschafft, hier die
+zwei Einträge zu machen. Ich habe aber an dem PDF gearbeitet.
+
+## Tag 274 - 21.5.2025
+
+Übermorgen ist schon die Vorstellung. Ich muss dafür noch das Programm vorbereiten (wollte ich eigentlich schon heute
+machen, kam aber die Dokumentation mal wieder dazwischen), auf GitHub hochladen und in der Dokumentation verlinken. Ich
+freue mich schon, wenn ich mir endlich etwas anderes aussuchen kann, was ich mache, auch wenn ich dieses Projekt 
+vermissen werde. Ich werde wahrscheinlich ein Tagebuch – ähnlich wie dieses – machen, auch, wenn ich es dann nicht 
+veröffentlichen werde.
+
+## Tag 275 - 22.5.2025
+
+Heute ist der letzte Tag, an dem ich in mein Tagebuch einen Eintrag machen kann. Ich habe jetzt vor, mein Projekt auf
+GitHub zu veröffentlichen und dann in der Website zu verlinken. 
+
+So, das Programm ist jetzt auf GitHub verfügbar und auch verlinkt (oben rechts in der Ecke).
+
 [^1]: Argument: Ein Argument in der Programmierung ist eine Information, die an eine Funktion übergeben wird, damit sie
 eine bestimmte Aufgabe ausführen kann. Wird auch Parameter genannt.
 
